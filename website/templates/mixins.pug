@@ -1,0 +1,35 @@
+mixin association(key, map, value)
+  .association.block
+
+
+mixin contact(contact)
+  a(href=contact.url)
+    span.association-complex-key
+      span.association-key= contact.key
+      span.association-map= contact.map
+    span.association-value= contact.value
+
+
+mixin cvRecord(data)
+  article.media
+    .media-content
+      a(href=data.url)
+        nav.breadcrumb
+          ul
+            each division in data.organization
+              li= division
+      .content
+        strong= data.title
+        br
+        small #{data.start_date} - #{data.end_date}  (#{data.status})
+        br
+        ul
+          each occupation in data.occupation
+            li= occupation
+
+mixin cvSection(name, data)
+  .section
+    .container
+      .title= name
+      each record in data
+        +cvRecord(record)

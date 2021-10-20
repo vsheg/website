@@ -1,0 +1,22 @@
+contacts:
+  - key: email
+    map: ':'
+    value: v@sheg.cc
+    url: mailto:v@sheg.cc
+  - key: telegram
+    map: ':'
+    value: vsheg
+    url: https://t.me/vsheg
+  - key: linkedin.com/in
+    map: '/'
+    value: vsheg
+    url: https://linkedin.com/in/vsheg
+links:
+  - key: github.com
+    map: '/'
+    value: vsheg
+    url: https://github.com/vsheg
+  - key: istina
+    map: ':'
+    value: sheg
+    url: https://istina.msu.ru/profile/sheg
