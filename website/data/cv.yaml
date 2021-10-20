@@ -1,0 +1,99 @@
+proficiencies:
+  - skill:
+
+education:
+  - organization:
+      - Lomonosov MSU
+      - Faculty of Chemistry
+      - Chemical Enzymology dept.
+    url: http://www.enzyme.chem.msu.ru/eng/
+    location:
+      country: Russia
+      city: Moscow
+    start_date: Feb '20
+    end_date: Present
+    title: Enzymology, Biotechnology
+    status: full-time
+    occupation: []
+
+  - organization:
+      - Lomonosov MSU
+      - Faculty of Chemistry
+      - Medicinal Chemistry and Fine Organic Synthesis dept.
+    url: http://www.chem.msu.su/rus/chair/med_w.html
+    location:
+      country: Russia
+      city: Moscow
+    start_date: Feb '20
+    end_date: June '21
+    title: Medical chemistry
+    status: full-time
+    occupation: []
+
+  - organization:
+      - Lomonosov MSU
+      - Faculty of Chemistry
+      - Physical Chemistry dept.
+      - Laboratory of Quantum Chemistry and Molecular Modeling
+    url: https://lcc.chem.msu.ru
+    location:
+      country: Russia
+      city: Moscow
+    start_date: Sep '15
+    end_date: June '20
+    title: Computational chemistry
+    status: full-time
+    occupation: []
+
+experience:
+  - organization:
+      - BIOCAD
+      - R&D
+      - Computational Chemistry div.
+    url: https://biocadglobal.com
+    location:
+      country: Russia
+      city: St. Petersburg
+    start_date: Jun '20
+    end_date: Oct '21
+    title: R&D data scientist, chemoinformatician
+    status: internship
+    occupation:
+      - Approbation of deep neural networks and reinforcement learning for chemical problems
+      - Design and application of a methodology for validation of neural network model before production, using expert-chemists assessments
+      - Containerization of ML models into a Docker containers, and unit testing
+      - Data processing on a remote PySpark cluster
+
+  - organization:
+      - Belozersky Research Institute
+      - Department of Biokinetics
+      - Laboratory of enzymatic modification of physiologically active compounds
+    url: https://www.belozersky.msu.ru/en/structure/laboratories?id=228774
+    location:
+      country: Russia
+      city: Moscow
+    start_date: Feb '20
+    end_date: Present
+    title: Computational chemist
+    status: apprenticeship
+    occupation:
+      - Usage of supercomputer clusters for hight-performance computations and modeling
+      - Writing Python scripts and pipelines for automatization
+      - Analysis and statistical processing of obtained data, detection of special events
+
+  - organization:
+      - Lomonosov MSU
+      - Faculty of Chemistry
+      - Inorganic Chemistry Division
+      - Laboratory of Coordination Chemistry
+    url: https://www.inorg.chem.msu.ru/coord/en/
+    location:
+      country: Russia
+      city: Moscow
+    start_date: Oct '15
+    end_date: Jun '17
+    title: Inorganic chemist, Computational chemist
+    status: apprenticeship
+    occupation:
+      - Usage of supercomputer cluster for computations and modeling
+      - Mathematical modeling and complex equation deducing using CAS (computer algebra system) Wolfram Mathematica

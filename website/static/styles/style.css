@@ -1,0 +1,37 @@
+.main {
+    display: flex;
+    min-height: 120vh;
+    flex-direction: column;
+}
+
+.section {
+    flex: 1;
+}
+
+/* cheap dark mode */
+
+@media (prefers-color-scheme: dark) {
+    html {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+/* association styling */
+
+.association-complex-key {
+    opacity: 0.5;
+}
+
+.association-map {
+    padding-right: 0.5em;
+    padding-left: 0.1em;
+}
+
+.contacts a {
+    display: table-row;
+}
+
+a .association-complex-key {
+    display: table-cell;
+    text-align: right;
+}

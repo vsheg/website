@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "website"
+version = "0.1.0"
+description = "Vsevolod Shegolev's personal website."
+authors = ["Vsevolod Shegolev <v@sheg.cc>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Flask = "^2.0.2"
+pydantic = "^1.8.2"
+pypugjs = "^5.9.9"
+Flask-Assets = "^2.0"
+pyScss = "^1.3.7"
+cssmin = "^0.2.0"
+PyYAML = "^6.0"
+
+[tool.poetry.dev-dependencies]
+python-dotenv = "^0.19.1"
+black = "^21.9b0"
+pre-commit = "^2.15.0"
+pylint = "^2.11.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+skip-string-normalization = true
+
+[tool.pylint.messages_control]
+disable = ["E0401", "R0903"]
