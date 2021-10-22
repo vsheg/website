@@ -13,10 +13,10 @@ this repo contains the code of my personal website, which I plan to use to deplo
 
 ## Web
 
-- [Bulma] CSS-only framework
+- [Bulma] CSS framework
 - [Buefy] web framework, based on [Bulma] and [Vue.js], that provides useful JavaScript facilities
 - [Pug] HTML preprocessor, implemented in Python ([PyPugJS])
-- [SASS] CSS preprocessor
+- ~~[SASS] CSS preprocessor~~
 
 ## Server
 
@@ -26,7 +26,7 @@ this repo contains the code of my personal website, which I plan to use to deplo
 ## CI/CD
 
 - [Docker] & [Docker Compose] for containerization
-- [GitHub Actions] for testing and deploy to my VPS
+- ~~[GitHub Actions] for testing and deploy to my VPS~~
 
 [Flask]: https://github.com/pallets/flask
 [Gunicorn]: https://github.com/benoitc/gunicorn
