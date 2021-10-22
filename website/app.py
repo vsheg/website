@@ -5,7 +5,6 @@ from functools import partial
 from os import getenv
 
 from flask import Flask, redirect, render_template
-from flask_assets import Bundle, Environment
 
 from models import contacts, education, experience
 
@@ -15,18 +14,6 @@ render_template = partial(
 
 app = Flask(__name__)
 app.jinja_env.add_extension('pypugjs.ext.jinja.PyPugJSExtension')
-
-
-assets = Environment(app)
-assets.init_app(app)
-all_css = Bundle(
-    'styles/*.scss',
-    filters='pyscss,cssmin',
-    depends='styles/*.scss',
-    output='styles/all_sass.css',
-)
-assets.register(None, all_css)
-all_css.build()
 
 
 @app.context_processor
