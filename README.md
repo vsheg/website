@@ -1,3 +1,5 @@
+[![CodeQL](https://github.com/vsheg/website/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/vsheg/website/actions/workflows/codeql-analysis.yml)
+
 # Hello,
 
 this repo contains the code of my personal website, which I plan to use to deploy some ML models in the future.
@@ -26,7 +28,7 @@ this repo contains the code of my personal website, which I plan to use to deplo
 ## CI/CD
 
 - [Docker] & [Docker Compose] for containerization
-- ~~[GitHub Actions] for testing and deploy to my VPS~~
+- [GitHub Actions] for testing and deploy to my VPS
 
 [Flask]: https://github.com/pallets/flask
 [Gunicorn]: https://github.com/benoitc/gunicorn
