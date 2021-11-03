@@ -1,6 +1,5 @@
 services:
   web:
-    image: web:${TAG}
     restart: always
     build: .
     ports:
@@ -9,4 +8,3 @@ services:
       - .env
     environment:
       WEB_PORT: ${WEB_PORT}
-      TAG: ${TAG}
