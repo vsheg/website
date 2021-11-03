@@ -2,12 +2,12 @@ name: Development Deployment
 
 on:
   push:
-    branches: [ dev ]
+    branches: [dev]
   pull_request:
-    branches: [ dev ]
+    branches: [dev]
   workflow_dispatch:
 
-concurrency: 
+concurrency:
   group: dev
   cancel-in-progress: true
 
@@ -15,7 +15,9 @@ jobs:
   deployment:
     runs-on: self-hosted
     environment: dev
+    env:
+      WEB_PORT: ${{ secrets.WEB_PORT }}
     steps:
-        - uses: actions/checkout@v2
-        - name: Build and Up
-          run: docker-compose up --build -d
+      - uses: actions/checkout@v2
+      - name: Build and Up
+        run: docker-compose up --build -d
