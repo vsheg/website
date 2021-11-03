@@ -14,7 +14,7 @@ concurrency:
 jobs:
   deployment:
     runs-on: self-hosted
-    environment: main
+    environment: prod
     env:
       WEB_PORT: ${{ secrets.WEB_PORT }}
     steps:
