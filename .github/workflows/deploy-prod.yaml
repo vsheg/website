@@ -2,9 +2,9 @@ name: Development Deployment
 
 on:
   push:
-    branches: [dev]
+    branches: [main]
   pull_request:
-    branches: [dev]
+    branches: [main]
   workflow_dispatch:
 
 concurrency:
@@ -14,7 +14,7 @@ concurrency:
 jobs:
   deployment:
     runs-on: self-hosted
-    environment: dev
+    environment: prod
     env:
       WEB_PORT: ${{ secrets.WEB_PORT }}
     steps:

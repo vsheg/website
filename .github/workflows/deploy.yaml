@@ -1,0 +1,34 @@
+name: Deployment
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+    branches: [dev, main]
+  workflow_dispatch:
+
+concurrency:
+  group: dev
+  cancel-in-progress: true
+
+jobs:
+  dev:
+    if: ${{ github.ref == 'refs/heads/dev' }}
+    runs-on: self-hosted
+    environment: dev
+    env:
+      WEB_PORT: ${{ secrets.WEB_PORT }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and Up
+        run: docker-compose -p website_dev up --build -d
+  prod:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    runs-on: self-hosted
+    environment: prod
+    env:
+      WEB_PORT: ${{ secrets.WEB_PORT }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build and Up
+        run: docker-compose -p website_prod up --build -d
