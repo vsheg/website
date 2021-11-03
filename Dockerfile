@@ -11,10 +11,9 @@ WORKDIR /app
 COPY poetry.lock pyproject.toml ./
 
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi
+    && poetry install --no-interaction --no-ansi --no-dev
 
-COPY . ./
 WORKDIR /app/website
+COPY website ./
 
-EXPOSE 8000
-CMD gunicorn --workers=2 --bind 0.0.0.0:8000 --reload app:app
+CMD gunicorn --workers=2 --bind 0.0.0.0:${WEB_PORT} --reload app:app
