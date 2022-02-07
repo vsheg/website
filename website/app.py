@@ -3,17 +3,26 @@
 
 from functools import partial
 from os import getenv
-
 from flask import Flask, redirect, render_template
-
 from models import contacts, education, experience
+from markdown import markdown
 
-render_template = partial(
-    render_template, repo_url=getenv('REPO_URL'), website_url=getenv('WEBSITE_URL')
-)
+render_template = partial(render_template, repo_url=getenv('REPO_URL'), website_url=getenv('WEBSITE_URL'))
 
 app = Flask(__name__)
 app.jinja_env.add_extension('pypugjs.ext.jinja.PyPugJSExtension')
+
+
+@app.context_processor
+def markdown_processor():
+    '''Add `markdown(md_text)` to the template processor.'''
+
+    # inner function
+    def markdown_(text: str) -> str:
+        '''Render markdown and trim terminal `<p>` tags.'''
+        return markdown(text).lstrip('<p>').rstrip('</p>')  # TODO: switch to a nicer markdown processor
+
+    return dict(markdown=markdown_)
 
 
 @app.context_processor
