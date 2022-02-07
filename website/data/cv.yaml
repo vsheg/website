@@ -1,6 +1,3 @@
-proficiencies:
-  - skill:
-
 education:
   - organization:
       - Lomonosov MSU
@@ -14,7 +11,10 @@ education:
     end_date: Present
     title: Enzymology, Biotechnology
     status: full-time
-    occupation: []
+    occupation:
+      - wet lab (cell culture and transfection, isolation/purification of DNA and proteins, enzyme kinetics)
+      - instrumental analysis methods (HPLC, NMR, IR, circular dichroism, fluorescence, mass- and other spectroscopies)
+      - immunological analysis methods (ELISA, immunochemistry)
 
   - organization:
       - Lomonosov MSU
@@ -28,7 +28,8 @@ education:
     end_date: June '21
     title: Medical chemistry
     status: full-time
-    occupation: []
+    occupation:
+      - nice smile
 
   - organization:
       - Lomonosov MSU
@@ -47,24 +48,6 @@ education:
 
 experience:
   - organization:
-      - BIOCAD
-      - R&D
-      - Computational Chemistry div.
-    url: https://biocadglobal.com
-    location:
-      country: Russia
-      city: St. Petersburg
-    start_date: Jun '20
-    end_date: Oct '21
-    title: R&D data scientist, chemoinformatician
-    status: internship
-    occupation:
-      - Approbation of deep neural networks and reinforcement learning for chemical problems
-      - Design and application of a methodology for validation of neural network model before production, using expert-chemists assessments
-      - Containerization of ML models into a Docker containers, and unit testing
-      - Data processing on a remote PySpark cluster
-
-  - organization:
       - Belozersky Research Institute
       - Department of Biokinetics
       - Laboratory of enzymatic modification of physiologically active compounds
@@ -77,9 +60,33 @@ experience:
     title: Computational chemist
     status: apprenticeship
     occupation:
-      - Usage of supercomputer clusters for hight-performance computations and modeling
-      - Writing Python scripts and pipelines for automatization
-      - Analysis and statistical processing of obtained data, detection of special events
+      - Using of graph neural networks (PyTorch, TorchDrug) to predict drug-targets binding free energies
+      - Molecular dynamics and Free Energy methods (metadynamics, alchemical transformation) for estimation of kinetic and thermodynamic parameters of protein-inhibitor binding
+      - Development of Force Field parameters for small molecules from QM calculations
+      - Automated time series analysis (MD trajectories) and detection of interesting events (MDAnalysis)
+      - Data processing, analysis, and visualization using Python, R, and Mathematica
+      - Building data pipelines (Prefect, Snakemake)
+      - PyMOL, VMD, etc.
+
+  - organization:
+      - BIOCAD
+      - R&D
+      - Computational Chemistry div.
+    url: https://biocadglobal.com
+    location:
+      country: Russia
+      city: St. Petersburg
+    start_date: Jun '20
+    end_date: Oct '21
+    title: R&D data scientist, chemoinformatician
+    status: internship
+    occupation:
+      - Validation of in-house computational chemistry protocols (metadynamics)
+      - Approbation of deep neural networks and reinforcement learning for prediction of possible ways for drug synthesis (Keras)
+      - ML models containerization (Docker)
+      - Design and application of a methodology for validation of chemical ML models using expert chemists opinion
+      - Legacy API reverse engineering, data mining
+      - Big data analysis using PySpark on a remote cluster
 
   - organization:
       - Lomonosov MSU
@@ -97,3 +104,6 @@ experience:
     occupation:
       - Usage of supercomputer cluster for computations and modeling
       - Mathematical modeling and complex equation deducing using CAS (computer algebra system) Wolfram Mathematica
+      - Multiple synthesis and characterization (IR, XRD, TGA, DTA, titration) of REE trimethylacetates
+      - QM calculations for interpretation of their IR spectra and refinement of lattice parameters
+      - "*In silico* development of express REE analysis: analytical equations for various types of titration were found using CAS; supplements capable of increasing the signal at the equivalence point were calculated, then found and tested; an automated technique for the analysis of REE by reverse precipitation titration with the measurement of the excess of precipitant by permanganatometry with potentiometry was proposed"
