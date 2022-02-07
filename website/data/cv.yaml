@@ -12,7 +12,7 @@ education:
     title: Enzymology, Biotechnology
     status: full-time
     occupation:
-      - wet lab (cell culture and transfection, isolation/purification of DNA and proteins, enzyme kinetics)
+      - wet lab (cell culture and transfection, isolation/purification of DNA and proteins, *in-vitro* protein modification, enzyme kinetics)
       - instrumental analysis methods (HPLC, NMR, IR, circular dichroism, fluorescence, mass- and other spectroscopies)
       - immunological analysis methods (ELISA, immunochemistry)
 
@@ -42,9 +42,13 @@ education:
       city: Moscow
     start_date: Sep '15
     end_date: June '20
-    title: Computational chemistry
+    title: Computational Chemistry
     status: full-time
-    occupation: []
+    occupation:
+      - studying the properties of molecules using QM methods (GAMESS)
+      - combining of statistical mechanics calculations and thermochemical data to predict the thermodynamic properties of substances
+      - using numerical methods for optimization problems, solving systems of equations, linear algebra, etc. (C/C++)
+      - calculations and derivation of analytical relations using computer algebra systems (Maple)
 
 experience:
   - organization:
@@ -60,12 +64,12 @@ experience:
     title: Computational chemist
     status: apprenticeship
     occupation:
-      - Using of graph neural networks (PyTorch, TorchDrug) to predict drug-targets binding free energies
-      - Molecular dynamics and Free Energy methods (metadynamics, alchemical transformation) for estimation of kinetic and thermodynamic parameters of protein-inhibitor binding
-      - Development of Force Field parameters for small molecules from QM calculations
-      - Automated time series analysis (MD trajectories) and detection of interesting events (MDAnalysis)
-      - Data processing, analysis, and visualization using Python, R, and Mathematica
-      - Building data pipelines (Prefect, Snakemake)
+      - using of graph neural networks (PyTorch, TorchDrug) to predict drug-targets binding free energies
+      - Molecular Dynamics and Free Energy methods (metadynamics, alchemical transformation) for estimation of kinetic and thermodynamic parameters of protein-inhibitor binding
+      - development of Force Field parameters for small molecules from QM calculations
+      - automated time series analysis (MD trajectories) and detection of interesting events (MDAnalysis)
+      - data processing, analysis, and visualization using Python, R, and Mathematica
+      - building data pipelines (Prefect, Snakemake)
       - PyMOL, VMD, etc.
 
   - organization:
@@ -81,12 +85,12 @@ experience:
     title: R&D data scientist, chemoinformatician
     status: internship
     occupation:
-      - Validation of in-house computational chemistry protocols (metadynamics)
-      - Approbation of deep neural networks and reinforcement learning for prediction of possible ways for drug synthesis (Keras)
+      - validation of in-house computational chemistry protocols (metadynamics)
+      - approbation of deep neural networks and reinforcement learning for prediction of possible ways for drug synthesis (Keras)
       - ML models containerization (Docker)
-      - Design and application of a methodology for validation of chemical ML models using expert chemists opinion
-      - Legacy API reverse engineering, data mining
-      - Big data analysis using PySpark on a remote cluster
+      - design and application of a methodology for validation of chemical ML models using expert chemists opinion
+      - legacy API reverse engineering, data mining
+      - big data analysis using PySpark on a remote cluster
 
   - organization:
       - Lomonosov MSU
@@ -102,8 +106,8 @@ experience:
     title: Inorganic chemist, Computational chemist
     status: apprenticeship
     occupation:
-      - Usage of supercomputer cluster for computations and modeling
-      - Mathematical modeling and complex equation deducing using CAS (computer algebra system) Wolfram Mathematica
-      - Multiple synthesis and characterization (IR, XRD, TGA, DTA, titration) of REE trimethylacetates
+      - usage of supercomputer cluster for computations and modeling
+      - mathematical modeling and complex equation deducing using CAS (computer algebra system) Wolfram Mathematica
+      - multiple synthesis and characterization (IR, XRD, TGA, DTA, titration) of REE trimethylacetates
       - QM calculations for interpretation of their IR spectra and refinement of lattice parameters
-      - "*In silico* development of express REE analysis: analytical equations for various types of titration were found using CAS; supplements capable of increasing the signal at the equivalence point were calculated, then found and tested; an automated technique for the analysis of REE by reverse precipitation titration with the measurement of the excess of precipitant by permanganatometry with potentiometry was proposed"
+      - "*in silico* development of express REE analysis: analytical equations for various types of titration were found using CAS; supplements capable of increasing the signal at the equivalence point were calculated, then found and tested; an automated technique for the analysis of REE by reverse precipitation titration with the measurement of the excess of precipitant by permanganatometry with potentiometry was proposed"
