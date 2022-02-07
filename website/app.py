@@ -20,7 +20,7 @@ def markdown_processor():
     # inner function
     def markdown_(text: str) -> str:
         '''Render markdown and trim terminal `<p>` tags.'''
-        return markdown(text).lstrip('<p>').rstrip('</p>')  # TODO: switch to a nicer markdown processor
+        return markdown(text).removeprefix('<p>').removesuffix('</p>')  # TODO: switch to a nicer markdown processor
 
     return dict(markdown=markdown_)
 
