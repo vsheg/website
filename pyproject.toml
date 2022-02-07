@@ -10,6 +10,7 @@ Flask = "^2.0.2"
 pydantic = "^1.8.2"
 pypugjs = "^5.9.9"
 PyYAML = "^6.0"
+Markdown = "^3.3.6"
 
 [tool.poetry.dev-dependencies]
 python-dotenv = "^0.19.1"
@@ -22,8 +23,9 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-line-length = 100
+line-length = 120
 skip-string-normalization = true
 
-[tool.pylint.messages_control]
-disable = ["E0401", "R0903"]
+[tool.pylint]
+messages_control.disable = ["E0401", "R0903", "fixme"]
+format.max-line-length = 120
