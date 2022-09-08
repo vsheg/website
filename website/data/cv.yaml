@@ -12,9 +12,9 @@ education:
     title: Enzymology, Biotechnology
     status: full-time
     occupation:
-      - wet lab (cell culture and transfection, isolation/purification of DNA and proteins, *in-vitro* protein modification, enzyme kinetics)
-      - instrumental analysis methods (HPLC, NMR, IR, circular dichroism, fluorescence, mass- and other spectroscopies)
-      - immunological analysis methods (ELISA, immunochemistry)
+      - wet lab (cell culture and transfection, isolation/purification of DNA and proteins, *in vitro* protein modification, enzyme kinetics)
+      - instrumental analysis (HPLC, NMR, IR, circular dichroism, fluorescence, mass- and other spectroscopies)
+      - immunological analysis (ELISA, immunochemistry)
 
   - organization:
       - Lomonosov MSU
