@@ -6,7 +6,7 @@ authors = ["Vsevolod Shegolev <v@sheg.cc>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Flask = "^2.0.2"
+Flask = "^2.3.2"
 pydantic = "^1.8.2"
 pypugjs = "^5.9.9"
 PyYAML = "^6.0"
