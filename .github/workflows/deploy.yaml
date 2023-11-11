@@ -1,34 +1,32 @@
-name: Deployment
-
 on:
-  push:
-    branches: [dev, main]
-  pull_request:
-    branches: [dev, main]
   workflow_dispatch:
+  push:
+    branches: main
 
-concurrency:
-  group: dev
-  cancel-in-progress: true
+name: render
 
 jobs:
-  dev:
-    if: ${{ github.ref == 'refs/heads/dev' }}
-    runs-on: self-hosted
-    environment: dev
-    env:
-      WEB_PORT: ${{ secrets.WEB_PORT }}
+  
+  render:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Build and Up
-        run: docker-compose -p website_dev up --build -d
-  prod:
-    if: ${{ github.ref == 'refs/heads/main' }}
-    runs-on: self-hosted
-    environment: prod
-    env:
-      WEB_PORT: ${{ secrets.WEB_PORT }}
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
+      - run: quarto render
+      - uses: actions/upload-pages-artifact@v2
+        with:
+          name: github-pages
+          path: _site/
+  
+  deploy:
+    needs: render
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Build and Up
-        run: docker-compose -p website_prod up --build -d
+      - uses: actions/deploy-pages@v2
+        id: deployment
