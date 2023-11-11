@@ -15,7 +15,7 @@ about:
       href: https://github.com/vsheg
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/feed/
+      href: https://linkedin.com/in/vsheg
     - icon: book
       text: Naturoinformatics (Ru)
       href: https://inf.sheg.cc
