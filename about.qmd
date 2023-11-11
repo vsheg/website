@@ -1,0 +1,31 @@
+---
+title: "Vsevolod Shegolev"
+about:
+  template: jolla
+  image: imgs/profile.jpg
+  links:
+    - icon: envelope-at
+      text: email
+      href: mailto:v@sheg.cc?&body=Hello%20Vsevolod%2C%0A%0A%0A
+    - icon: send
+      text: Telegram
+      href: https://t.me/vsheg
+    - icon: github
+      text: Github
+      href: https://github.com/vsheg
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/feed/
+    - icon: book
+      text: Naturoinformatics (Ru)
+      href: https://inf.sheg.cc
+    - icon: cpu
+      text: moll
+      href: https://moll.sheg.cc
+---
+
+a pretty charming guy doing *in silico* drug design & chemical enzymology
+
+- PhD student in **Biotechnology** @ Lomonosov MSU
+- MSc in **Chemical Enzymology** @ Lomonosov MSU 
+- BSc in **Computational Chemistry** @ Lomonosov MSU 
