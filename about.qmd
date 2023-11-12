@@ -16,6 +16,7 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/vsheg
+    - text: 🤡
     - icon: book
       text: Naturoinformatics (Ru)
       href: https://inf.sheg.cc
