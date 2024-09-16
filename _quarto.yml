@@ -1,2 +1,24 @@
 project:
   type: website
+
+website:
+  title: sheg.cc
+  site-url: https://sheg.cc
+  navbar:
+    left:
+      - text: About
+        href: about/
+      - text: Teaching
+        href: teaching/
+
+    right:
+      - icon: rss
+        href: index.xml
+
+format:
+  html:
+    theme: cosmo
+
+reference-location: margin
+citation-location: margin
+callout-appearance: minimal
