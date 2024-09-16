@@ -2,7 +2,7 @@
 title: "Vsevolod Shegolev"
 about:
   template: jolla
-  image: imgs/profile.jpg
+  image: profile.jpg
   links:
     - icon: envelope-at
       text: hi@sheg.cc
