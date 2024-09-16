@@ -1,7 +1,1 @@
-# Intermidiate ML
-
-> This is a work-in-progress draft. Content is under construction.
-
-## Nonlinear models
-
-- [Nonlinear Least Squares](intermediate-ml/03-nonlinear/nonlinear-ls.pdf)
+{{< include intermediate-ml/README.md >}}
