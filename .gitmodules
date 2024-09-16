@@ -1,3 +1,6 @@
 [submodule "intermediate-ml"]
 	path = teaching/intermediate-ml
 	url = https://github.com/vsheg/intermediate-ml
+[submodule "teaching/intermediate-ml"]
+	path = teaching/intermediate-ml
+	url = https://github.com/vsheg/intermediate-ml
