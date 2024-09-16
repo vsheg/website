@@ -11,6 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
       - uses: quarto-dev/quarto-actions/setup@v2
       - run: quarto render
       - uses: actions/upload-pages-artifact@v2
