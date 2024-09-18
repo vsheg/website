@@ -8,8 +8,8 @@ website:
     left:
       - text: About
         href: about/
-      - text: Teaching
-        href: teaching/
+      - text: Intermediate ML
+        href: intermediate-ml/
 
     right:
       - icon: rss
