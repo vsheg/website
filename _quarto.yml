@@ -8,7 +8,7 @@ website:
     left:
       - text: About
         href: about/
-      - text: Intermediate ML
+      - text: Teaching
         href: intermediate-ml/
 
     right:
