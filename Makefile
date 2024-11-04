@@ -1,9 +1,4 @@
-all: intermediate-ml
+all: update-submodules
 
-intermediate-ml-pull:
+update-submodules:
 	git submodule update --remote --merge
-
-intermediate-ml-index:
-	cp intermediate-ml/README.md intermediate-ml/index.md
-
-intermediate-ml: intermediate-ml-pull intermediate-ml-index
