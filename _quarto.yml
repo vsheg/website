@@ -9,7 +9,7 @@ website:
       - text: About
         href: about/
       - text: Teaching
-        href: intermediate-ml/
+        href: teaching/
 
     right:
       - icon: rss
