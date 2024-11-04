@@ -1,4 +1,4 @@
 all: update-submodules
 
 update-submodules:
-	git submodule update --remote --merge
+	git submodule update --recursive --remote --force
