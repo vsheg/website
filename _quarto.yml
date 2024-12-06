@@ -11,9 +11,9 @@ website:
       - text: Teaching
         href: teaching/
 
-    right:
-      - icon: rss
-        href: index.xml
+    # right:
+    #   - icon: rss
+    #     href: index.xml
 
 format:
   html:
