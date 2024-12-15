@@ -6,14 +6,16 @@ website:
   site-url: https://sheg.cc
   navbar:
     left:
-      - text: About
-        href: about/
+      - text: Posts
+        href: posts/
       - text: Teaching
         href: teaching/
+      - text: About
+        href: about/
 
-    # right:
-    #   - icon: rss
-    #     href: index.xml
+    right:
+      - icon: rss
+        href: index.xml
 
 format:
   html:
