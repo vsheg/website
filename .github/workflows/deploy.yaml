@@ -10,7 +10,7 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt install -y fd-find
+      - run: sudo apt-get update && sudo apt-get install -y fd-find
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
