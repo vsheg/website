@@ -10,13 +10,13 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt-get install -y fd-find
-      - run: sudo cp $(which fdfind) /usr/local/bin/fd
+      - run: sudo apt-get install -y fd-find && cp $(which fdfind) /usr/local/bin/fd
+      - run: sudo apt install -y pandoc
+      - uses: quarto-dev/quarto-actions/setup@v2
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
       - run: make
-      - uses: quarto-dev/quarto-actions/setup@v2
       - run: quarto render
       - uses: actions/upload-pages-artifact@v2
         with:
