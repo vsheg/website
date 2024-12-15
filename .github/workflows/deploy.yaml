@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: sudo apt-get update && sudo apt-get install -y fd-find
+      - run: sudo cp $(which fdfind) /usr/local/bin/fd
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
