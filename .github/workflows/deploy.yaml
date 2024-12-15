@@ -15,8 +15,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: 'true'
-      - uses: quarto-dev/quarto-actions/setup@v2
       - run: make
+      - uses: quarto-dev/quarto-actions/setup@v2
       - run: quarto render
       - uses: actions/upload-pages-artifact@v2
         with:
