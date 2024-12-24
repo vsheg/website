@@ -4,6 +4,7 @@ project:
 website:
   title: sheg.cc
   site-url: https://sheg.cc
+  description: "sheg"
   navbar:
     left:
       - text: Posts
