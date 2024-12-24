@@ -11,4 +11,7 @@ posts:
 	fd -p -g "**/posts/*/*.md" --exec mv {} {.}.qmd
 
 
-.PHONY: clean posts
+rss:
+	mv _site/posts/index.xml _site/feed.xml
+
+.PHONY: clean posts rss

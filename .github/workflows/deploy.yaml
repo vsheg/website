@@ -18,6 +18,7 @@ jobs:
           submodules: 'true'
       - run: make
       - run: quarto render
+      - run: make rss
       - uses: actions/upload-pages-artifact@v2
         with:
           name: github-pages
