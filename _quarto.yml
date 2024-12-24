@@ -20,6 +20,8 @@ website:
 format:
   html:
     theme: cosmo
+    code-copy: true
+    code-annotations: hover
 
 reference-location: margin
 citation-location: margin
