@@ -16,12 +16,12 @@ website:
 
     right:
       - icon: rss
-        href: posts/index.xml
+        href: feed.xml
 
 format:
   html:
     theme: cosmo
-    code-copy: true
+    code-copy: hover
     code-annotations: hover
 
 reference-location: margin
