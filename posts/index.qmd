@@ -1,6 +1,6 @@
 ---
 listing:
-  contents: ./*/*.qmd
+  contents: ./
   sort: "date desc"
   feed: true
 ---

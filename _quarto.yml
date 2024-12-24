@@ -16,7 +16,7 @@ website:
 
     right:
       - icon: rss
-        href: index.xml
+        href: posts/index.xml
 
 format:
   html:
