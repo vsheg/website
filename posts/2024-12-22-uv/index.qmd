@@ -101,7 +101,7 @@ uv add scikit-learn seaborn
 ```
 
 This updates `pyproject.toml` as follows:
-```bash
+```{.toml filename="pyproject.toml"}
 [project]
 name = "sheg"
 version = "0.1.0"
@@ -127,7 +127,7 @@ uv remove seaborn
 
 You can modify the version constraints in `pyproject.toml`, e.g. to lower the minimum version of `scikit-learn`:
 
-```{.toml filename="pyproject.toml" (example)}
+```{.toml filename="pyproject.toml (example)"}
 [project]
 name = "sheg"
 version = "0.1.0"
