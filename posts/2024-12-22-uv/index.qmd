@@ -1,5 +1,7 @@
 ---
 date: "2024.12.22"
+categories:
+    - python
 ---
 
 # `uv` as a system-wide Python environment manager
