@@ -3,4 +3,5 @@ listing:
   contents: ./
   sort: "date desc"
   feed: true
+comments: false
 ---
