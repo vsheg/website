@@ -22,6 +22,7 @@ crossref:
   eq-prefix: "" # TODO: add parentheses around equation numbers
   sec-prefix: "§"
   fig-prefix: "⬟"
+  tbl-prefix: "⊞"
 
 format:
   html:
