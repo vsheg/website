@@ -11,8 +11,8 @@ website:
         href: posts/
       - text: Teaching
         href: teaching/
-      - text: About
-        href: about/
+      - text: Contact
+        href: contact/
 
     right:
       - icon: rss

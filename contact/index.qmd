@@ -16,10 +16,6 @@ about:
     - icon: linkedin
       text: in/vsheg
       href: https://linkedin.com/in/vsheg
-    - text: 🐵
-    - icon: book
-      text: Naturoinformatics (Ru)
-      href: https://inf.sheg.cc
     - icon: cpu
       text: moll
       href: https://moll.sheg.cc
