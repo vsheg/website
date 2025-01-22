@@ -3,5 +3,6 @@ listing:
   contents: ./
   sort: "date desc"
   feed: true
+  categories: true
 comments: false
 ---

@@ -1,0 +1,3452 @@
+---
+references:
+- id: '2014'
+  author:
+    - family: Васильева
+      given: И. А.
+    - family: Аксенова
+      given: В. А.
+  citation-key: '2014'
+  event-place: Москва
+  issued:
+    - year: 2014
+  publisher-place: Москва
+  title: >-
+    Федеральные клинические рекомендации по диагностике и лечению туберкулеза
+    органов дыхания
+  type: book
+
+- id: 2014a
+  author:
+    - family: Nelson
+      given: David L.
+    - family: Cox
+      given: Michael M.
+  citation-key: 2014a
+  edition: 6е издание
+  event-place: Нью-Йорк
+  issued:
+    - year: 2012
+  page: 823–825
+  publisher: W. H. Freeman and Company
+  publisher-place: Нью-Йорк
+  title: Lehninger principles of biochemistry
+  type: book
+
+- id: amber21
+  citation-key: amber21
+  issued:
+    - year: 2021
+  note: 'as: amber21'
+  title: Amber 2021 Reference Manual
+  type: book
+
+- id: atta-fynn
+  author:
+    - family: Atta-fynn
+      given: Raymond
+    - family: Bylaska
+      given: Eric J
+    - family: Jong
+      given: Wibe A De
+  citation-key: atta-fynn
+  event-place: Ричленд (Вашингтон)
+  publisher: Pacific Northwest National Laboratory
+  publisher-place: Ричленд (Вашингтон)
+  title: >-
+    Finite temperature free energy calculations in NWChem. Metadynamics and
+    umbrella sampling-wham: практическое пособие
+  type: book
+
+- id: Baker2015
+  accessed:
+    - year: 2022
+      month: 4
+      day: 29
+  author:
+    - family: Baker
+      given: Christopher M.
+  citation-key: Baker2015
+  container-title: 'Wiley Interdisciplinary Reviews: Computational Molecular Science'
+  container-title-short: WIREs Comput Mol Sci
+  DOI: 10.1002/wcms.1215
+  ISSN: '17590876'
+  issue: '2'
+  issued:
+    - year: 2015
+      month: 3
+  language: en
+  page: 241-254
+  source: DOI.org (Crossref)
+  title: Polarizable force fields for molecular dynamics simulations of biomolecules
+  type: article-journal
+  URL: https://onlinelibrary.wiley.com/doi/10.1002/wcms.1215
+  volume: '5'
+
+- id: Baldin2019
+  author:
+    - family: Baldin
+      given: S.M.
+    - family: Kirilin
+      given: E.M.
+    - family: Švedas
+      given: V. K.
+  citation-key: Baldin2019
+  container-title: 12th international conference “Biocatalysis. Fundamentals & applications"
+  issued:
+    - year: 2019
+  title: >-
+    Modeling of substrate binding with L,D-transpeptidase 2 from M. tuberculosis
+    by advanced metadynamics
+  type: paper-conference
+
+- id: Balint2021
+  abstract: >-
+    Various methods (Hartree–Fock methods, semi-empirical methods, Density
+    Functional Theory, Molecular Mechanics) used to optimize a molecule
+    structure feature the same basic approach but differ in the mathematical
+    approximations used. The geometry optimization procedure calculates the
+    energy at an initial geometry of a molecule and then proceeds to search a
+    new geometry with a lower energy. Using the 3D structures collected from the
+    PubChem database, 20 amino acid geometry optimization calculations were
+    performed with several methods. The purpose of the study was to analyze
+    these methods (39) to find the relationship between them and to determine
+    which to use under different circumstances. Cluster analysis and principal
+    component analysis were performed to evaluate the similarities between the
+    different methods. The results after the analysis can classified into three
+    main groups and can be selected accordingly to solve different types of
+    problems.
+  author:
+    - family: Bálint
+      given: Donatella
+    - family: Jäntschi
+      given: Lorentz
+  citation-key: Balint2021
+  container-title: Mathematics
+  DOI: 10.3390/math9222855
+  ISSN: 2227-7390
+  issue: '22'
+  issued:
+    - year: 2021
+  title: >-
+    Comparison of molecular geometry optimization methods based on molecular
+    descriptors
+  type: article-journal
+  URL: https://www.mdpi.com/2227-7390/9/22/2855
+  volume: '9'
+
+- id: Barducci2008
+  abstract: >-
+    We present a method for determining the free-energy dependence on a selected
+    number of collective variables using an adaptive bias. The formalism
+    provides a unified description which has metadynamics and canonical sampling
+    as limiting cases. Convergence and errors can be rigorously and easily
+    controlled. The parameters of the simulation can be tuned so as to focus the
+    computational effort only on the physically relevant regions of the order
+    parameter space. The algorithm is tested on the reconstruction of an alanine
+    dipeptide free-energy landscape. © 2008 The American Physical Society.
+  author:
+    - family: Barducci
+      given: Alessandro
+    - family: Bussi
+      given: Giovanni
+    - family: Parrinello
+      given: Michele
+  citation-key: Barducci2008
+  container-title: Physical Review Letters
+  DOI: 10.1103/PhysRevLett.100.020603
+  ISSN: '00319007'
+  issue: '2'
+  issued:
+    - year: 2008
+  PMID: '18232845'
+  title: >-
+    Well-tempered metadynamics: A smoothly converging and tunable free-energy
+    method
+  type: article-journal
+  volume: '100'
+
+- id: Barducci2011
+  abstract: >-
+    Metadynamics is a powerful technique for enhancing sampling in molecular
+    dynamics simulations and reconstructing the free-energy surface as a
+    function of few selected degrees of freedom, often referred to as collective
+    variables (CVs). In metadynamics, sampling is accelerated by a
+    history-dependent bias potential, which is adaptively constructed in the
+    space of the CVs. Since its first appearance, significant improvements have
+    been made to the original algorithm, leading to an efficient, flexible, and
+    accurate method that has found many successful applications in several
+    domains of science. Here, we discuss first the theory underlying
+    metadynamics and its recent developments. In particular, we focus on the
+    crucial issue of choosing an appropriate set of CVs and on the possible
+    strategies to alleviate this difficulty. Later in the second part, we
+    present a few recent representative applications, which we have classified
+    into three main classes: solid-state physics, chemical reactions, and
+    biomolecules. © 2011 John Wiley & Sons, Ltd.
+  author:
+    - family: Barducci
+      given: Alessandro
+    - family: Bonomi
+      given: Massimiliano
+    - family: Parrinello
+      given: Michele
+  citation-key: Barducci2011
+  container-title: 'Wiley Interdisciplinary Reviews: Computational Molecular Science'
+  DOI: 10.1002/wcms.31
+  ISSN: '17590876'
+  issue: '5'
+  issued:
+    - year: 2011
+  page: 826–843
+  publisher: Wiley Online Library
+  title: Metadynamics
+  type: article-journal
+  volume: '1'
+
+- id: Bayly1993
+  author:
+    - family: Bayly
+      given: Christopher I.
+    - family: Cieplak
+      given: Piotr
+    - family: Cornell
+      given: Wendy
+    - family: Kollman
+      given: Peter A.
+  citation-key: Bayly1993
+  container-title: The Journal of Physical Chemistry
+  container-title-short: J. Phys. Chem.
+  DOI: 10.1021/j100142a004
+  ISSN: 0022-3654
+  issue: '40'
+  issued:
+    - year: 1993
+      month: 10
+      day: 1
+  page: 10269-10280
+  publisher: American Chemical Society
+  title: >-
+    A well-behaved electrostatic potential based method using charge restraints
+    for deriving atomic charges: the RESP model
+  type: article-journal
+  URL: https://doi.org/10.1021/j100142a004
+  volume: '97'
+
+- id: Bekker2004
+  abstract: >-
+    If the rotational motion of a single macromolecule is constrained during a
+    molecular dynamics simulation with periodic boundary conditions it is
+    possible to perform such simulations in a computational box with a minimal
+    amount of solvent. In this article we describe a method to construct such a
+    box, and test the approach on a number of macromolecules, randomly chosen
+    from the protein databank. The essence of the method is that the molecule is
+    first dilated with a layer of at least half the cut-off radius. For the
+    enlarged molecule a near-densest lattice packing is calculated. From this
+    packing the simulation box is derived. On average, the volume of the
+    resulting box proves to be about 50% of the volume of standard boxes. In
+    test simulations this yields on average a factor of about two in simulation
+    speed. © 2004 Wiley Periodicals, Inc.
+  author:
+    - family: Bekker
+      given: Henk
+    - family: Van Den Berg
+      given: Jur P.
+    - family: Wassenaar
+      given: Tsjerk A.
+  citation-key: Bekker2004
+  container-title: Journal of Computational Chemistry
+  DOI: 10.1002/jcc.20050
+  ISSN: '01928651'
+  issue: '8'
+  issued:
+    - year: 2004
+  note: as
+  page: 1037–1046
+  PMID: '15067679'
+  title: >-
+    A method to obtain a near-minimal-volume molecular simulation of a
+    macromolecule, using periodic boundary conditions and rotational constraints
+  type: article-journal
+  volume: '25'
+
+- id: Berendsen1984
+  abstract: >-
+    In molecular dynamics (MD) simulations the need often arises to maintain
+    such parameters as temperature or pressure rather than energy and volume, or
+    to impose gradients for studying transport properties in nonequilibrium MD.
+    A method is described to realize coupling to an external bath with constant
+    temperature or pressure with adjustable time constants for the coupling. The
+    method is easily extendable to other variables and to gradients, and can be
+    applied also to polyatomic molecules involving internal constraints. The
+    influence of coupling time constants on dynamical variables is evaluated. A
+    leap-frog algorithm is presented for the general case involving constraints
+    with coupling to both a constant temperature and a constant pressure bath. ©
+    1984 American Institute of Physics.
+  author:
+    - family: Berendsen
+      given: H. J.C.
+    - family: Postma
+      given: J. P.M.
+    - family: Van Gunsteren
+      given: W. F.
+    - family: Dinola
+      given: A.
+    - family: Haak
+      given: J. R.
+  citation-key: Berendsen1984
+  container-title: The Journal of Chemical Physics
+  DOI: 10.1063/1.448118
+  ISSN: '00219606'
+  issue: '8'
+  issued:
+    - year: 1984
+  page: 3684–3690
+  title: Molecular dynamics with coupling to an external bath
+  type: article-journal
+  volume: '81'
+
+- id: Biarrotte-Sorin2006
+  abstract: >-
+    During the final stages of cell-wall synthesis in bacteria,
+    penicillin-binding proteins (PBPs) catalyse the cross-linking of peptide
+    chains from adjacent glycan strands of nascent peptidoglycan. We have
+    recently shown that this step can be bypassed by an l,d-transpeptidase,
+    which confers high-level β-lactam-resistance in Enterococcus faecium. The
+    resistance bypass leads to replacement of d-Ala4→d-Asx-l-Lys3 cross-links
+    generated by the PBPs by l-Lys3→d-Asx-l-Lys3 cross-links generated by the
+    l,d-transpeptidase. As the first structure of a member of this new
+    transpeptidase family, we have determined the crystal structure of a
+    fragment of the l,d-transpeptidase from E. faecium (Ldtfm217) at 2.4 Å
+    resolution. Ldtfm217 consists of two domains, the N-terminal domain, a new
+    mixed alpha-beta fold, and the ErfK_YbiS_YhnG C-terminal domain, a
+    representative of the mainly β class of protein structures. Residue Cys442
+    of the C-terminal domain has been proposed to be the catalytic residue
+    implicated in the cleavage of the l-Lys-d-Ala peptide bond. Surface analysis
+    of Ldtfm217 reveals that residue Cys442 is localized in a buried pocket and
+    is accessible by two paths on different sides of the protein. We propose
+    that the two paths to the catalytic residue Cys442 are the binding sites for
+    the acceptor and donor substrates of the l,d-transpeptidase. © 2006 Elsevier
+    Ltd. All rights reserved.
+  author:
+    - family: Biarrotte-Sorin
+      given: Sabrina
+    - family: Hugonnet
+      given: Jean Emmanuel
+    - family: Delfosse
+      given: Vanessa
+    - family: Mainardi
+      given: Jean Luc
+    - family: Gutmann
+      given: Laurent
+    - family: Arthur
+      given: Michel
+    - family: Mayer
+      given: Claudine
+  citation-key: Biarrotte-Sorin2006
+  container-title: Journal of Molecular Biology
+  DOI: 10.1016/j.jmb.2006.03.014
+  ISSN: '00222836'
+  issue: '3'
+  issued:
+    - year: 2006
+  page: 533–538
+  PMID: '16647082'
+  title: >-
+    Crystal structure of a novel <span
+    class="nocase">β</span>-lactam-insensitive peptidoglycan transpeptidase
+  type: article-journal
+  volume: '359'
+
+- id: Bielnicki2006
+  abstract: >-
+    The crystal structure of the product of the Bacillus subtilis ykuD gene was
+    solved by the multiwavelength anomalous dispersion (MAD) method and refined
+    using data to 2.0 Å resolution. The ykuD protein is a representative of a
+    distinctly prokaryotic and ubiquitous family found among both pathogenic and
+    nonpathogenic Gram-positive and Gram-negative bacteria. The deduced amino
+    acid sequence reveals the presence of an N-terminal LysM domain, which
+    occurs among enzymes involved in cell wall metabolism, and a novel, putative
+    catalytic domain with a highly conserved His/Cys-containing motif of
+    hitherto unknown structure. As the wild-type protein did not crystallize, a
+    double mutant was designed (Lys117Ala/Gln118Ala) to reduce excess surface
+    conformational entropy. As expected, the structure of the LysM domain is
+    similar to the NBIR structure reported for an analogous domain from
+    Escherichia coli murein transglycosylase MltD. The molecular model also
+    shows that the 112-residue-long C-terminal domain has a novel tertiary fold
+    consisting of a β-sandwich with two mixed sheets, one containing five
+    strands and the other, six strands. The two β-sheets form a cradle capped by
+    an α-helix. This domain contains a putative catalytic site with a tetrad of
+    invariant His123, Gly124, Cys139, and Arg141. The stereochemistry of this
+    active site shows similarities to peptidotransferases and sortases, and
+    suggests that the enzymes of the ykuD family may play an important role in
+    cell wall biology. © 2005 Wiley-Liss, Inc.
+  author:
+    - family: Bielnicki
+      given: Jakub
+    - family: Devedjiev
+      given: Yancho
+    - family: Derewenda
+      given: Urszula
+    - family: Dauter
+      given: Zbigniew
+    - family: Joachimiak
+      given: Andrzej
+    - family: Derewenda
+      given: Zygmunt S.
+  citation-key: Bielnicki2006
+  container-title: 'Proteins: Structure, Function and Genetics'
+  DOI: 10.1002/prot.20702
+  ISSN: '08873585'
+  issue: '1'
+  issued:
+    - year: 2006
+  page: 144–151
+  PMID: '16287140'
+  publisher: Wiley Online Library
+  title: >-
+    B. subtilis ykuD protein at 2.0 Å resolution: Insights into the structure
+    and function of a novel, ubiquitous family of bacterial enzymes
+  type: article-journal
+  volume: '62'
+
+- id: Billones2016
+  abstract: >-
+    Mycobacterium tuberculosis (Mtb) the main causative agent of tuberculosis,
+    is the main reason why this disease continues to be a global public health
+    threat. It is  therefore imperative to find a novel antitubercular drug
+    target that is unique to  the structural machinery or is essential to the
+    growth and survival of the  bacterium. One such target is the enzyme
+    l,d-transpeptidase 2, also known as  LdtMt2, a protein primarily responsible
+    for the catalysis of 3→3 cross-linkages  that make up the
+    mycolyl-arabinogalactan-peptidoglycan complex of Mtb. In this  study,
+    structure-based pharmacophore screening, molecular docking, and in silico 
+    toxicity evaluations were employed in screening compounds from a database
+    of  synthetic compounds. Out of the 4.5 million database compounds, 18
+    structures  were identified as high-scoring, high-binding hits with very
+    satisfactory  absorption, distribution, metabolism, excretion, and toxicity
+    properties. Two out  of the 18 compounds were further subjected to in vitro
+    bioactivity assays, with  one exhibiting a good inhibitory activity against
+    the Mtb H37Ra strain.
+  author:
+    - family: Billones
+      given: Junie B.
+    - family: Carrillo
+      given: Maria Constancia O.
+    - family: Organo
+      given: Voltaire G.
+    - family: Macalino
+      given: Stephani Joy Y.
+    - family: Sy
+      given: Jamie Bernadette A.
+    - family: Emnacen
+      given: Inno A.
+    - family: Clavio
+      given: Nina Abigail B.
+    - family: Concepcion
+      given: Gisela P.
+  citation-key: Billones2016
+  container-title: Drug design, development and therapy
+  container-title-short: Drug Des Devel Ther
+  DOI: 10.2147/DDDT.S97043
+  ISSN: 1177-8881
+  issued:
+    - year: 2016
+  language: eng
+  page: 1147-1157
+  PMCID: PMC4795573
+  PMID: '27042006'
+  title: >-
+    Toward antituberculosis drugs: in silico screening of synthetic compounds
+    against Mycobacterium tuberculosisl,d-transpeptidase 2.
+  type: article-journal
+  volume: '10'
+
+- id: Bjelkmar2010
+  accessed:
+    - year: 2022
+      month: 4
+      day: 29
+  author:
+    - family: Bjelkmar
+      given: Pär
+    - family: Larsson
+      given: Per
+    - family: Cuendet
+      given: Michel A.
+    - family: Hess
+      given: Berk
+    - family: Lindahl
+      given: Erik
+  citation-key: Bjelkmar2010
+  container-title: Journal of Chemical Theory and Computation
+  container-title-short: J. Chem. Theory Comput.
+  DOI: 10.1021/ct900549r
+  ISSN: 1549-9618, 1549-9626
+  issue: '2'
+  issued:
+    - year: 2010
+      month: 2
+      day: 9
+  language: en
+  page: 459-466
+  source: DOI.org (Crossref)
+  title: >-
+    Implementation of the CHARMM Force Field in GROMACS: Analysis of Protein
+    Stability Effects from Correction Maps, Virtual Interaction Sites, and Water
+    Models
+  title-short: Implementation of the CHARMM Force Field in GROMACS
+  type: article-journal
+  URL: https://pubs.acs.org/doi/10.1021/ct900549r
+  volume: '6'
+
+- id: Bohm1994
+  abstract: >-
+    A new simple empirical function has been developed that estimates the free
+    energy of binding for a given protein-ligand complex of known 3D structure.
+    The function takes into account hydrogen bonds, ionic interactions, the
+    lipophilic protein-ligand contact surface and the number of rotatable bonds
+    in the ligand. The dataset for the calibration of the function consists of
+    45 protein-ligand complexes. The new energy function reproduces the binding
+    constants (ranging from 2.5·10-2 to 4·10-14 M, corresponding to binding
+    energies between -9 and -76 kJ/mol) of the dataset with a standard deviation
+    of 7.9 kJ/mol, corresponding to 1.4 orders of magnitude in binding affinity.
+    The individual contributions to protein-ligand binding obtained from the
+    scoring function are: ideal neutral hydrogen bond: -4.7 kJ/mol; ideal ionic
+    interaction: -8.3 kJ/mol; lipophilic contact: -0.17 kJ/mol Å2; one rotatable
+    bond in the ligand: +1.4 kJ/mol. The function also contains a constant
+    contribution (+5.4 kJ/mol) which may be rationalized as loss of
+    translational and rotational entropy. The function can be evaluated very
+    fast and is therefore also suitable for application in a 3D database search
+    or de novo ligand design program such as LUDI.
+  author:
+    - family: Böhm
+      given: Hans-Joachim
+  citation-key: Bohm1994
+  container-title: Journal of Computer-Aided Molecular Design
+  container-title-short: Journal of Computer-Aided Molecular Design
+  DOI: 10.1007/BF00126743
+  ISSN: 1573-4951
+  issue: '3'
+  issued:
+    - year: 1994
+      month: 6
+      day: 1
+  page: 243-256
+  title: >-
+    The development of a simple empirical scoring function to estimate the
+    binding constant for a protein-ligand complex of known three-dimensional
+    structure
+  type: article-journal
+  URL: https://doi.org/10.1007/BF00126743
+  volume: '8'
+
+- id: Both2013
+  abstract: >-
+    The transpeptidase LtdMt2 catalyzes the formation of the (3-3) cross-links
+    characteristic of the peptidoglycan layer in the Mycobacterium tuberculosis
+    cell wall. Bioinformatics analysis suggests that the extramembrane part of
+    the enzyme consists of three domains: two smaller domains (denoted as A and
+    B domains) and a transpeptidase domain (the C domain) at the C-terminus. The
+    crystal structures of two fragments comprising the AB domains and the BC
+    domains have been determined. The structure of the BC module, which was
+    determined to 1.86 Å resolution using Se-SAD phasing, consists of the B
+    domain with an immunoglobulin-related fold and the catalytic domain
+    belonging to the ErfK/YbiS/YbnG fold family. The structure of the AB-domain
+    fragment, which was solved by molecular replacement to 1.45 Å resolution,
+    reveals that despite a lack of overall sequence identity the A domain is
+    structurally very similar to the B domain. Combining the structures of the
+    two fragments provides a view of the complete three-domain extramembrane
+    part of LdtMt2 and shows that the protein extends at least 80-100 Å from the
+    plasma membrane into the peptidoglycan layer and thus defines the maximal
+    distance at which cross-links are formed by this enzyme. The LdtMt-related
+    transpeptidases contain one or two immunoglobulin domains, which suggests
+    that these might serve as extender units to position the catalytic domain at
+    an appropriate distance from the membrane in the peptidoglycan layer. © 2013
+    International Union of Crystallography Printed in Singapore - all rights
+    reserved.
+  author:
+    - family: Böth
+      given: Dominic
+    - family: Steiner
+      given: Eva Maria
+    - family: Stadler
+      given: Daniela
+    - family: Lindqvist
+      given: Ylva
+    - family: Schnell
+      given: Robert
+    - family: Schneider
+      given: Gunter
+  citation-key: Both2013
+  container-title: 'Acta Crystallographica Section D: Biological Crystallography'
+  DOI: 10.1107/S0907444912049268
+  ISSN: '09074449'
+  issue: '3'
+  issued:
+    - year: 2013
+  page: 432–441
+  publisher: International Union of Crystallography
+  title: Structure of LdtMt2, an L,D-transpeptidase from mycobacterium tuberculosis
+  type: article-journal
+  volume: '69'
+
+- id: Both2013a
+  abstract: >-
+    The transpeptidase LtdMt2 catalyzes the formation of the (3-3) cross-links
+    characteristic of the peptidoglycan layer in the Mycobacterium tuberculosis
+    cell wall. Bioinformatics analysis suggests that the extramembrane part of
+    the enzyme consists of three domains: two smaller domains (denoted as A and
+    B domains) and a transpeptidase domain (the C domain) at the C-terminus. The
+    crystal structures of two fragments comprising the AB domains and the BC
+    domains have been determined. The structure of the BC module, which was
+    determined to 1.86 Å resolution using Se-SAD phasing, consists of the B
+    domain with an immunoglobulin-related fold and the catalytic domain
+    belonging to the ErfK/YbiS/YbnG fold family. The structure of the AB-domain
+    fragment, which was solved by molecular replacement to 1.45 Å resolution,
+    reveals that despite a lack of overall sequence identity the A domain is
+    structurally very similar to the B domain. Combining the structures of the
+    two fragments provides a view of the complete three-domain extramembrane
+    part of LdtMt2 and shows that the protein extends at least 80-100 Å from the
+    plasma membrane into the peptidoglycan layer and thus defines the maximal
+    distance at which cross-links are formed by this enzyme. The LdtMt-related
+    transpeptidases contain one or two immunoglobulin domains, which suggests
+    that these might serve as extender units to position the catalytic domain at
+    an appropriate distance from the membrane in the peptidoglycan layer. © 2013
+    International Union of Crystallography Printed in Singapore - all rights
+    reserved.
+  author:
+    - family: Böth
+      given: Dominic
+    - family: Steiner
+      given: Eva Maria
+    - family: Stadler
+      given: Daniela
+    - family: Lindqvist
+      given: Ylva
+    - family: Schnell
+      given: Robert
+    - family: Schneider
+      given: Gunter
+  citation-key: Both2013a
+  container-title: 'Acta Crystallographica Section D: Biological Crystallography'
+  DOI: 10.1107/S0907444912049268
+  ISSN: '09074449'
+  issue: '3'
+  issued:
+    - year: 2013
+  page: 432–441
+  publisher: International Union of Crystallography
+  title: Structure of LdtMt2, an L,D-transpeptidase from mycobacterium tuberculosis
+  type: article-journal
+  volume: '69'
+
+- id: Brunger2020
+  abstract: >-
+    X-PLOR is a highly sophisticated computer program that provides an interface
+    between theoretical foundations and experimental data in structural biology,
+    with specific emphasis on X-ray crystallography and nuclear magnetic
+    resonance spectroscopy in solution of biological macro-molecules. It is
+    intended primarily for researchers and students in the fields of
+    computational chemistry, structural biology, and computational molecular
+    biology.
+  author:
+    - family: Brünger
+      given: Axel T.
+  citation-key: Brunger2020
+  container-title: 'Нью-Хейвен (Коннектикут): Yale Univ Press'
+  ISBN: '0300054025'
+  issued:
+    - year: 1992
+  page: '39'
+  title: 'X-plor version 3.1: A system for x-ray crystallography and NMR'
+  type: article-journal
+
+- id: Case2005
+  abstract: >-
+    We describe the development, current features, and some directions for
+    future development of the Amber package of computer programs. This package
+    evolved from a program that was constructed in the late 1970s to do Assisted
+    Model Building with Energy Refinement, and now contains a group of programs
+    embodying a number of powerful tools of modern computational chemistry,
+    focused on molecular dynamics and free energy calculations of proteins,
+    nucleic acids, and carbohydrates. © 2005 Wiley Periodicals, Inc.
+  author:
+    - family: Case
+      given: David A.
+    - family: Cheatham
+      given: Thomas E.
+    - family: Darden
+      given: Tom
+    - family: Gohlke
+      given: Holger
+    - family: Luo
+      given: Ray
+    - family: Merz
+      given: Kenneth M.
+    - family: Onufriev
+      given: Alexey
+    - family: Simmerling
+      given: Carlos
+    - family: Wang
+      given: Bing
+    - family: Woods
+      given: Robert J.
+  citation-key: Case2005
+  container-title: Journal of Computational Chemistry
+  DOI: 10.1002/jcc.20290
+  ISSN: '01928651'
+  issue: '16'
+  issued:
+    - year: 2005
+  page: 1668–1688
+  PMID: '16200636'
+  title: The Amber biomolecular simulation programs
+  type: article-journal
+  volume: '26'
+
+- id: Cava2011
+  abstract: >-
+    Production of non-canonical D-amino acids (NCDAAs) in stationary phase
+    promotes remodelling of peptidoglycan (PG), the polymer that comprises the
+    bacterial cell wall. Impairment of NCDAAs production leads to excessive
+    accumulation of PG and hypersensitivity to osmotic shock; however, the
+    mechanistic bases for these phenotypes were not previously determined. Here,
+    we show that incorporation of NCDAAs into PG is a critical means by which
+    NCDAAs control PG abundance and strength. We identified and reconstituted in
+    vitro two (of at least three) distinct processes that mediate NCDAA
+    incorporation. Diverse bacterial phyla incorporate NCDAAs into their cell
+    walls, either through periplasmic editing of the mature PG or via
+    incorporation into PG precursor subunits in the cytosol. Production of
+    NCDAAs in Vibrio cholerae requires the stress response sigma factor RpoS,
+    suggesting that NCDAAs may aid bacteria in responding to varied
+    environmental challenges. The widespread capacity of diverse bacteria,
+    including non-producers, to incorporate NCDAAs suggests that these amino
+    acids may serve as both autocrine-and paracrine-like regulators of chemical
+    and physical properties of the cell wall in microbial communities. © 2011
+    European Molecular Biology Organization.
+  author:
+    - family: Cava
+      given: Felipe
+    - family: De Pedro
+      given: Miguel A.
+    - family: Lam
+      given: Hubert
+    - family: Davis
+      given: Brigid M.
+    - family: Waldor
+      given: Matthew K.
+  citation-key: Cava2011
+  container-title: EMBO Journal
+  DOI: 10.1038/emboj.2011.246
+  ISSN: '02614189'
+  issue: '16'
+  issued:
+    - year: 2011
+  page: 3442–3453
+  publisher: John Wiley & Sons, Ltd
+  title: >-
+    Distinct pathways for modification of the bacterial cell wall by
+    non-canonical D-amino acids
+  type: article-journal
+  volume: '30'
+
+- id: Chipot2007
+  abstract: >-
+    "This volume sets out to present a coherent account of the concepts that
+    underlie different approaches devised for the determination of free
+    energies. The book is aimed at a broad readership of graduate students and
+    researchers having a background in chemistry, physics, engineering and
+    physical biology."--Jacket.
+  archive: /z-wcorg/
+  author:
+    - family: Chipot
+      given: Ch.
+      suffix: Pohorille, A.,
+  citation-key: Chipot2007
+  event-place: Berlin; New York
+  ISBN: 978-3-540-38447-2 3-540-38447-2
+  issued:
+    - year: 2007
+  language: English
+  publisher: Springer
+  publisher-place: Berlin; New York
+  source: http://worldcat.org
+  title: 'Free energy calculations : theory and applications in chemistry and biology'
+  type: book
+
+- id: Cordillot2013
+  abstract: >-
+    The Mycobacterium tuberculosis peptidoglycan is cross-linked mainly by
+    l,d-transpeptidases (LDTs), which are efficiently inactivated by a single 
+    β-lactam class, the carbapenems. Development of carbapenems for
+    tuberculosis  treatment has recently raised considerable interest since
+    these drugs, in  association with the β-lactamase inhibitor clavulanic acid,
+    are uniformly active  against extensively drug-resistant M. tuberculosis and
+    kill both exponentially  growing and dormant forms of the bacilli. We have
+    purified the five  l,d-transpeptidase paralogues of M. tuberculosis (Mt1 to
+    -5) and compared their  activities with those of peptidoglycan fragments and
+    carbapenems. The five LDTs  were functional in vitro since they were active
+    in assays of peptidoglycan  cross-linking (Mt5), β-lactam acylation (Mt3),
+    or both (Mt1, Mt2, and Mt4). Mt3  was the only LDT that was inactive in the
+    cross-linking assay, suggesting that  this enzyme might be involved in other
+    cellular functions such as the anchoring  of proteins to peptidoglycan, as
+    shown in Escherichia coli. Inactivation of LDTs  by carbapenems is a
+    two-step reaction comprising reversible formation of a  tetrahedral
+    intermediate, the oxyanion, followed by irreversible rupture of the 
+    β-lactam ring that leads to formation of a stable acyl enzyme. Determination
+    of  the rate constants for these two steps revealed important differences
+    (up to  460-fold) between carbapenems, which affected the velocity of
+    oxyanion and acyl  enzyme formation. Imipenem inactivated LDTs more rapidly
+    than ertapenem, and both  drugs were more efficient than meropenem and
+    doripenem, indicating that  modification of the carbapenem side chain could
+    be used to optimize their  antimycobacterial activity.
+  author:
+    - family: Cordillot
+      given: Mathilde
+    - family: Dubée
+      given: Vincent
+    - family: Triboulet
+      given: Sébastien
+    - family: Dubost
+      given: Lionel
+    - family: Marie
+      given: Arul
+    - family: Hugonnet
+      given: Jean-Emmanuel
+    - family: Arthur
+      given: Michel
+    - family: Mainardi
+      given: Jean-Luc
+  citation-key: Cordillot2013
+  container-title: Antimicrobial agents and chemotherapy
+  container-title-short: Antimicrob Agents Chemother
+  DOI: 10.1128/AAC.01663-13
+  ISSN: 1098-6596 0066-4804
+  issue: '12'
+  issued:
+    - year: 2013
+      month: 12
+  language: eng
+  page: 5940-5945
+  PMCID: PMC3837840
+  PMID: '24041897'
+  title: >-
+    In vitro cross-linking of Mycobacterium tuberculosis peptidoglycan by
+    L,D-transpeptidases and inactivation of these enzymes by carbapenems.
+  type: article-journal
+  volume: '57'
+
+- id: Davidchack2009
+  abstract: >-
+    We present a new method for isothermal rigid body simulations using the
+    quaternion representation and Langevin dynamics. It can be combined with the
+    traditional Langevin or gradient (Brownian) dynamics for the translational
+    degrees of freedom to correctly sample the canonical distribution in a
+    simulation of rigid molecules. We propose simple, quasisymplectic
+    second-order numerical integrators and test their performance on the TIP4P
+    model of water. We also investigate the optimal choice of thermostat
+    parameters. © 2009 American Institute of Physics.
+  author:
+    - family: Davidchack
+      given: Ruslan L.
+    - family: Handel
+      given: Richard
+    - family: Tretyakov
+      given: M. V.
+  citation-key: Davidchack2009
+  container-title: Journal of Chemical Physics
+  DOI: 10.1063/1.3149788
+  ISSN: '00219606'
+  issue: '23'
+  issued:
+    - year: 2009
+  title: Langevin thermostat for rigid body dynamics
+  type: article-journal
+  volume: '130'
+
+- id: Dickson2014
+  author:
+    - family: Dickson
+      given: Callum J.
+    - family: Madej
+      given: Benjamin D.
+    - family: Skjevik
+      given: Åge A.
+    - family: Betz
+      given: Robin M.
+    - family: Teigen
+      given: Knut
+    - family: Gould
+      given: Ian R.
+    - family: Walker
+      given: Ross C.
+  citation-key: Dickson2014
+  container-title: Journal of Chemical Theory and Computation
+  container-title-short: J. Chem. Theory Comput.
+  DOI: 10.1021/ct4010307
+  ISSN: 1549-9618
+  issue: '2'
+  issued:
+    - year: 2014
+      month: 2
+      day: 11
+  page: 865-879
+  publisher: American Chemical Society
+  title: 'Lipid14: The Amber Lipid Force Field'
+  type: article-journal
+  URL: https://doi.org/10.1021/ct4010307
+  volume: '10'
+
+- id: Durant2002
+  abstract: >-
+    For a number of years MDL products have exposed both 166 bit and 960 bit
+    keysets based on 2D descriptors. These keysets were originally constructed
+    and optimized  for substructure searching. We report on improvements in the
+    performance of MDL  keysets which are reoptimized for use in molecular
+    similarity. Classification  performance for a test data set of 957 compounds
+    was increased from 0.65 for the  166 bit keyset and 0.67 for the 960 bit
+    keyset to 0.71 for a surprisal S/N pruned  keyset containing 208 bits and
+    0.71 for a genetic algorithm optimized keyset  containing 548 bits. We
+    present an overview of the underlying technology  supporting the definition
+    of descriptors and the encoding of these descriptors  into keysets. This
+    technology allows definition of descriptors as combinations of  atom
+    properties, bond properties, and atomic neighborhoods at various
+    topological  separations as well as supporting a number of custom
+    descriptors. These  descriptors can then be used to set one or more bits in
+    a keyset. We constructed  various keysets and optimized their performance in
+    clustering bioactive  substances. Performance was measured using methodology
+    developed by Briem and  Lessel. "Directed pruning" was carried out by
+    eliminating bits from the keysets  on the basis of random selection, values
+    of the surprisal of the bit, or values  of the surprisal S/N ratio of the
+    bit. The random pruning experiment highlighted  the insensitivity of keyset
+    performance for keyset lengths of more than 1000  bits. Contrary to initial
+    expectations, pruning on the basis of the surprisal  values of the various
+    bits resulted in keysets which underperformed those  resulting from random
+    pruning. In contrast, pruning on the basis of the surprisal  S/N ratio was
+    found to yield keysets which performed better than those resulting  from
+    random pruning. We also explored the use of genetic algorithms in the 
+    selection of optimal keysets. Once more the performance was only a weak
+    function  of keyset size, and the optimizations failed to identify a single
+    globally  optimal keyset. Instead multiple, equally optimal keysets could be
+    produced which  had relatively low overlap of the descriptors they encoded.
+  author:
+    - family: Durant
+      given: Joseph L.
+    - family: Leland
+      given: Burton A.
+    - family: Henry
+      given: Douglas R.
+    - family: Nourse
+      given: James G.
+  citation-key: Durant2002
+  container-title: Journal of chemical information and computer sciences
+  container-title-short: J Chem Inf Comput Sci
+  DOI: 10.1021/ci010132r
+  event-place: United States
+  ISSN: 0095-2338
+  issue: '6'
+  issued:
+    - literal: 2002 Nov-Dec
+  language: eng
+  page: 1273-1280
+  PMID: '12444722'
+  publisher-place: United States
+  title: Reoptimization of MDL keys for use in drug discovery.
+  type: article-journal
+  volume: '42'
+
+- id: Feller1995
+  abstract: >-
+    A new method for performing molecular dynamics simulations under constant
+    pressure is presented. In the method, which is based on the extended system
+    formalism introduced by Andersen, the deterministic equations of motion for
+    the piston degree of freedom are replaced by a Langevin equation; a suitable
+    choice of collision frequency then eliminates the unphysical "ringing" of
+    the volume associated with the piston mass. In this way it is similar to the
+    "weak coupling algorithm" developed by Berendsen and co-workers to perform
+    molecular dynamics simulation without piston mass effects. It is shown,
+    however, that the weak coupling algorithm induces artifacts into the
+    simulation which can be quite severe for inhomogeneous systems such as
+    aqueous biopolymers or liquid/liquid interfaces.
+  author:
+    - family: Feller
+      given: Scott E.
+    - family: Zhang
+      given: Yuhong
+    - family: Pastor
+      given: Richard W.
+    - family: Brooks
+      given: Bernard R.
+  citation-key: Feller1995
+  container-title: The Journal of Chemical Physics
+  DOI: 10.1063/1.470648
+  ISSN: '00219606'
+  issue: '11'
+  issued:
+    - year: 1995
+  page: 4613–4621
+  publisher: American Institute of Physics
+  title: 'Constant pressure molecular dynamics simulation: The Langevin piston method'
+  type: article-journal
+  volume: '103'
+
+- id: Galimzyanov2016
+  author:
+    - family: Галимзянов
+      given: Б.Н.
+    - family: Мокшин
+      given: А.В.
+  citation-key: Galimzyanov2016
+  event-place: Казань
+  issued:
+    - year: 2016
+  publisher: КФУ
+  publisher-place: Казань
+  title: 'Основы моделирования молекулярной динамики: учебное пособие'
+  type: book
+
+- id: gamess
+  accessed:
+    - year: 2020
+      month: 6
+      day: 18
+  author:
+    - family: Barca
+      given: Giuseppe M. J.
+    - family: Bertoni
+      given: Colleen
+    - family: Carrington
+      given: Laura
+    - family: Datta
+      given: Dipayan
+    - family: De Silva
+      given: Nuwan
+    - family: Deustua
+      given: J. Emiliano
+    - family: Fedorov
+      given: Dmitri G.
+    - family: Gour
+      given: Jeffrey R.
+    - family: Gunina
+      given: Anastasia O.
+    - family: Guidez
+      given: Emilie
+    - family: Harville
+      given: Taylor
+    - family: Irle
+      given: Stephan
+    - family: Ivanic
+      given: Joe
+    - family: Kowalski
+      given: Karol
+    - family: Leang
+      given: Sarom S.
+    - family: Li
+      given: Hui
+    - family: Li
+      given: Wei
+    - family: Lutz
+      given: Jesse J.
+    - family: Magoulas
+      given: Ilias
+    - family: Mato
+      given: Joani
+    - family: Mironov
+      given: Vladimir
+    - family: Nakata
+      given: Hiroya
+    - family: Pham
+      given: Buu Q.
+    - family: Piecuch
+      given: Piotr
+    - family: Poole
+      given: David
+    - family: Pruitt
+      given: Spencer R.
+    - family: Rendell
+      given: Alistair P.
+    - family: Roskop
+      given: Luke B.
+    - family: Ruedenberg
+      given: Klaus
+    - family: Sattasathuchana
+      given: Tosaporn
+    - family: Schmidt
+      given: Michael W.
+    - family: Shen
+      given: Jun
+    - family: Slipchenko
+      given: Lyudmila
+    - family: Sosonkina
+      given: Masha
+    - family: Sundriyal
+      given: Vaibhav
+    - family: Tiwari
+      given: Ananta
+    - family: Galvez Vallejo
+      given: Jorge L.
+    - family: Westheimer
+      given: Bryce
+    - family: Wloch
+      given: Marta
+    - family: Xu
+      given: Peng
+    - family: Zahariev
+      given: Federico
+    - family: Gordon
+      given: Mark S.
+  citation-key: gamess
+  container-title: The Journal of Chemical Physics
+  container-title-short: J. Chem. Phys.
+  DOI: 10.1063/5.0005188
+  ISSN: 0021-9606, 1089-7690
+  issue: '15'
+  issued:
+    - year: 2020
+      month: 4
+  language: english
+  note: 'as: gamess'
+  page: '154102'
+  title: >-
+    Recent developments in the general atomic and molecular electronic structure
+    system
+  type: article-journal
+  URL: http://aip.scitation.org/doi/10.1063/5.0005188
+  volume: '152'
+
+- id: globalTBReport
+  abstract: >-
+    Requests for permission to reproduce or translate WHO publications-whether
+    for sale or for non-commercial distribution-should be addressed to WHO Press
+    through the WHO website
+    (www.who.int/about/licensing/copyright_form/en/index.html). The designations
+    employed and the presentation of the material in this publication do not
+    imply the expression of any opinion whatsoever on the part of the World
+    Health Organization concerning the legal status of any country, territory,
+    city or area or of its authorities, or concerning the delimitation of its
+    frontiers or boundaries. Dotted and dashed lines on maps represent
+    approximate border lines for which there may not yet be full agreement.
+  author:
+    - literal: World Health Organization
+  citation-key: globalTBReport
+  DOI: .1037//0033-2909.I26.1.78
+  ISBN: '0000000000000'
+  issued:
+    - year: 2020
+  page: 1–261
+  title: Global tuberculosis report 2019
+  type: article-journal
+
+- id: Glowacki2009
+  abstract: >-
+    We present a simple, comprehensive technique for accelerating simulation of
+    rare events and calculating free energy profiles in molecular dynamics (MD)
+    simulations. The technique is based on two related and complementary methods
+    (AXD and BXD), which provide both thermodynamic and kinetic information
+    along some reaction coordinate. The idea is to slice the reaction coordinate
+    into several "boxes", and then run trajectories, locking them consecutively
+    within each box to generate kinetic rate coefficients for exchange between
+    neighboring boxes. In this way, a reaction coordinate may be efficiently
+    explored, including those regions that would otherwise be visited only
+    rarely. Combined with a simple and exact method for renormalizing the
+    statistics obtained within each box, the box-to-box rate coefficients permit
+    efficient free energy mapping. Tests carried out on model peptides
+    demonstrate the utility of the method as well as the validity of the
+    detailed balance assumption that underpins the derivations. © 2009 American
+    Chemical Society.
+  author:
+    - family: Glowacki
+      given: David R.
+    - family: Paci
+      given: Emanuele
+    - family: Shalashilin
+      given: Dmitrii V.
+  citation-key: Glowacki2009
+  container-title: Journal of Physical Chemistry B
+  DOI: 10.1021/jp9074898
+  ISSN: '15206106'
+  issue: '52'
+  issued:
+    - year: 2009
+  page: 16603–16611
+  publisher: ACS Publications
+  title: >-
+    Boxed molecular dynamics: A simple and general technique for accelerating
+    rare event kinetics and mapping free energy in large molecular systems
+  type: article-journal
+  volume: '113'
+
+- id: Gotz2012
+  abstract: >-
+    We present an implementation of generalized Born implicit solvent all-atom
+    classical molecular dynamics (MD) within the AMBER program package that runs
+    entirely on CUDA enabled NVIDIA graphics processing units (GPUs). We discuss
+    the algorithms that are used to exploit the processing power of the GPUs and
+    show the performance that can be achieved in comparison to simulations on
+    conventional CPU clusters. The implementation supports three different
+    precision models in which the contributions to the forces are calculated in
+    single precision floating point arithmetic but accumulated in double
+    precision (SPDP), or everything is computed in single precision (SPSP) or
+    double precision (DPDP). In addition to performance, we have focused on
+    understanding the implications of the different precision models on the
+    outcome of implicit solvent MD simulations. We show results for a range of
+    tests including the accuracy of single point force evaluations and energy
+    conservation as well as structural properties pertainining to protein
+    dynamics. The numerical noise due to rounding errors within the SPSP
+    precision model is sufficiently large to lead to an accumulation of errors
+    which can result in unphysical trajectories for long time scale simulations.
+    We recommend the use of the mixed-precision SPDP model since the numerical
+    results obtained are comparable with those of the full double precision DPDP
+    model and the reference double precision CPU implementation but at
+    significantly reduced computational cost. Our implementation provides
+    performance for GB simulations on a single desktop that is on par with, and
+    in some cases exceeds, that of traditional supercomputers. © 2012 American
+    Chemical Society.
+  author:
+    - family: Götz
+      given: Andreas W.
+    - family: Williamson
+      given: Mark J.
+    - family: Xu
+      given: Dong
+    - family: Poole
+      given: Duncan
+    - family: Le Grand
+      given: Scott
+    - family: Walker
+      given: Ross C.
+  citation-key: Gotz2012
+  container-title: Journal of Chemical Theory and Computation
+  DOI: 10.1021/ct200909j
+  ISSN: '15499618'
+  issue: '5'
+  issued:
+    - year: 2012
+  page: 1542–1555
+  title: >-
+    Routine microsecond molecular dynamics simulations with AMBER on GPUs. 1.
+    generalized born
+  type: article-journal
+  volume: '8'
+
+- id: gromacs2022
+  author:
+    - family: Bauer
+      given: Paul
+    - family: Hess
+      given: Berk
+    - family: Lindahl
+      given: Erik
+  citation-key: gromacs2022
+  DOI: 10.5281/zenodo.6103568
+  issued:
+    - year: 2022
+      month: 2
+  note: 'as: gromacs2022'
+  publisher: Zenodo
+  title: GROMACS 2022 manual
+  type: document
+  URL: https://doi.org/10.5281/zenodo.6103568
+
+- id: Gupta2010
+  abstract: >-
+    The peptidoglycan layer is a vital component of the bacterial cell wall. The
+    existing paradigm describes the peptidoglycan network as a static structure
+    that is cross-linked predominantly by 43 transpeptide linkages. However, the
+    nonclassical 33 linkages predominate the transpeptide networking of the
+    peptidoglycan layer of nonreplicating Mycobacterium tuberculosis. The
+    molecular basis of these linkages and their role in the physiology of the
+    peptidoglycan layer, virulence and susceptibility of M. tuberculosis to
+    drugs remain undefined. Here we identify MT2594 as an L,D-transpeptidase
+    that generates 33 linkages in M. tuberculosis. We show that the loss of this
+    protein leads to altered colony morphology, loss of virulence and increased
+    susceptibility to amoxicillin-clavulanate during the chronic phase of
+    infection. This suggests that 33 cross-linking is vital to the physiology of
+    the peptidoglycan layer. Although a functional homolog exists, expression of
+    ldt Mt2 is dominant throughout the growth phases of M. tuberculosis. 43
+    transpeptide linkages are targeted by one of the most widely used classes of
+    antibacterial drugs in human clinical use today, Β-lactams. Recently,
+    meropenem-clavulanate was shown to be effective against drug-resistant M.
+    tuberculosis. Our study suggests that a combination of L,D-transpeptidase
+    and Β-lactamase inhibitors could effectively target persisting bacilli
+    during the chronic phase of tuberculosis. © 2010 Nature America, Inc. All
+    rights reserved.
+  author:
+    - family: Gupta
+      given: Radhika
+    - family: Lavollay
+      given: Marie
+    - family: Mainardi
+      given: Jean Luc
+    - family: Arthur
+      given: Michel
+    - family: Bishai
+      given: William R.
+    - family: Lamichhane
+      given: Gyanu
+  citation-key: Gupta2010
+  container-title: Nature Medicine
+  DOI: 10.1038/nm.2120
+  ISSN: '10788956'
+  issue: '4'
+  issued:
+    - year: 2010
+  page: 466–469
+  title: >-
+    The Mycobacterium tuberculosis protein LdtMt2 is a nonclassical
+    transpeptidase required for virulence and resistance to amoxicillin
+  type: article-journal
+  volume: '16'
+
+- id: Guvench2008
+  abstract: >-
+    In the context of molecular dynamics simulations of proteins, the term
+    "force field" refers to the combination of a mathematical formula and
+    associated parameters that are used to describe the energy of the protein as
+    a function of its atomic coordinates. In this review, we describe the
+    functional forms and parameterization protocols of the widely used
+    biomolecular force fields Amber, CHARMM, GROMOS, and OPLS-AA. We also
+    summarize the ability of various readily available noncommercial molecular
+    dynamics packages to perform simulations using these force fields, as well
+    as to use modern methods for the generation of constant-temperature,
+    constant-pressure ensembles and to treat long-range interactions. Finally,
+    we finish with a discussion of the ability of these force fields to support
+    the modeling of proteins in conjunction with nucleic acids, lipids,
+    carbohydrates, and/or small molecules.
+  author:
+    - family: Guvench
+      given: Olgun
+    - family: MacKerell
+      given: Alexander D.
+  citation-key: Guvench2008
+  container-title: Methods in Molecular Biology (Clifton, N.J.)
+  container-title-short: Methods Mol Biol
+  DOI: 10.1007/978-1-59745-177-2_4
+  ISSN: 1064-3745
+  issued:
+    - year: 2008
+  language: eng
+  page: 63-88
+  PMID: '18446282'
+  source: PubMed
+  title: Comparison of protein force fields for molecular dynamics simulations
+  type: article-journal
+  volume: '443'
+
+- id: Hett2008
+  abstract: >-
+    The genus Mycobacterium is best known for its two major pathogenic species,
+    M. tuberculosis and M. leprae, the causative agents of two of the world's
+    oldest diseases, tuberculosis and leprosy, respectively. M. tuberculosis
+    kills approximately two million people each year and is thought to latently
+    infect one-third of the world's population. One of the most remarkable
+    features of the nonsporulating M. tuberculosis is its ability to remain
+    dormant within an individual for decades before reactivating into active
+    tuberculosis. Thus, control of cell division is a critical part of the
+    disease. The mycobacterial cell wall has unique characteristics and is
+    impermeable to a number of compounds, a feature in part responsible for
+    inherent resistance to numerous drugs. The complexity of the cell wall
+    represents a challenge to the organism, requiring specialized mechanisms to
+    allow cell division to occur. Besides these mycobacterial specializations,
+    all bacteria face some common challenges when they divide. First, they must
+    maintain their normal architecture during and after cell division. In the
+    case of mycobacteria, that means synthesizing the many layers of complex
+    cell wall and maintaining their rod shape. Second, they need to coordinate
+    synthesis and breakdown of cell wall components to maintain integrity
+    throughout division. Finally, they need to regulate cell division in
+    response to environmental stimuli. Here we discuss these challenges and the
+    mechanisms that mycobacteria employ to meet them. Because these organisms
+    are difficult to study, in many cases we extrapolate from information known
+    for gram-negative bacteria or more closely related GC-rich gram-positive
+    organisms.
+  author:
+    - family: Hett
+      given: Erik C.
+    - family: Rubin
+      given: Eric J.
+  citation-key: Hett2008
+  container-title: Microbiology and Molecular Biology Reviews
+  DOI: 10.1128/mmbr.00028-07
+  ISSN: 1092-2172
+  issue: '1'
+  issued:
+    - year: 2008
+  page: 126–156
+  PMID: '18322037'
+  title: 'Bacterial growth and cell division: a Mycobacterial perspective'
+  type: article-journal
+  volume: '72'
+
+- id: Hoover1985
+  abstract: >-
+    Nosé has modified Newtonian dynamics so as to reproduce both the canonical
+    and the isothermal-isobaric probability densities in the phase space of an
+    N-body system. He did this by scaling time (with s) and distance (with V1/D
+    in D dimensions) through Lagrangian equations of motion. The dynamical
+    equations describe the evolution of these two scaling variables and their
+    two conjugate momenta ps and pv. Here we develop a slightly different set of
+    equations, free of time scaling. We find the dynamical steady-state
+    probability density in an extended phase space with variables x, px, V, ,
+    and , where the x are reduced distances and the two variables and act as
+    thermodynamic friction coefficients. We find that these friction
+    coefficients have Gaussian distributions. From the distributions the extent
+    of small-system non-Newtonian behavior can be estimated. We illustrate the
+    dynamical equations by considering their application to the simplest
+    possible case, a one-dimensional classical harmonic oscillator. © 1985 The
+    American Physical Society.
+  author:
+    - family: Hoover
+      given: William G.
+  citation-key: Hoover1985
+  container-title: Physical Review A
+  DOI: 10.1103/PhysRevA.31.1695
+  ISSN: '10502947'
+  issue: '3'
+  issued:
+    - year: 1985
+  page: 1695–1697
+  PMID: '9895674'
+  title: 'Canonical dynamics: Equilibrium phase-space distributions'
+  type: article-journal
+  volume: '31'
+
+- id: Hugonnet2009
+  abstract: >-
+    β-lactam antibiotics are ineffective against Mycobacterium tuberculosis,
+    being rapidly hydrolyzed by the chromosomally encoded blaC gene product. The
+    carbapenem class of β-lactams are very poor substrates for BlaC, allowing us
+    to determine the three-dimensional structure of the covalent BlaC-meropenem
+    covalent complex at 1.8 angstrom resolution. When meropenem was combined
+    with the β-lactamase inhibitor clavulanate, potent activity against
+    laboratory strains of M. tuberculosis was observed [minimum inhibitory
+    concentration (MICmeropenem) less than 1 microgram per milliliter], and
+    sterilization of aerobically grown cultures was observed within 14 days. In
+    addition, this combination exhibited inhibitory activity against
+    anaerobically grown cultures that mimic the "persistent" state and inhibited
+    the growth of 13 extensively drug-resistant strains of M. tuberculosis at
+    the same levels seen for drug-susceptible strains. Meropenem and clavulanate
+    are Food and Drug Administration - approved drugs and could potentially be
+    used to treat patients with currently untreatable disease.
+  author:
+    - family: Hugonnet
+      given: Jean Emmanuel
+    - family: Tremblay
+      given: Lee W.
+    - family: Boshoff
+      given: Helena I.
+    - family: Barry
+      given: Clifton E.
+    - family: Blanchard
+      given: John S.
+  citation-key: Hugonnet2009
+  container-title: Science (New York, N.Y.)
+  container-title-short: Science
+  DOI: 10.1126/science.1167498
+  ISSN: '00368075'
+  issue: '5918'
+  issued:
+    - year: 2009
+  page: 1215–1218
+  PMID: '19251630'
+  title: >-
+    Meropenem-clavulanate is effective against extensively drug-resistant
+    Mycobacterium tuberculosis
+  type: article-journal
+  volume: '323'
+
+- id: Humphrey1996
+  abstract: >-
+    VMD is a molecular graphics program designed for the display and analysis of
+    molecular assemblies, in particular biopolymers such as proteins and nucleic
+    acids. VMD can simultaneously display any number of structures using a wide
+    variety of rendering styles and coloring methods. Molecules are displayed as
+    one or more 'representations,' in which each representation embodies a
+    particular rendering method and coloring scheme for a selected subset of
+    atoms. The atoms displayed in each representation are chosen using an
+    extensive atom selection syntax, which includes Boolean operators and
+    regular expressions. VMD provides a complete graphical user interface for
+    program control, as well as a text interface using the Tcl embeddable parser
+    to allow for complex scripts with variable substitution, control loops, and
+    function calls. Full session logging is supported, which produces a VMD
+    command script for later playback. High-resolution raster images of
+    displayed molecules may be produced by generating input scripts for use by a
+    number of photorealistic image-rendering applications. VMD has also been
+    expressly designed with the ability to animate molecular dynamics (MD)
+    simulation trajectories, imported either from files or from a direct
+    connection to a running MD simulation. VMD is the visualization component of
+    MDScope, a set of tools for interactive problem solving in structural
+    biology, which also includes the parallel MD program NAMD, and the MDCOMM
+    software used to connect the visualization and simulation programs. VMD is
+    written in C++, using an object-oriented design; the program, including
+    source code and extensive documentation, is freely available via anonymous
+    ftp and through the World Wide Web.
+  author:
+    - family: Humphrey
+      given: William
+    - family: Dalke
+      given: Andrew
+    - family: Schulten
+      given: Klaus
+  citation-key: Humphrey1996
+  container-title: Journal of Molecular Graphics
+  DOI: 10.1016/0263-7855(96)00018-5
+  ISSN: '02637855'
+  issue: '1'
+  issued:
+    - year: 1996
+  page: 33–38
+  PMID: '8744570'
+  title: 'VMD: Visual molecular dynamics'
+  type: article-journal
+  volume: '14'
+
+- id: Hunter1990
+  author:
+    - family: Hunter
+      given: Christopher A.
+    - family: Sanders
+      given: Jeremy K. M.
+  citation-key: Hunter1990
+  container-title: Journal of the American Chemical Society
+  container-title-short: J. Am. Chem. Soc.
+  DOI: 10.1021/ja00170a016
+  ISSN: 0002-7863
+  issue: '14'
+  issued:
+    - year: 1990
+      month: 7
+      day: 1
+  page: 5525-5534
+  publisher: American Chemical Society
+  title: The nature of .pi.-.pi. interactions
+  type: article-journal
+  URL: https://doi.org/10.1021/ja00170a016
+  volume: '112'
+
+- id: icd11tb
+  author:
+    - literal: International Classification of Diseases 11th Revision
+  citation-key: icd11tb
+  issued:
+    - year: 2019
+  note: 'as: icd11tb'
+  publisher: World Health Organization
+  title: ICD-11 Tuberculosis
+  type: document
+  URL: id.who.int/icd/entity/2072728114
+
+- id: Jing2019
+  abstract: >-
+    Realistic modeling of biomolecular systems requires an accurate treatment of
+    electrostatics, including electronic polarization. Due to recent advances in
+    physical models, simulation algorithms, and computing hardware, biomolecular
+    simulations with advanced force fields at biologically relevant timescales
+    are becoming increasingly promising. These advancements have not only led to
+    new biophysical insights but also afforded opportunities to advance our
+    understanding of fundamental intermolecular forces. This article describes
+    the recent advances and applications, as well as future directions, of
+    polarizable force fields in biomolecular simulations.
+  author:
+    - family: Jing
+      given: Zhifeng
+    - family: Liu
+      given: Chengwen
+    - family: Cheng
+      given: Sara Y.
+    - family: Qi
+      given: Rui
+    - family: Walker
+      given: Brandon D.
+    - family: Piquemal
+      given: Jean-Philip
+    - family: Ren
+      given: Pengyu
+  citation-key: Jing2019
+  container-title: Annual Review of Biophysics
+  DOI: 10.1146/annurev-biophys-070317-033349
+  issue: '1'
+  issued:
+    - year: 2019
+  page: 371-394
+  title: >-
+    Polarizable force fields for biomolecular simulations: Recent advances and
+    applications
+  type: article-journal
+  URL: https://doi.org/10.1146/annurev-biophys-070317-033349
+  volume: '48'
+
+- id: Jorgensen1981
+  author:
+    - family: Jorgensen
+      given: William L.
+  citation-key: Jorgensen1981
+  container-title: Journal of the American Chemical Society
+  container-title-short: J. Am. Chem. Soc.
+  DOI: 10.1021/ja00392a016
+  ISSN: 0002-7863
+  issue: '2'
+  issued:
+    - year: 1981
+      month: 1
+      day: 1
+  page: 335-340
+  publisher: American Chemical Society
+  title: >-
+    Quantum and statistical mechanical studies of liquids. 10. Transferable
+    intermolecular potential functions for water, alcohols, and ethers.
+    Application to liquid water
+  type: article-journal
+  URL: https://doi.org/10.1021/ja00392a016
+  volume: '103'
+
+- id: Jorgensen1983
+  accessed:
+    - year: 2022
+      month: 4
+      day: 27
+  author:
+    - family: Jorgensen
+      given: William L.
+    - family: Chandrasekhar
+      given: Jayaraman
+    - family: Madura
+      given: Jeffry D.
+    - family: Impey
+      given: Roger W.
+    - family: Klein
+      given: Michael L.
+  citation-key: Jorgensen1983
+  container-title: The Journal of Chemical Physics
+  container-title-short: J. Chem. Phys.
+  DOI: 10.1063/1.445869
+  ISSN: 0021-9606
+  issue: '2'
+  issued:
+    - year: 1983
+      month: 7
+      day: 15
+  page: 926-935
+  publisher: American Institute of Physics
+  title: Comparison of simple potential functions for simulating liquid water
+  type: article-journal
+  URL: https://doi.org/10.1063/1.445869
+  volume: '79'
+
+- id: Jumper2021
+  abstract: "Proteins are essential to life, and understanding their structure can facilitate a mechanistic understanding of their function. Through an enormous experimental effort1–4, the structures of around 100,000 unique proteins have been determined5, but this represents a small fraction of the billions of known protein sequences6,7. Structural coverage is bottlenecked by the months to years of painstaking effort required to determine a single protein structure. Accurate computational approaches are needed to address this gap and to enable large-scale structural bioinformatics. Predicting the three-dimensional structure that a protein will adopt based solely on its amino acid sequence—the structure prediction component of the ‘protein folding problem’8—has been an important open research problem for more than 50\_years9. Despite recent progress10–14, existing methods fall far\_short of atomic accuracy, especially when no homologous structure is available. Here we provide the first computational method that can regularly predict protein structures with atomic accuracy even in cases in which no similar structure is known. We validated an entirely redesigned version of our neural network-based model, AlphaFold, in the challenging 14th Critical Assessment of protein Structure Prediction (CASP14)15, demonstrating accuracy competitive with experimental structures in a majority of cases and greatly outperforming other methods. Underpinning the latest version of AlphaFold is a novel machine learning approach that incorporates physical and biological knowledge about protein structure, leveraging multi-sequence alignments, into the design of the deep learning algorithm."
+  author:
+    - family: Jumper
+      given: John
+    - family: Evans
+      given: Richard
+    - family: Pritzel
+      given: Alexander
+    - family: Green
+      given: Tim
+    - family: Figurnov
+      given: Michael
+    - family: Ronneberger
+      given: Olaf
+    - family: Tunyasuvunakool
+      given: Kathryn
+    - family: Bates
+      given: Russ
+    - family: Žídek
+      given: Augustin
+    - family: Potapenko
+      given: Anna
+    - family: Bridgland
+      given: Alex
+    - family: Meyer
+      given: Clemens
+    - family: Kohl
+      given: Simon A. A.
+    - family: Ballard
+      given: Andrew J.
+    - family: Cowie
+      given: Andrew
+    - family: Romera-Paredes
+      given: Bernardino
+    - family: Nikolov
+      given: Stanislav
+    - family: Jain
+      given: Rishub
+    - family: Adler
+      given: Jonas
+    - family: Back
+      given: Trevor
+    - family: Petersen
+      given: Stig
+    - family: Reiman
+      given: David
+    - family: Clancy
+      given: Ellen
+    - family: Zielinski
+      given: Michal
+    - family: Steinegger
+      given: Martin
+    - family: Pacholska
+      given: Michalina
+    - family: Berghammer
+      given: Tamas
+    - family: Bodenstein
+      given: Sebastian
+    - family: Silver
+      given: David
+    - family: Vinyals
+      given: Oriol
+    - family: Senior
+      given: Andrew W.
+    - family: Kavukcuoglu
+      given: Koray
+    - family: Kohli
+      given: Pushmeet
+    - family: Hassabis
+      given: Demis
+  citation-key: Jumper2021
+  container-title: Nature
+  container-title-short: Nature
+  DOI: 10.1038/s41586-021-03819-2
+  ISSN: 1476-4687
+  issue: '7873'
+  issued:
+    - year: 2021
+      month: 8
+      day: 1
+  page: 583-589
+  title: Highly accurate protein structure prediction with AlphaFold
+  type: article-journal
+  URL: https://doi.org/10.1038/s41586-021-03819-2
+  volume: '596'
+
+- id: Kirschner2008
+  abstract: >-
+    A new derivation of the GLYCAM06 force field, which removes its previous
+    specificity for carbohydrates, and its dependency on the AMBER force field
+    and parameters, is presented. AU pertinent force field terms have been
+    explicitly specified and so no default or generic parameters are employed.
+    The new GLYCAM is no longer limited to any particular class of biomolecules,
+    but is extendible to all molecular classes in the spirit of a smallmolecule
+    force field. The torsion terms in the present work were all derived from
+    quantum mechanical data from a collection of minimal molecular fragments and
+    related small molecules. For carbohydrates, there is now a single parameter
+    set applicable to both α- and β-anomers and to all monosaccharide ring sizes
+    and conformations. We demonstrate that deriving dihedral parameters by
+    fitting to QM data for internal rotational energy curves for representative
+    small molecules generally leads to correct rotamer populations in molecular
+    dynamics simulations, and that this approach removes the need for phase
+    corrections in the dihedral terms. However, we note that there are cases
+    where this approach is inadequate. Reported here are the basic components of
+    the new force field as well as an illustration of its extension to
+    carbohydrates. In addition to reproducing the gas-phase properties of an
+    array of small test molecules, condensed-phase simulations employing
+    GLYCAM06 are shown to reproduce rotamer populations for key small molecules
+    and representative biopolymer building blocks in explicit water, as well as
+    crystalline lattice properties, such as unit cell dimensions, and
+    vibrational frequencies. © 2007 Wiley Periodicals, Inc.
+  author:
+    - family: Kirschner
+      given: Karl N.
+    - family: Yongye
+      given: Austin B.
+    - family: Tschampel
+      given: Sarah M.
+    - family: González-Outeiriño
+      given: Jorge
+    - family: Daniels
+      given: Charlisa R.
+    - family: Foley
+      given: B. Lachele
+    - family: Woods
+      given: Robert J.
+  citation-key: Kirschner2008
+  container-title: Journal of Computational Chemistry
+  DOI: 10.1002/jcc.20820
+  ISSN: '01928651'
+  issue: '4'
+  issued:
+    - year: 2008
+  page: 622–655
+  PMID: '17849372'
+  title: 'GLYCAM06: A generalizable biomolecular force field. carbohydrates'
+  type: article-journal
+  volume: '29'
+
+- id: Kmiecik2016
+  author:
+    - family: Kmiecik
+      given: Sebastian
+    - family: Gront
+      given: Dominik
+    - family: Kolinski
+      given: Michal
+    - family: Wieteska
+      given: Lukasz
+    - family: Dawid
+      given: Aleksandra Elzbieta
+    - family: Kolinski
+      given: Andrzej
+  citation-key: Kmiecik2016
+  container-title: Chemical Reviews
+  container-title-short: Chem. Rev.
+  DOI: 10.1021/acs.chemrev.6b00163
+  ISSN: 0009-2665
+  issue: '14'
+  issued:
+    - year: 2016
+      month: 7
+      day: 27
+  page: 7898-7936
+  publisher: American Chemical Society
+  title: Coarse-Grained Protein Models and Their Applications
+  type: article-journal
+  URL: https://doi.org/10.1021/acs.chemrev.6b00163
+  volume: '116'
+
+- id: Kumar2012
+  abstract: >-
+    Carbapenems such as meropenem are being investigated for their potential
+    therapeutic utility against highly drug-resistant tuberculosis. These
+    β-lactams target the transpeptidases that introduce interpeptide cross-links
+    into bacterial peptidoglycan thereby controlling rigidity of the bacterial
+    envelope. Treatment of Mycobacterium tuberculosis (Mtb) with the β-lactamase
+    inhibitor clavulanate together with meropenem resulted in rapid, polar, cell
+    lysis releasing cytoplasmic contents. In Mtb it has been previously
+    demonstrated that 3-3 cross-linkages [involving two diaminopimelate (DAP)
+    molecules] predominate over 4-3 cross-linkages (involving one DAP and one
+    D-alanine) in stationary-phase cells. We purified and analysed peptidoglycan
+    from Mtb and found that 3-3 cross-linkages predominate throughout all growth
+    phases and the ratio of 4-3/3-3 linkages does not vary significantly under
+    any growth condition. Meropenem treatment was accompanied by a dramatic
+    accumulation of unlinked pentapeptide stems with no change in the
+    tetrapeptide pools, suggesting that meropenem inhibits both a
+    D,D-carboxypeptidase and an L,D-transpeptidase. We purified a candidate
+    D,D-carboxypeptidase DacB2 and showed that meropenem indeed directly
+    inhibits this enzyme by forming a stable adduct at the enzyme active site.
+    These results suggest that the rapid lysis of meropenem-treated cells is the
+    result of synergistically inhibiting the transpeptidases that introduce
+    3,3-cross-links while simultaneously limiting the pool of available
+    substrates available for cross-linking. Published 2012. This article is a
+    U.S. Government work and is in the public domain in the USA..
+  author:
+    - family: Kumar
+      given: Pradeep
+    - family: Arora
+      given: Kriti
+    - family: Lloyd
+      given: John R.
+    - family: Lee
+      given: Ill Y.
+    - family: Nair
+      given: Vinod
+    - family: Fischer
+      given: Elizabeth
+    - family: Boshoff
+      given: Helena I.M.
+    - family: Barry
+      given: Clifton E.
+  citation-key: Kumar2012
+  container-title: Molecular Microbiology
+  DOI: 10.1111/j.1365-2958.2012.08199.x
+  ISSN: 0950382X
+  issue: '2'
+  issued:
+    - year: 2012
+  page: 367–381
+  publisher: Wiley Online Library
+  title: >-
+    Meropenem inhibits D,D-carboxypeptidase activity in Mycobacterium
+    tuberculosis
+  type: article-journal
+  volume: '86'
+
+- id: Limongelli2013
+  abstract: >-
+    A detailed description of the events ruling ligand/protein interaction and
+    an accurate estimation of the drug affinity to its target is of great help
+    in speeding drug discovery strategies. We have developed a
+    metadynamics-based approach, named funnel metady-namics, that allows the
+    ligandtoenhance the samplingof the target binding sites and its solvated
+    states. This method leads to an efficient characterization of the binding
+    free-energy surface and an accurate calculation of the absolute
+    protein-ligand binding free energy. We illustrate our protocol in two
+    systems, benzamidine/ trypsin and SC-558/cyclooxygenase 2. In both cases,
+    the X-ray conformation has been found as the lowest free-energy pose, and
+    the computed protein-ligand binding free energy in good agreement with
+    experiments. Furthermore, funnel metadynamics unveils important information
+    about the binding process, suchasthe presence of alternative binding modes
+    and the role of waters. The results achieved at an affordable computational
+    cost make funnel meta-dynamics a valuable method for drug discovery and for
+    dealing with a variety of problems in chemistry, physics, and material
+    science.
+  author:
+    - family: Limongelli
+      given: Vittorio
+    - family: Bonomi
+      given: Massimiliano
+    - family: Parrinello
+      given: Michele
+  citation-key: Limongelli2013
+  container-title: >-
+    Proceedings of the National Academy of Sciences of the United States of
+    America
+  DOI: 10.1073/pnas.1303186110
+  ISSN: '10916490'
+  issue: '16'
+  issued:
+    - year: 2013
+  page: 6358–6363
+  title: Funnel metadynamics as accurate binding free-energy method
+  type: article-journal
+  volume: '110'
+
+- id: Liu2018
+  author:
+    - family: Liu
+      given: Xuewei
+    - family: Shi
+      given: Danfeng
+    - family: Zhou
+      given: Shuangyan
+    - family: Liu
+      given: Hongli
+    - family: Liu
+      given: Huanxiang
+    - family: Yao
+      given: Xiaojun
+  citation-key: Liu2018
+  container-title: Expert Opinion on Drug Discovery
+  DOI: 10.1080/17460441.2018.1403419
+  issue: '1'
+  issued:
+    - year: 2018
+  page: 23-37
+  title: Molecular dynamics simulations and novel drug discovery
+  type: article-journal
+  URL: https://doi.org/10.1080/17460441.2018.1403419
+  volume: '13'
+
+- id: Liu2020
+  abstract: "As the number of elucidated protein structures is rapidly increasing, the growing data call for methods to efficiently exploit the structural information for biological and pharmaceutical purposes. Given the three-dimensional (3D) structure of a protein and a ligand, predicting their binding sites and affinity are a key task for computer-aided drug discovery. To address this task, a variety of docking tools have been developed. Most of them focus on docking in the preset binding sites given by users. To automatically predict binding modes without information about binding sites, we developed a user-friendly blind docking web server, named CB-Dock, which predicts binding sites of a given protein and calculates the centers and sizes with a novel\_curvature-based cavity detection approach, and performs docking with a popular docking program, Autodock Vina. This method was carefully optimized and achieved ~70% success rate for the top-ranking poses whose root mean square deviation (RMSD) were within 2 Å from the X-ray pose, which outperformed the state-of-the-art blind docking tools in our benchmark tests. CB-Dock offers an interactive 3D visualization of results, and is freely available at http://cao.labshare.cn/cb-dock/."
+  author:
+    - family: Liu
+      given: Yang
+    - family: Grimm
+      given: Maximilian
+    - family: Dai
+      given: Wen-tao
+    - family: Hou
+      given: Mu-chun
+    - family: Xiao
+      given: Zhi-Xiong
+    - family: Cao
+      given: Yang
+  citation-key: Liu2020
+  container-title: Acta Pharmacologica Sinica
+  container-title-short: Acta Pharmacologica Sinica
+  DOI: 10.1038/s41401-019-0228-6
+  ISSN: 1745-7254
+  issue: '1'
+  issued:
+    - year: 2020
+      month: 1
+      day: 1
+  page: 138-144
+  title: >-
+    CB-Dock: a web server for cavity detection-guided protein–ligand blind
+    docking
+  type: article-journal
+  URL: https://doi.org/10.1038/s41401-019-0228-6
+  volume: '41'
+
+- id: Lu2012
+  author:
+    - family: Lu
+      given: Yunxiang
+    - family: Liu
+      given: Yingtao
+    - family: Xu
+      given: Zhijian
+    - family: Li
+      given: Haiying
+    - family: Liu
+      given: Honglai
+    - family: Zhu
+      given: Weiliang
+  citation-key: Lu2012
+  container-title: Expert Opinion on Drug Discovery
+  container-title-short: Expert Opin. Drug Discov.
+  DOI: 10.1517/17460441.2012.678829
+  issue: '5'
+  issued:
+    - year: 2012
+  page: 375-383
+  title: Halogen bonding for rational drug design and new drug discovery
+  type: article-journal
+  URL: https://doi.org/10.1517/17460441.2012.678829
+  volume: '7'
+
+- id: Ma2010
+  abstract: >-
+    Drugs for tuberculosis are inadequate to address the many inherent and
+    emerging challenges of treatment. In the past decade, ten compounds have
+    progressed into the clinical development pipeline, including six new
+    compounds specifically developed for tuberculosis. Despite this progress,
+    the global drug pipeline for tuberculosis is still insufficient to address
+    the unmet needs of treatment. Additional and sustainable efforts, and
+    funding are needed to further improve the pipeline. The key challenges in
+    the development of new treatments are the needs for novel drug combinations,
+    new trial designs, studies in paediatric populations, increased clinical
+    trial capacity, clear regulatory guidelines, and biomarkers for prediction
+    of long-term outcome. Despite substantial progress in efforts to control
+    tuberculosis, the global burden of this disease remains high. To eliminate
+    tuberculosis as a public health concern by 2050, all responsible parties
+    need to work together to strengthen the global antituberculosis drug
+    pipeline and support the development of new antituberculosis drug regimens.
+    © 2010 Elsevier Ltd. All rights reserved.
+  author:
+    - family: Ma
+      given: Zhenkun
+    - family: Lienhardt
+      given: Christian
+    - family: McIlleron
+      given: Helen
+    - family: Nunn
+      given: Andrew J.
+    - family: Wang
+      given: Xiexiu
+  citation-key: Ma2010
+  DOI: 10.1016/S0140-6736(10)60359-9
+  ISSN: '01406736'
+  issued:
+    - year: 2010
+  number: '9731'
+  page: 2100–2109
+  PMID: '20488518'
+  title: 'Global tuberculosis drug development pipeline: the need and the reality'
+  type: document
+  volume: '375'
+
+- id: Mahoney2000
+  accessed:
+    - year: 2022
+      month: 4
+      day: 27
+  author:
+    - family: Mahoney
+      given: Michael W.
+    - family: Jorgensen
+      given: William L.
+  citation-key: Mahoney2000
+  container-title: The Journal of Chemical Physics
+  container-title-short: J. Chem. Phys.
+  DOI: 10.1063/1.481505
+  ISSN: 0021-9606
+  issue: '20'
+  issued:
+    - year: 2000
+      month: 5
+      day: 22
+  page: 8910-8922
+  publisher: American Institute of Physics
+  title: >-
+    A five-site model for liquid water and the reproduction of the density
+    anomaly by rigid, nonpolarizable potential functions
+  type: article-journal
+  URL: https://doi.org/10.1063/1.481505
+  volume: '112'
+
+- id: Martelli2021
+  abstract: >-
+    Summary Effective treatment of tuberculosis is frequently hindered by the
+    emerging antimicrobial resistance of Mycobacterium tuberculosis. The present
+    study evaluates monocyclic β-lactam compounds targeting the mycobacterial
+    cell wall remodeling. Novel N-thio-β-lactams were designed, synthesized, and
+    characterized on the L,D-transpeptidase-2, a validated target in M.
+    tuberculosis. The candidates were evaluated in biochemical assays
+    identifying five compounds presenting target-specific kinetic constants
+    equal or superior to meropenem, a carbapenem currently considered for
+    tuberculosis therapy. Mass spectrometry in line with the crystal structures
+    of five target-ligand complexes revealed that the N-thio-β-lactams act via
+    an unconventional mode of adduct formation, transferring the thio-residues
+    from the lactam ring to the active-site cysteine of LdtMt2. The resulting
+    stable adducts lead to a long-term inactivation of the target protein.
+    Finally, the candidates were evaluated in vitro against a drug-susceptible
+    and multidrug-resistant clinical isolates of M. tuberculosis, confirming the
+    antimycobacterial effect of these novel compounds.
+  author:
+    - family: Martelli
+      given: Giulia
+    - family: Pessatti
+      given: Tomas Bohn
+    - family: Steiner
+      given: Eva Maria
+    - family: Cirillo
+      given: Martina
+    - family: Caso
+      given: Carolina
+    - family: Bisognin
+      given: Francesco
+    - family: Landreh
+      given: Michael
+    - family: Monte
+      given: Paola Dal
+    - family: Giacomini
+      given: Daria
+    - family: Schnell
+      given: Robert
+  citation-key: Martelli2021
+  container-title: Cell Chemical Biology
+  DOI: https://doi.org/10.1016/j.chembiol.2021.03.008
+  ISSN: 2451-9456
+  issue: '9'
+  issued:
+    - year: 2021
+  page: 1321-1332.e5
+  title: >-
+    N-Thio-β-lactams targeting L,D-transpeptidase-2, with activity against
+    drug-resistant strains of Mycobacterium tuberculosis
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S2451945621001471
+  volume: '28'
+
+- id: Mathematica
+  author:
+    - literal: Wolfram Research Inc.
+  citation-key: Mathematica
+  issued:
+    - year: 2020
+  title: Mathematica 12.1
+  type: document
+
+- id: mdanalysis
+  author:
+    - family: Gowers
+      given: Richard J.
+    - family: Linke
+      given: Max
+    - family: Barnoud
+      given: Jonathan
+    - family: Reddy
+      given: Tyler J. E.
+    - family: Melo
+      given: Manuel N.
+    - family: Seyler
+      given: Sean L.
+    - family: Domański
+      given: Jan
+    - family: Dotson
+      given: David L.
+    - family: Buchoux
+      given: Sébastien
+    - family: Kenney
+      given: Ian M.
+    - literal: Oliver Beckstein
+  citation-key: mdanalysis
+  container-title: Proceedings of the 15th Python in Science Conference
+  DOI: 10.25080/Majora-629e541a-00e
+  editor:
+    - family: Benthall
+      given: Sebastian
+    - literal: Scott Rostrup
+  issued:
+    - year: 2016
+  note: 'as: mdanalysis'
+  page: 98 - 105
+  title: >-
+    MDAnalysis: A python package for the rapid analysis of molecular dynamics
+    simulations
+  type: paper-conference
+
+- id: Muegge1999
+  abstract: >-
+    A fast, simplified potential-based approach is presented that estimates the
+    protein-ligand binding affinity based on the given 3D structure of a 
+    protein-ligand complex. This general, knowledge-based approach exploits 
+    structural information of known protein-ligand complexes extracted from the 
+    Brookhaven Protein Data Bank and converts it into distance-dependent
+    Helmholtz  free interaction energies of protein-ligand atom pairs
+    (potentials of mean force,  PMF). The definition of an appropriate reference
+    state and the introduction of a  correction term accounting for the volume
+    taken by the ligand were found to be  crucial for deriving the relevant
+    interaction potentials that treat solvation and  entropic contributions
+    implicitly. A significant correlation between experimental  binding
+    affinities and computed score was found for sets of diverse  protein-ligand
+    complexes and for sets of different ligands bound to the same  target. For
+    77 protein-ligand complexes taken from the Brookhaven Protein Data  Bank,
+    the calculated score showed a standard deviation from observed binding 
+    affinities of 1.8 log Ki units and an R2 value of 0.61. The best results
+    were  obtained for the subset of 16 serine protease complexes with a
+    standard deviation  of 1.0 log Ki unit and an R2 value of 0.86. A set of 33
+    inhibitors modeled into a  crystal structure of HIV-1 protease yielded a
+    standard deviation of 0.8 log Ki  units from measured inhibition constants
+    and an R2 value of 0.74. In contrast to  empirical scoring functions that
+    show similar or sometimes better correlation  with observed binding
+    affinities, our method does not involve deriving specific  parameters that
+    fit the observed binding affinities of protein-ligand complexes  of a given
+    training set. We compared the performance of the PMF score, Böhm's  score
+    (LUDI), and the SMOG score for eight different test sets of protein-ligand 
+    complexes. It was found that for the majority of test sets the PMF score
+    performs  best. The strength of the new approach presented here lies in its
+    generality as  no knowledge about measured binding affinities is needed to
+    derive atomic  interaction potentials. The use of the new scoring function
+    in docking studies is  outlined.
+  author:
+    - family: Muegge
+      given: I.
+    - family: Martin
+      given: Y. C.
+  citation-key: Muegge1999
+  container-title: Journal of medicinal chemistry
+  container-title-short: J Med Chem
+  DOI: 10.1021/jm980536j
+  event-place: United States
+  ISSN: 0022-2623
+  issue: '5'
+  issued:
+    - year: 1999
+      month: 3
+      day: 11
+  language: eng
+  page: 791-804
+  PMID: '10072678'
+  publisher-place: United States
+  title: >-
+    A general and fast scoring function for protein-ligand interactions: a
+    simplified potential approach.
+  type: article-journal
+  volume: '42'
+
+- id: namd-potential
+  accessed:
+    - year: 2022
+      month: 4
+      day: 29
+  citation-key: namd-potential
+  note: 'as: namd-potential'
+  title: Potential energy functions
+  type: webpage
+  URL: https://www.ks.uiuc.edu/Research/namd/2.9/ug/node22.html
+
+- id: Ngadjeua2018
+  abstract: >-
+    The bacterial cell wall peptidoglycan contains unusual l- and d-amino acids
+    assembled as branched peptides. Insight into the biosynthesis of the polymer
+    has been hampered by limited access to substrates and to suitable
+    polymerization assays. Here we report the full synthesis of the peptide stem
+    of peptidoglycan precursors from two pathogenic bacteria, Enterococcus
+    faecium and Mycobacterium tuberculosis, and the development of a sensitive
+    post-derivatization assay for their cross-linking by l,d-transpeptidases.
+    Access to series of stem peptides showed that amidation of free carboxyl
+    groups is essential for optimal enzyme activity, in particular the amidation
+    of diaminopimelate (DAP) residues for the cross-linking activity of the
+    l,d-transpeptidase LdtMt2 from M. tuberculosis. Accordingly, construction of
+    a conditional mutant established the essential role of AsnB indicating that
+    this DAP amidotransferase is an attractive target for the development of
+    anti-mycobacterial drugs.
+  author:
+    - family: Ngadjeua
+      given: Flora
+    - family: Braud
+      given: Emmanuelle
+    - family: Saidjalolov
+      given: Saidbakhrom
+    - family: Iannazzo
+      given: Laura
+    - family: Schnappinger
+      given: Dirk
+    - family: Ehrt
+      given: Sabine
+    - family: Hugonnet
+      given: Jean Emmanuel
+    - family: Mengin-Lecreulx
+      given: Dominique
+    - family: Patin
+      given: Delphine
+    - family: Ethève-Quelquejeu
+      given: Mélanie
+    - family: Fonvielle
+      given: Matthieu
+    - family: Arthur
+      given: Michel
+  citation-key: Ngadjeua2018
+  container-title: Chemistry - A European Journal
+  DOI: 10.1002/chem.201706082
+  ISSN: '15213765'
+  issue: '22'
+  issued:
+    - year: 2018
+  page: 5743–5747
+  PMID: '29389045'
+  title: >-
+    Critical impact of peptidoglycan precursor amidation on the activity of
+    L,D-transpeptidases from Enterococcus faecium and Mycobacterium tuberculosis
+  type: article-journal
+  volume: '24'
+
+- id: Nose1984
+  abstract: >-
+    Three recently proposed constant temperature molecular dynamics methods by:
+    (i) Nosé (Mol. Phys., to be published); (ii) Hoover et al. [Phys. Rev. Lett.
+    48, 1818 (1982)], and Evans and Morriss [Chem. Phys. 77, 63 (1983)]; and
+    (iii) Haile and Gupta [J. Chem. Phys. 79, 3067 (1983)] are examined
+    analytically via calculating the equilibrium distribution functions and
+    comparing them with that of the canonical ensemble. Except for effects due
+    to momentum and angular momentum conservation, method (i) yields the
+    rigorous canonical distribution in both momentum and coordinate space.
+    Method (ii) can be made rigorous in coordinate space, and can be derived
+    from method (i) by imposing a specific constraint. Method (iii) is not
+    rigorous and gives a deviation of order N -1/2 from the canonical
+    distribution (N the number of particles). The results for the constant
+    temperature-constant pressure ensemble are similar to the canonical ensemble
+    case. © 1984 American Institute of Physics.
+  author:
+    - family: Nosé
+      given: Shuichi
+  citation-key: Nose1984
+  container-title: The Journal of Chemical Physics
+  DOI: 10.1063/1.447334
+  ISSN: '00219606'
+  issue: '1'
+  issued:
+    - year: 1984
+  page: 511–519
+  title: A unified formulation of the constant temperature molecular dynamics methods
+  type: article-journal
+  volume: '81'
+
+- id: Onufriev2018
+  abstract: >-
+    Modern simulation and modeling approaches to investigation of biomolecular
+    structure and function rely heavily on a variety of methods?water models?to
+    approximate the influence of solvent. We give a brief overview of several
+    distinct classes of available water models, with the emphasis on the
+    conceptual basis at each level of approximation. The main focus is on
+    classes of models most widely used in atomistic simulations, including
+    popular implicit and explicit solvent models. Among the latter,
+    nonpolarizable N-point models are covered in most detail, including some
+    recent methodological advances and nuances. Notes on practical availability
+    and usage in biomolecular simulations are included. Atomistic simulations
+    that were hardly possible only a short while ago have revealed significant
+    problems that can be traced to deficiencies of most commonly used N-point
+    water models. Recently developed models of this class approximate
+    experimental properties of liquid water much closer than before, and show
+    promise in practical biomolecular simulations. Obstacles to wider adoption
+    of these more accurate water models, both technical and conceptual, are
+    discussed. It is argued that verifying robustness of simulation results to
+    the choice of water model can be of immediate benefit even in the absence of
+    a clear replacement for older models; a specific strategy is proposed. The
+    review is concluded with a discussion on how force-field development efforts
+    can benefit from better solvent models, and vice versa. WIREs Comput Mol Sci
+    2018, 8:e1347. doi: 10.1002/wcms.1347 This article is categorized under:
+    Structure and Mechanism > Computational Biochemistry and Biophysics
+    Molecular and Statistical Mechanics > Molecular Dynamics and Monte-Carlo
+    Methods
+  accessed:
+    - year: 2022
+      month: 4
+      day: 27
+  author:
+    - family: Onufriev
+      given: Alexey V.
+    - family: Izadi
+      given: Saeed
+  citation-key: Onufriev2018
+  container-title: WIREs Computational Molecular Science
+  container-title-short: WIREs Computational Molecular Science
+  DOI: 10.1002/wcms.1347
+  ISSN: 1759-0876
+  issue: '2'
+  issued:
+    - year: 2018
+      month: 3
+      day: 1
+  page: e1347
+  publisher: John Wiley & Sons, Ltd
+  title: Water models for biomolecular simulations
+  type: article-journal
+  URL: https://doi.org/10.1002/wcms.1347
+  volume: '8'
+
+- id: Pettersen2004
+  abstract: >-
+    The design, implementation, and capabilities of an extensible visualization
+    system, UCSF Chimera, are discussed. Chimera is segmented into a core that
+    provides basic services and visualization, and extensions that provide most
+    higher level functionality. This architecture ensures that the extension
+    mechanism satisfies the demands of outside developers who wish to
+    incorporate new features, Two unusual extensions are presented: Multiscale,
+    which adds the ability to visualize large-scale molecular assemblies such as
+    viral coats, and Collaboratory, which allows researchers to share a Chimera
+    session interactively despite being at separate locales. Other extensions
+    include Multalign Viewer, for showing multiple sequence alignments and
+    associated structures; ViewDock, for screening docked ligand orientations;
+    Movie, for replaying molecular dynamics trajectories; and Volume Viewer, for
+    display and analysis of volumetric data. A discussion of the usage of
+    Chimera in real-world situations is given, along with anticipated future
+    directions. Chimera includes full user documentation, is free to academic
+    and nonprofit users, and is available for Microsoft Windows, Linux, Apple
+    Mac OS X, SGI IRIX, and HP Tru64 Unix from http://www.cgl.ucsf.edu/chimera/.
+    © 2004 Wiley Periodicals, Inc.
+  author:
+    - family: Pettersen
+      given: Eric F.
+    - family: Goddard
+      given: Thomas D.
+    - family: Huang
+      given: Conrad C.
+    - family: Couch
+      given: Gregory S.
+    - family: Greenblatt
+      given: Daniel M.
+    - family: Meng
+      given: Elaine C.
+    - family: Ferrin
+      given: Thomas E.
+  citation-key: Pettersen2004
+  container-title: Journal of Computational Chemistry
+  DOI: 10.1002/jcc.20084
+  ISSN: '01928651'
+  issue: '13'
+  issued:
+    - year: 2004
+  page: 1605–1612
+  PMID: '15264254'
+  title: UCSF Chimera - A visualization system for exploratory research and analysis
+  type: article-journal
+  volume: '25'
+
+- id: PLUMED
+  citation-key: PLUMED
+  title: >-
+    PLUMED is an open-source, community-developed library that provides a wide
+    range of different methods
+  type: document
+  URL: plumed.org
+
+- id: Podryga2014
+  author:
+    - family: Подрыга
+      given: Виктория Олеговна
+    - family: Поляков
+      given: Сергей Владимирович
+  citation-key: Podryga2014
+  container-title: Препринты Института прикладной математики им. М. В Келдыша РАН
+  ISSN: 2071-2898
+  issued:
+    - year: 2014
+  page: 20–41
+  title: >-
+    Молекулярно-динамическое моделирование процесса установления
+    термодинамического равновесия нагретого никеля
+  type: article-journal
+
+- id: pymol
+  abstract: >-
+    PyMOL is a molecular viewer, render tool, and 3D molecular editor developed
+    in the spirit of RasMol and OpenRasMol and intended for visualization of 3D
+    chemical structures including atomic resolution X-ray crystal structures of:
+    proteins, nucleic acids (DNA, RNA, & tRNA), and carbohydrates, as well as
+    small molecule structures of drug leads, inhibitors, metabolites, sugars,
+    nucleoside phosphates, and other ligands including inorganic salts and
+    solvent molecules. PyMOL serves academic research and education in chemistry
+    and biology, and the biotechnology and pharmaceutical industries by
+    rendering publication-quality journal illustrations of macromolecules
+    including drug targets such as GPCRs, kinases (Abl, Raf, Aurora, EGFR),
+    proteases (HIV, BACE, Factor Xa), phosophorylases (PTP1B), and other enzyme
+    targets, as well as therapeutic biomolecules such as humanized antibodies,
+    cytokines, hormones, and serpins. Available molecular representations for
+    nanotechnology pictures include space-filling "CPK" atoms, chemical bonds,
+    cartoon ribbons, molecular surfaces, and solvent accessible surface meshes.
+    As a stereochemistry viewer, PyMOL can illustrate the 3D stereochemical
+    relationships of organic chemistry. As a crystallographic protein structure
+    viewer, PyMOL can display millions of atoms inside a crystal lattice.
+    Molecular interactions can be represented using interatomic distances, van
+    der Waals clashes, property-based, potential-based, & proximity-based
+    coloring schemes, solid and mesh isosurface potentials, slice planes, and
+    gradient field lines. PyMOL also supports input of electron density maps,
+    electrostatic potential maps, and other volumetric data sets as well as
+    arbitrary 3D geometries comprised of triangles, spheres, cylinders, cones,
+    ellipsoids, and text. Output options include copy & paste, PNG images,
+    QuickTime Movies (on Mac), VRML, Maya OBJ, and POVRay POV input files.
+    Molecular animations can be created through simple object & camera motions
+    or through input of trajectories from molecular dynamics simulations and
+    other dynamic conformational ensembles such as 3D NMR structures, allosteric
+    states, and Monte Carlo configurations. PyMOL can be scripted using Python
+    and is available as both an ActiveX Control and a Java/JNI Component. PyMOL
+    supports OpenGL hardware from nVidia (3D Vision), ATI/AMD, and Intel, with
+    stereoscopic 3D graphics display on devices such as the Planar3D, Samsung
+    SyncMaster 2233RZ, Viewsonic Fuhzion VX2265wm & PJD6220-3D, Z…
+  author:
+    - literal: Schrödinger LLC
+  citation-key: pymol
+  DOI: 10.1038/hr.2014.17
+  ISBN: '00657727'
+  ISSN: 1348-4214
+  issued:
+    - year: 2014
+  PMID: '24705435'
+  title: The PyMOL molecular graphics system, version 1.8
+  type: document
+  URL: pymol.org
+
+- id: R2019
+  abstract: >-
+    R Core Team (2014). R: A language and environment for statistical computing.
+    R Foundation for Statistical Computing, Vienna, Austria. URL
+    http://www.R-project.org/.
+  author:
+    - literal: R Development Core Team 3.0.1.
+  citation-key: R2019
+  ISBN: '3900051003'
+  issued:
+    - year: 2013
+  page: https://www.R–project.org
+  title: A language and environment for statistical computing
+  type: document
+  volume: '2'
+
+- id: Rarey1996
+  abstract: >-
+    We present an automatic method for docking organic ligands into protein
+    binding sites. The method can be used in the design process of specific
+    protein ligands.  It combines an appropriate model of the physico-chemical
+    properties of the docked  molecules with efficient methods for sampling the
+    conformational space of the  ligand. If the ligand is flexible, it can adopt
+    a large variety of different  conformations. Each such minimum in
+    conformational space presents a potential  candidate for the conformation of
+    the ligand in the complexed state. Our docking  method samples the
+    conformation space of the ligand on the basis of a discrete  model and uses
+    a tree-search technique for placing the ligand incrementally into  the
+    active site. For placing the first fragment of the ligand into the protein, 
+    we use hashing techniques adapted from computer vision. The incremental 
+    construction algorithm is based on a greedy strategy combined with
+    efficient  methods for overlap detection and for the search of new
+    interactions. We present  results on 19 complexes of which the binding
+    geometry has been  crystallographically determined. All considered ligands
+    are docked in at most  three minutes on a current workstation. The
+    experimentally observed binding mode  of the ligand is reproduced with 0.5
+    to 1.2 A rms deviation. It is almost always  found among the highest-ranking
+    conformations computed.
+  author:
+    - family: Rarey
+      given: M.
+    - family: Kramer
+      given: B.
+    - family: Lengauer
+      given: T.
+    - family: Klebe
+      given: G.
+  citation-key: Rarey1996
+  container-title: Journal of molecular biology
+  container-title-short: J Mol Biol
+  DOI: 10.1006/jmbi.1996.0477
+  event-place: Netherlands
+  ISSN: 0022-2836
+  issue: '3'
+  issued:
+    - year: 1996
+      month: 8
+      day: 23
+  language: eng
+  page: 470-489
+  PMID: '8780787'
+  publisher-place: Netherlands
+  title: A fast flexible docking method using an incremental construction algorithm.
+  type: article-journal
+  volume: '261'
+
+- id: rdkit
+  citation-key: rdkit
+  note: 'as: rdkit'
+  title: 'RDKit: Open-source cheminformatics'
+  type: webpage
+  URL: https://www.rdkit.org
+
+- id: Rezac2009
+  author:
+    - family: Řezáč
+      given: Jan
+    - family: Fanfrlík
+      given: Jindřich
+    - family: Salahub
+      given: Dennis
+    - family: Hobza
+      given: Pavel
+  citation-key: Rezac2009
+  container-title: Journal of Chemical Theory and Computation
+  container-title-short: J. Chem. Theory Comput.
+  DOI: 10.1021/ct9000922
+  ISSN: 1549-9618
+  issue: '7'
+  issued:
+    - year: 2009
+      month: 7
+      day: 14
+  page: 1749-1760
+  publisher: American Chemical Society
+  title: >-
+    Semiempirical Quantum Chemical PM6 Method Augmented by Dispersion and
+    H-Bonding Correction Terms Reliably Describes Various Types of Noncovalent
+    Complexes
+  type: article-journal
+  URL: https://doi.org/10.1021/ct9000922
+  volume: '5'
+
+- id: Robert2014
+  abstract: >-
+    ENDscript 2 is a friendly Web server for extracting and rendering a
+    comprehensive analysis of primary to quaternary protein structure
+    information in an automated way. This major upgrade has been fully
+    re-engineered to enhance speed, accuracy and usability with interactive 3D
+    visualization. It takes advantage of the new version 3 of ESPript, our
+    well-known sequence alignment renderer, improved to handle a large number of
+    data with reduced computation time. From a single PDB entry or file,
+    ENDscript produces high quality figures displaying multiple sequence
+    alignment of proteins homologous to the query, colored according to residue
+    conservation. Furthermore, the experimental secondary structure elements and
+    a detailed set of relevant biophysical and structural data are depicted. All
+    this information and more are now mapped on interactive 3D PyMOL
+    representations. Thanks to its adaptive and rigorous algorithm, beginner to
+    expert users can modify settings to fine-tune ENDscript to their needs.
+    ENDscript has also been upgraded as an open platform for the visualization
+    of multiple biochemical and structural data coming from external biotool Web
+    servers, with both 2D and 3D representations. ENDscript 2 and ESPript 3 are
+    freely available at http://endscript.ibcp.fr and http://espript.ibcp.fr,
+    respectively. © 2014 The Author(s).
+  author:
+    - family: Robert
+      given: Xavier
+    - family: Gouet
+      given: Patrice
+  citation-key: Robert2014
+  container-title: Nucleic Acids Research
+  DOI: 10.1093/nar/gku316
+  ISSN: '13624962'
+  issue: W1
+  issued:
+    - year: 2014
+  page: W320–W324
+  publisher: Oxford University Press
+  title: Deciphering key features in protein structures with the new ENDscript server
+  type: article-journal
+  volume: '42'
+
+- id: Roe2013
+  abstract: >-
+    We describe PTRAJ and its successor CPPTRAJ, two complementary, portable,
+    and freely available computer programs for the analysis and processing of
+    time series of three-dimensional atomic positions (i.e., coordinate
+    trajectories) and the data therein derived. Common tools include the ability
+    to manipulate the data to convert among trajectory formats, process groups
+    of trajectories generated with ensemble methods (e.g., replica exchange
+    molecular dynamics), image with periodic boundary conditions, create average
+    structures, strip subsets of the system, and perform calculations such as
+    RMS fitting, measuring distances, B-factors, radii of gyration, radial
+    distribution functions, and time correlations, among other actions and
+    analyses. Both the PTRAJ and CPPTRAJ programs and source code are freely
+    available under the GNU General Public License version 3 and are currently
+    distributed within the AmberTools 12 suite of support programs that make up
+    part of the Amber package of computer programs (see http://ambermd.org).
+    This overview describes the general design, features, and history of these
+    two programs, as well as algorithmic improvements and new features available
+    in CPPTRAJ. © 2013 American Chemical Society.
+  author:
+    - family: Roe
+      given: Daniel R.
+    - family: Cheatham
+      given: Thomas E.
+  citation-key: Roe2013
+  container-title: Journal of Chemical Theory and Computation
+  DOI: 10.1021/ct400341p
+  ISSN: '15499618'
+  issue: '7'
+  issued:
+    - year: 2013
+  page: 3084–3095
+  PMID: '26583988'
+  title: >-
+    PTRAJ and CPPTRAJ: Software for processing and analysis of molecular
+    dynamics trajectory data
+  type: article-journal
+  volume: '9'
+
+- id: ROF2014
+  author:
+    - family: Васильева
+      given: И. А.
+    - family: Багдасарян
+      given: Т. Р.
+  citation-key: ROF2014
+  event-place: Москва
+  issued:
+    - year: 2014
+  note: 'as: РОФ2014'
+  publisher-place: Москва
+  title: >-
+    Федеральные клинические рекомендации по диагностике и лечению туберкулеза
+    органов дыхания с множественной и широкой лекарственной устойчивостью
+    возбудителя
+  type: book
+
+- id: Rullas2015
+  abstract: >-
+    We report here a dehydropeptidase-deficient murine model of tuberculosis
+    (TB) infection that is able to partially uncover the efficacy of marketed 
+    broad-spectrum β-lactam antibiotics alone and in combination. Reductions of
+    up to  2 log CFU in the lungs of TB-infected mice after 8 days of treatment
+    compared to  untreated controls were obtained at blood drug concentrations
+    and time above the  MIC (T>MIC) below clinically achievable levels in
+    humans. These findings provide  evidence supporting the potential of
+    β-lactams as safe and mycobactericidal  components of new combination
+    regimens against TB with or without resistance to  currently used drugs.
+  author:
+    - family: Rullas
+      given: Joaquín
+    - family: Dhar
+      given: Neeraj
+    - family: McKinney
+      given: John D.
+    - family: García-Pérez
+      given: Adolfo
+    - family: Lelievre
+      given: Joël
+    - family: Diacon
+      given: Andreas H.
+    - family: Hugonnet
+      given: Jean-Emmanuel
+    - family: Arthur
+      given: Michel
+    - family: Angulo-Barturen
+      given: Iñigo
+    - family: Barros-Aguirre
+      given: David
+    - family: Ballell
+      given: Lluís
+  citation-key: Rullas2015
+  container-title: Antimicrobial agents and chemotherapy
+  container-title-short: Antimicrob Agents Chemother
+  DOI: 10.1128/AAC.01063-15
+  ISSN: 1098-6596 0066-4804
+  issue: '8'
+  issued:
+    - year: 2015
+      month: 8
+  language: eng
+  page: 4997-4999
+  PMCID: PMC4505286
+  PMID: '25987618'
+  title: >-
+    Combinations of β-Lactam Antibiotics Currently in Clinical Trials Are
+    Efficacious in a DHP-I-Deficient Mouse Model of Tuberculosis Infection.
+  type: article-journal
+  volume: '59'
+
+- id: Salomon-Ferrer2013
+  abstract: >-
+    Molecular dynamics (MD) allows the study of biological and chemical systems
+    at the atomistic level on timescales from femtoseconds to milliseconds. It
+    complements experiment while also offering a way to follow processes
+    difficult to discern with experimental techniques. Numerous software
+    packages exist for conducting MD simulations of which one of the widest used
+    is termed Amber. Here, we outline the most recent developments, since
+    version 9 was released in April 2006, of the Amber and AmberTools MD
+    software packages, referred to here as simply the Amber package. The latest
+    release represents six years of continued development, since version 9, by
+    multiple research groups and the culmination of over 33 years of work
+    beginning with the first version in 1979. The latest release of the Amber
+    package, version 12 released in April 2012, includes a substantial number of
+    important developments in both the scientific and computer science arenas.
+    We present here a condensed vision of what Amber currently supports and
+    where things are likely to head over the coming years. Figure 1 shows the
+    performance in ns/day of the Amber package version 12 on a single-core AMD
+    FX-8120 8-Core 3.6GHz CPU, the Cray XT5 system, and a single GPU GTX680. ©
+    2012 John Wiley & Sons, Ltd.
+  author:
+    - family: Salomon-Ferrer
+      given: Romelia
+    - family: Case
+      given: David A.
+    - family: Walker
+      given: Ross C.
+  citation-key: Salomon-Ferrer2013
+  container-title: 'Wiley Interdisciplinary Reviews: Computational Molecular Science'
+  DOI: 10.1002/wcms.1121
+  ISSN: '17590876'
+  issue: '2'
+  issued:
+    - year: 2013
+  page: 198–210
+  title: An overview of the Amber biomolecular simulation package
+  type: article-journal
+  volume: '3'
+
+- id: Salomon-Ferrer2013a
+  abstract: >-
+    Molecular dynamics (MD) allows the study of biological and chemical systems
+    at the atomistic level on timescales from femtoseconds to milliseconds. It
+    complements experiment while also offering a way to follow processes
+    difficult to discern with experimental techniques. Numerous software
+    packages exist for conducting MD simulations of which one of the widest used
+    is termed Amber. Here, we outline the most recent developments, since
+    version 9 was released in April 2006, of the Amber and AmberTools MD
+    software packages, referred to here as simply the Amber package. The latest
+    release represents six years of continued development, since version 9, by
+    multiple research groups and the culmination of over 33 years of work
+    beginning with the first version in 1979. The latest release of the Amber
+    package, version 12 released in April 2012, includes a substantial number of
+    important developments in both the scientific and computer science arenas.
+    We present here a condensed vision of what Amber currently supports and
+    where things are likely to head over the coming years. Figure 1 shows the
+    performance in ns/day of the Amber package version 12 on a single-core AMD
+    FX-8120 8-Core 3.6GHz CPU, the Cray XT5 system, and a single GPU GTX680. ©
+    2012 John Wiley & Sons, Ltd.
+  author:
+    - family: Salomon-Ferrer
+      given: Romelia
+    - family: Case
+      given: David A.
+    - family: Walker
+      given: Ross C.
+  citation-key: Salomon-Ferrer2013a
+  container-title: 'Wiley Interdisciplinary Reviews: Computational Molecular Science'
+  DOI: 10.1002/wcms.1121
+  ISSN: '17590876'
+  issue: '2'
+  issued:
+    - year: 2013
+  page: 198–210
+  title: An overview of the Amber biomolecular simulation package
+  type: article-journal
+  volume: '3'
+
+- id: Salomon-Ferrer2013b
+  abstract: >-
+    We present an implementation of explicit solvent all atom classical
+    molecular dynamics (MD) within the AMBER program package that runs entirely
+    on CUDA-enabled GPUs. First released publicly in April 2010 as part of
+    version 11 of the AMBER MD package and further improved and optimized over
+    the last two years, this implementation supports the three most widely used
+    statistical mechanical ensembles (NVE, NVT, and NPT), uses particle mesh
+    Ewald (PME) for the long-range electrostatics, and runs entirely on
+    CUDA-enabled NVIDIA graphics processing units (GPUs), providing results that
+    are statistically indistinguishable from the traditional CPU version of the
+    software and with performance that exceeds that achievable by the CPU
+    version of AMBER software running on all conventional CPU-based clusters and
+    supercomputers. We briefly discuss three different precision models
+    developed specifically for this work (SPDP, SPFP, and DPDP) and highlight
+    the technical details of the approach as it extends beyond previously
+    reported work [Götz et al., J. Chem. Theory Comput. 2012, DOI:
+    10.1021/ct200909j; Le Grand et al., Comp. Phys. Comm. 2013, DOI:
+    10.1016/j.cpc.2012.09.022].We highlight the substantial improvements in
+    performance that are seen over traditional CPU-only machines and provide
+    validation of our implementation and precision models. We also provide
+    evidence supporting our decision to deprecate the previously described fully
+    single precision (SPSP) model from the latest release of the AMBER software
+    package. © 2013 American Chemical Society.
+  author:
+    - family: Salomon-Ferrer
+      given: Romelia
+    - family: Götz
+      given: Andreas W.
+    - family: Poole
+      given: Duncan
+    - family: Le Grand
+      given: Scott
+    - family: Walker
+      given: Ross C.
+  citation-key: Salomon-Ferrer2013b
+  container-title: Journal of Chemical Theory and Computation
+  DOI: 10.1021/ct400314y
+  ISSN: '15499618'
+  issue: '9'
+  issued:
+    - year: 2013
+  page: 3878–3888
+  title: >-
+    Routine microsecond molecular dynamics simulations with AMBER on GPUs. 2.
+    Explicit solvent particle mesh ewald
+  type: article-journal
+  volume: '9'
+
+- id: Santos-Martins2021
+  author:
+    - family: Santos-Martins
+      given: Diogo
+    - family: Solis-Vasquez
+      given: Leonardo
+    - family: Tillack
+      given: Andreas F
+    - family: Sanner
+      given: Michel F
+    - family: Koch
+      given: Andreas
+    - family: Forli
+      given: Stefano
+  citation-key: Santos-Martins2021
+  container-title: Journal of Chemical Theory and Computation
+  container-title-short: J. Chem. Theory Comput.
+  DOI: 10.1021/acs.jctc.0c01006
+  ISSN: 1549-9618
+  issue: '2'
+  issued:
+    - year: 2021
+      month: 2
+      day: 9
+  page: 1060-1073
+  publisher: American Chemical Society
+  title: Accelerating AutoDock4 with GPUs and Gradient-Based Local Search
+  type: article-journal
+  URL: https://doi.org/10.1021/acs.jctc.0c01006
+  volume: '17'
+
+- id: Shaytan2004
+  author:
+    - family: Шайтан
+      given: К.В.
+    - family: Терёшкина
+      given: К.Б.
+  citation-key: Shaytan2004
+  event-place: Москва
+  issued:
+    - year: 2004
+  publisher: МГУ
+  publisher-place: Москва
+  title: 'Молекулярная динамика белков и пептидов: методическое пособие'
+  type: book
+
+- id: Solapure2013
+  abstract: >-
+    Beta-lactams, in combination with beta-lactamase inhibitors, are reported to
+    have activity against Mycobacterium tuberculosis bacteria growing in broth,
+    as well as  inside the human macrophage. We tested representative
+    beta-lactams belonging to 3  different classes for activity against
+    replicating M. tuberculosis in broth and  nonreplicating M. tuberculosis
+    under hypoxia, as well as against  streptomycin-starved M. tuberculosis
+    strain 18b (ss18b) in the presence or  absence of clavulanate. Most of the
+    combinations showed bactericidal activity  against replicating M.
+    tuberculosis, with up to 200-fold improvement in potency  in the presence of
+    clavulanate. None of the combinations, including those  containing
+    meropenem, imipenem, and faropenem, killed M. tuberculosis under  hypoxia.
+    However, faropenem- and meropenem-containing combinations killed strain 
+    ss18b moderately. We tested the bactericidal activities of
+    meropenem-clavulanate  and amoxicillin-clavulanate combinations in the acute
+    and chronic aerosol  infection models of tuberculosis in BALB/c mice. Based
+    on  pharmacokinetic/pharmacodynamic indexes reported for beta-lactams
+    against other  bacterial pathogens, a cumulative percentage of a 24-h period
+    that the drug  concentration exceeds the MIC under steady-state
+    pharmacokinetic conditions  (%TMIC) of 20 to 40% was achieved in mice using
+    a suitable dosing regimen. Both  combinations showed marginal reduction in
+    lung CFU compared to the late controls  in the acute model, whereas both
+    were inactive in the chronic model.
+  author:
+    - family: Solapure
+      given: Suresh
+    - family: Dinesh
+      given: Neela
+    - family: Shandil
+      given: Radha
+    - family: Ramachandran
+      given: Vasanthi
+    - family: Sharma
+      given: Sreevalli
+    - family: Bhattacharjee
+      given: Deepa
+    - family: Ganguly
+      given: Samit
+    - family: Reddy
+      given: Jitendar
+    - family: Ahuja
+      given: Vijaykamal
+    - family: Panduga
+      given: Vijender
+    - family: Parab
+      given: Manish
+    - family: Vishwas
+      given: K. G.
+    - family: Kumar
+      given: Naveen
+    - family: Balganesh
+      given: Meenakshi
+    - family: Balasubramanian
+      given: V.
+  citation-key: Solapure2013
+  container-title: Antimicrobial agents and chemotherapy
+  container-title-short: Antimicrob Agents Chemother
+  DOI: 10.1128/AAC.00023-13
+  ISSN: 1098-6596 0066-4804
+  issue: '6'
+  issued:
+    - year: 2013
+      month: 6
+  language: eng
+  page: 2506-2510
+  PMCID: PMC3716166
+  PMID: '23507276'
+  title: >-
+    In vitro and in vivo efficacy of β-lactams against replicating and slowly
+    growing/nonreplicating Mycobacterium tuberculosis.
+  type: article-journal
+  volume: '57'
+
+- id: Sterling2015
+  author:
+    - family: Sterling
+      given: Teague
+    - family: Irwin
+      given: John J.
+  citation-key: Sterling2015
+  container-title: Journal of Chemical Information and Modeling
+  container-title-short: J. Chem. Inf. Model.
+  DOI: 10.1021/acs.jcim.5b00559
+  ISSN: 1549-9596
+  issue: '11'
+  issued:
+    - year: 2015
+      month: 11
+      day: 23
+  page: 2324-2337
+  publisher: American Chemical Society
+  title: ZINC 15 – Ligand Discovery for Everyone
+  type: article-journal
+  URL: https://doi.org/10.1021/acs.jcim.5b00559
+  volume: '55'
+
+- id: TBKeyFacts
+  author:
+    - literal: World Health Organization
+  citation-key: TBKeyFacts
+  issued:
+    - year: 2020
+  title: Tuberculosis. Key facts
+  type: document
+  URL: who.int/en/news-room/fact-sheets/detail/tuberculosis
+
+- id: Tian2020
+  author:
+    - family: Tian
+      given: Chuan
+    - family: Kasavajhala
+      given: Koushik
+    - family: Belfon
+      given: Kellon A. A.
+    - family: Raguette
+      given: Lauren
+    - family: Huang
+      given: He
+    - family: Migues
+      given: Angela N.
+    - family: Bickel
+      given: John
+    - family: Wang
+      given: Yuzhang
+    - family: Pincay
+      given: Jorge
+    - family: Wu
+      given: Qin
+    - family: Simmerling
+      given: Carlos
+  citation-key: Tian2020
+  container-title: Journal of Chemical Theory and Computation
+  container-title-short: J. Chem. Theory Comput.
+  DOI: 10.1021/acs.jctc.9b00591
+  ISSN: 1549-9618
+  issue: '1'
+  issued:
+    - year: 2020
+      month: 1
+      day: 14
+  page: 528-552
+  publisher: American Chemical Society
+  title: >-
+    ff19SB: Amino-Acid-Specific Protein Backbone Parameters Trained against
+    Quantum Mechanics Energy Surfaces in Solution
+  type: article-journal
+  URL: https://doi.org/10.1021/acs.jctc.9b00591
+  volume: '16'
+
+- id: Tuckerman2010
+  abstract: >-
+    Complex systems that bridge the traditional disciplines of physics,
+    chemistry, biology, and materials science can be studied at an unprecedented
+    level of detail using increasingly sophisticated theoretical methodology and
+    high-speed computers. The aim of this book is to prepare burgeoning users
+    and developers to become active participants in this exciting and rapidly
+    advancing research area by uniting for the first time, in one monograph, the
+    basic concepts of equilibrium and time-dependent statistical mechanics with
+    the modern techniques used to solve the complex problems that arise in
+    real-world applications. The book contains a detailed review of classical
+    and quantum mechanics, in-depth discussions of the most commonly used
+    ensembles simultaneously with modern computational techniques such as
+    molecular dynamics and Monte Carlo, and important topics including
+    free-energy calculations, linear-response theory, harmonic baths and the
+    generalized Langevin equation, critical phenomena, and advanced
+    conformational sampling methods. Burgeoning users and developers are thus
+    provided firm grounding to become active participants in this exciting and
+    rapidly advancing research area, while experienced practitioners will find
+    the book to be a useful reference tool for the field.
+  archive: /z-wcorg/
+  author:
+    - family: Tuckerman
+      given: Mark E.
+      suffix: ''
+  citation-key: Tuckerman2010
+  event-place: Oxford
+  ISBN: 9780191523465 0191523461 0198525265 9780198525264
+  issued:
+    - year: 2010
+  language: English
+  publisher: Oxford University Press
+  publisher-place: Oxford
+  source: http://worldcat.org
+  title: 'Statistical mechanics : theory and molecular simulation'
+  type: webpage
+  URL: http://site.ebrary.com/id/10370327
+
+- id: Tuckerman2010a
+  abstract: >-
+    Complex systems that bridge the traditional disciplines of physics,
+    chemistry, biology, and materials science can be studied at an unprecedented
+    level of detail using increasingly sophisticated theoretical methodology and
+    high-speed computers. The aim of this book is to prepare burgeoning users
+    and developers to become active participants in this exciting and rapidly
+    advancing research area by uniting for the first time, in one monograph, the
+    basic concepts of equilibrium and time-dependent statistical mechanics with
+    the modern techniques used to solve the complex problems that arise in
+    real-world applications. The book contains a detailed review of classical
+    and quantum mechanics, in-depth discussions of the most commonly used
+    ensembles simultaneously with modern computational techniques such as
+    molecular dynamics and Monte Carlo, and important topics including
+    free-energy calculations, linear-response theory, harmonic baths and the
+    generalized Langevin equation, critical phenomena, and advanced
+    conformational sampling methods. Burgeoning users and developers are thus
+    provided firm grounding to become active participants in this exciting and
+    rapidly advancing research area, while experienced practitioners will find
+    the book to be a useful reference tool for the field.
+  archive: /z-wcorg/
+  author:
+    - family: Tuckerman
+      given: Mark E.
+      suffix: ''
+  citation-key: Tuckerman2010a
+  event-place: Oxford
+  ISBN: 9780191523465 0191523461 0198525265 9780198525264
+  issued:
+    - year: 2010
+  language: English
+  publisher: Oxford University Press
+  publisher-place: Oxford
+  source: http://worldcat.org
+  title: 'Statistical mechanics : theory and molecular simulation'
+  type: webpage
+  URL: http://site.ebrary.com/id/10370327
+
+- id: UniProtLdtMt2
+  citation-key: UniProtLdtMt2
+  title: Mycobacterium tuberculosis (strain CDC 1551 / oshkosh)
+  type: document
+  URL: uniprot.org/uniprot/O53223
+
+- id: Vanquelef2011
+  abstract: >-
+    R.E.D. Server is a unique, open web service, designed to derive
+    non-polarizable RESP and ESP charges and to build force field libraries for
+    new molecules/molecular fragments. It provides to computational biologists
+    the means to derive rigorously molecular electrostatic potential-based
+    charges embedded in force field libraries that are ready to be used in force
+    field development, charge validation and molecular dynamics simulations.
+    R.E.D. Server interfaces quantum mechanics programs, the RESP program and
+    the latest version of the R.E.D. tools. A two step approach has been
+    developed. The first one consists of preparing P2N file(s) to rigorously
+    define key elements such as atom names, topology and chemical equivalencing
+    needed when building a force field library. Then, P2N files are used to
+    derive RESP or ESP charges embedded in force field libraries in the Tripos
+    mol2 format. In complex cases an entire set of force field libraries or
+    force field topology database is generated. Other features developed in
+    R.E.D. Server include help services, a demonstration, tutorials, frequently
+    asked questions, Jmol-based tools useful to construct PDB input files and
+    parse R.E.D. Server outputs as well as a graphical queuing system allowing
+    any user to check the status of R.E.D. Server jobs.
+  author:
+    - family: Vanquelef
+      given: Enguerran
+    - family: Simon
+      given: Sabrina
+    - family: Marquant
+      given: Gaelle
+    - family: Garcia
+      given: Elodie
+    - family: Klimerak
+      given: Geoffroy
+    - family: Delepine
+      given: Jean Charles
+    - family: Cieplak
+      given: Piotr
+    - family: Dupradeau
+      given: François-Yves
+  citation-key: Vanquelef2011
+  container-title: Nucleic Acids Research
+  container-title-short: Nucleic Acids Res.
+  DOI: 10.1093/nar/gkr288
+  ISSN: 0305-1048
+  issue: suppl₂
+  issued:
+    - year: 2011
+      month: 5
+  page: W511-W517
+  title: >-
+    R.E.D. Server: a web service for deriving RESP and ESP charges and building
+    force field libraries for new molecules and molecular fragments
+  type: article-journal
+  URL: https://doi.org/10.1093/nar/gkr288
+  volume: '39'
+
+- id: Verlet1967
+  abstract: >-
+    The equation of motion of a system of 864 particles interacting through a
+    Lennard-Jones potential has been integrated for various values of the
+    temperature and density, relative, generally, to a fluid state. The
+    equilibrium properties have been calculated and are shown to agree very well
+    with the corresponding properties of argon. It is concluded that, to a good
+    approximation, the equilibrium state of argon can be described through a
+    two-body potential. © 1967 The American Physical Society.
+  author:
+    - family: Verlet
+      given: Loup
+  citation-key: Verlet1967
+  container-title: Physical Review
+  DOI: 10.1103/PhysRev.159.98
+  ISSN: 0031899X
+  issue: '1'
+  issued:
+    - year: 1967
+  page: 98–103
+  title: >-
+    Computer "experiments" on classical fluids. I. Thermodynamical properties of
+    Lennard-Jones molecules
+  type: article-journal
+  volume: '159'
+
+- id: Voevodin2019
+  abstract: >-
+    The huge number of hardware and software components, together with a large
+    number of parameters affecting the performance of each parallel application,
+    makes ensuring the efficiency of a large scale supercomputer extremely
+    difficult. In this situation, all basic parameters of the supercomputer
+    should be constantly monitored, as well as many decisions about its
+    functioning should be made by special software automatically. In this paper
+    we describe the tight connection between complexity of modern large high
+    performance computing systems and special techniques and tools required to
+    ensure their efficiency in practice. The main subsystems of the developed
+    complex (Octoshell, DiMMoN, Octotron, JobDigest, and an expert software
+    system to bring fine analytics on parallel applications and the entire
+    supercomputer to users and sysadmins) are actively operated on the large
+    supercomputer systems at Lomonosov Moscow State University. A brief
+    description of the architecture of Lomonosov-2 supercomputer is presented,
+    and questions showing both a wide variety of emerging complex issues and the
+    need for an integrated approach to solving the problem of effectively
+    supporting large supercomputer systems are discussed.
+  author:
+    - family: Voevodin
+      given: Vladimir V.
+    - family: Antonov
+      given: Alexander S.
+    - family: Nikitenko
+      given: Dmitry A.
+    - family: Shvets
+      given: Pavel A.
+    - family: Sobolev
+      given: Sergey I.
+    - family: Sidorov
+      given: Igor Yu
+    - family: Stefanov
+      given: Konstantin S.
+    - family: Voevodin
+      given: Vadim V.
+    - family: Zhumatiy
+      given: Sergey A.
+  citation-key: Voevodin2019
+  container-title: Supercomputing Frontiers and Innovations
+  DOI: 10.14529/js190201
+  ISSN: '23138734'
+  issue: '2'
+  issued:
+    - year: 2019
+  page: 4–11
+  title: >-
+    Supercomputer Lomonosov-2: Large scale, deep monitoring and fine analytics
+    for the user community
+  type: article-journal
+  volume: '6'
+
+- id: Wang2016
+  abstract: >-
+    As one of the most popular computational approaches in modern
+    structure-based drug design, molecular docking can be used not only to
+    identify the correct  conformation of a ligand within the target binding
+    pocket but also to estimate  the strength of the interaction between a
+    target and a ligand. Nowadays, as a  variety of docking programs are
+    available for the scientific community, a  comprehensive understanding of
+    the advantages and limitations of each docking  program is fundamentally
+    important to conduct more reasonable docking studies and  docking-based
+    virtual screening. In the present study, based on an extensive  dataset of
+    2002 protein-ligand complexes from the PDBbind database (version  2014), the
+    performance of ten docking programs, including five commercial  programs
+    (LigandFit, Glide, GOLD, MOE Dock, and Surflex-Dock) and five academic 
+    programs (AutoDock, AutoDock Vina, LeDock, rDock, and UCSF DOCK), was 
+    systematically evaluated by examining the accuracies of binding pose
+    prediction  (sampling power) and binding affinity estimation (scoring
+    power). Our results  showed that GOLD and LeDock had the best sampling power
+    (GOLD: 59.8% accuracy for  the top scored poses; LeDock: 80.8% accuracy for
+    the best poses) and AutoDock  Vina had the best scoring power (rp/rs of
+    0.564/0.580 and 0.569/0.584 for the top  scored poses and best poses),
+    suggesting that the commercial programs did not  show the expected better
+    performance than the academic ones. Overall, the ligand  binding poses could
+    be identified in most cases by the evaluated docking programs  but the ranks
+    of the binding affinities for the entire dataset could not be well 
+    predicted by most docking programs. However, for some types of protein
+    families,  relatively high linear correlations between docking scores and
+    experimental  binding affinities could be achieved. To our knowledge, this
+    study has been the  most extensive evaluation of popular molecular docking
+    programs in the last five  years. It is expected that our work can offer
+    useful information for the  successful application of these docking tools to
+    different requirements and  targets.
+  author:
+    - family: Wang
+      given: Zhe
+    - family: Sun
+      given: Huiyong
+    - family: Yao
+      given: Xiaojun
+    - family: Li
+      given: Dan
+    - family: Xu
+      given: Lei
+    - family: Li
+      given: Youyong
+    - family: Tian
+      given: Sheng
+    - family: Hou
+      given: Tingjun
+  citation-key: Wang2016
+  container-title: 'Physical chemistry chemical physics : PCCP'
+  container-title-short: Phys Chem Chem Phys
+  DOI: 10.1039/c6cp01555g
+  event-place: England
+  ISSN: 1463-9084 1463-9076
+  issue: '18'
+  issued:
+    - year: 2016
+      month: 5
+      day: 14
+  language: eng
+  page: 12964-12975
+  PMID: '27108770'
+  publisher-place: England
+  title: >-
+    Comprehensive evaluation of ten docking programs on a diverse set of
+    protein-ligand complexes: the prediction accuracy of sampling power and
+    scoring  power.
+  type: article-journal
+  volume: '18'
+
+- id: whoTbReport2021
+  author:
+    - literal: WHO. Global Tuberculosis Programme
+  citation-key: whoTbReport2021
+  issued:
+    - year: 2021
+  note: 'as: whoTbReport2021'
+  page: '57'
+  title: Global tuberculosis report
+  type: report
+  URL: https://www.who.int/publications/i/item/9789240037021
+
+- id: Yeh1999
+  abstract: >-
+    We propose a modification in the three-dimensional Ewald summation technique
+    for calculations of long-range Coulombic forces for systems with a slab
+    geometry that are periodic in two dimensions and have a finite length in the
+    third dimension. The proposed method adds a correction term to the standard
+    Ewald summation formula. To test the current method, molecular dynamics
+    simulations on water between Pt(111) walls have been carried out. For a more
+    direct test, the calculation of the pair forces between two point charges
+    has been also performed. An excellent agreement with the results from
+    simulations using the rigorous two dimensional Ewald summation technique
+    were obtained. We observed that a significant reduction in computing time
+    can be achieved when the proposed modification is used. © 1999 American
+    Institute of Physics.
+  author:
+    - family: Yeh
+      given: In Chul
+    - family: Berkowitz
+      given: Max L.
+  citation-key: Yeh1999
+  container-title: Journal of Chemical Physics
+  DOI: 10.1063/1.479595
+  ISSN: '00219606'
+  issue: '7'
+  issued:
+    - year: 1999
+  page: 3155–3162
+  publisher: American Institute of Physics
+  title: Ewald summation for systems with slab geometry
+  type: article-journal
+  volume: '111'
+
+- id: zotero-undefined
+  accessed:
+    - year: 2022
+      month: 4
+      day: 27
+  citation-key: zotero-undefined
+  title: >-
+    Water models for biomolecular simulations - Onufriev - 2018 - WIREs
+    Computational Molecular Science - Wiley Online Library
+  type: webpage
+  URL: https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1347
+
+- id: zotero-undefineda
+  accessed:
+    - year: 2022
+      month: 4
+      day: 29
+  citation-key: zotero-undefineda
+  title: >-
+    Citation for: Polarizable force fields for molecular dynamics simulations of
+    biomolecules
+  type: webpage
+  URL: >-
+    https://wires.onlinelibrary.wiley.com/action/showCitFormats?doi=10.1002%2Fwcms.1215
+
+- id: zotero-undefinedb
+  accessed:
+    - year: 2022
+      month: 4
+      day: 29
+  citation-key: zotero-undefinedb
+  title: >-
+    Polarizable force fields for molecular dynamics simulations of biomolecules
+    - Baker - 2015 - WIREs Computational Molecular Science - Wiley Online
+    Library
+  type: webpage
+  URL: https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1215
+
+- id: Zwanzig1954
+  author:
+    - family: Zwanzig
+      given: Robert W.
+  citation-key: Zwanzig1954
+  container-title: The Journal of Chemical Physics
+  DOI: 10.1063/1.1740409
+  issue: '8'
+  issued:
+    - year: 1954
+  page: 1420-1426
+  title: >-
+    High‐Temperature equation of state by a perturbation method. I. Nonpolar
+    gases
+  type: article-journal
+  URL: https://doi.org/10.1063/1.1740409
+  volume: '22'
+...
