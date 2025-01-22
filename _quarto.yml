@@ -18,11 +18,16 @@ website:
       - icon: rss
         href: feed.xml
 
+crossref:
+  eq-prefix: "" # TODO: add parentheses around equation numbers
+  sec-prefix: "§"
+
 format:
   html:
     theme: cosmo
     code-copy: hover
     code-annotations: hover
+    html-math-method: mathjax
 
 reference-location: margin
 citation-location: margin
