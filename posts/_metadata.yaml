@@ -2,3 +2,5 @@ comments:
   giscus:
     repo: vsheg/website
     category: Posts
+    input-position: bottom
+    mapping: title
