@@ -32,6 +32,8 @@ format:
     code-annotations: hover
     html-math-method: mathjax
 
+css: style.css
+
 reference-location: margin
 citation-location: margin
 callout-appearance: minimal
