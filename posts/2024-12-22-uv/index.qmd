@@ -1,10 +1,9 @@
 ---
-date: "2024.12.22"
+date: 2024-12-22
+title: "`uv` as a system-wide Python environment manager"
 categories:
     - python
 ---
-
-# `uv` as a system-wide Python environment manager
 
 Creating new virtual environments for each project during quick prototyping, data analysis, or machine learning can be cumbersome.
 While managing a global environment with `pip` is simpler, it often leads to dependency conflicts and version mismatches,

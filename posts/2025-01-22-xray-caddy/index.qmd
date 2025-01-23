@@ -1,10 +1,9 @@
 ---
-date: "2025.01.22"
+date: 2025-01-22
+title: Hiding VPN behind Caddy web server on port 443
 categories:
   - networks
 ---
-
-# Hiding VPN behind Caddy web server on port 443
 
 VLESS VPN protocol implemented in XRay can use HTTP for transport, allowing web servers to handle traffic proxying, encryption, and custom routing.
 
