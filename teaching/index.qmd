@@ -1,1 +1,5 @@
+---
+title: Educational materials
+---
+
 {{< include intermediate-ml/README.md >}}
