@@ -5,6 +5,7 @@ comments: false
 listing:
   id: posts
   contents: ./
+  feed: true
   sort: "date desc"
   categories: unnumbered
   # TODO: image-placeholder: ""
