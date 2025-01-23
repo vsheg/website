@@ -1,4 +1,17 @@
 ---
-include-in-header:
-    - text: <meta http-equiv="refresh" content="0; URL=/posts/">
+title: Vsevolod Shegolev
+subtitle: Personal website
+page-layout: full
+listing:
+  id: posts
+  contents: posts/*/*.qmd
+  sort: "date desc"
+  type: grid
+  grid-columns: 3
+  max-items: 3
 ---
+
+## Latest Posts
+
+::: {#posts}
+:::
