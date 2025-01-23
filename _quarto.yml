@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - robots.txt
 
 website:
   title: sheg.cc
