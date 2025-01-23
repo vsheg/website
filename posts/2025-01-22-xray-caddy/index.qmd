@@ -61,7 +61,7 @@ services:
 2. Replace with the image name of your file sharing service.
 3. Assign appropriate ports, here we bind the service to the VPS's `8081` port. 
 
-When you bind a Docker container to `0.0.0.0` it's accessible from outside the host machine (VPS), so should bind the service to `127.0.0.1`, it won't be accessible from outside the host machine (VPS), so you don't need to use firewall rules or encryption. We will use Caddy's reverse proxy capabilities to handle this automatically.
+When you bind a Docker container to `0.0.0.0` it's accessible from outside the host machine (VPS). Instead, bind the service to `127.0.0.1` so it won't be accessible externally - this way you don't need firewall rules or encryption. We'll use Caddy's reverse proxy capabilities to handle this automatically.
 
 ## Make website accessible via Caddy
 
@@ -205,7 +205,7 @@ Subscription service returns client configurations when a secret after `/sub/` (
 
 ***
 
-This finishes the setup.
+This completes the setup.
 
 ## Post scriptum {#ps}
 
@@ -223,9 +223,9 @@ This finishes the setup.
 
 - If you have problems setting up XRay, you can bind it to localhost explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if XRay is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
 
-- I personally had a problem with XRay when it ignores listen IPs configured via web console, so I patched its database directly. It's actually quite simple: I connected to my VPS via VS Code SSH extension, with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor) extension, then I opened `~/3x-ui/db/x-ui.db` and edited `webListen` and `subListen` fields in the `settings` table. Then I forcefully recreated the container with `docker-compose up -d --force-recreate` 
+- I had an issue where XRay ignored listen IPs configured via web console, so I patched its database directly. The fix was simple: I connected to my VPS via VS Code SSH extension with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor), opened `~/3x-ui/db/x-ui.db`, edited `webListen` and `subListen` fields in the `settings` table, then recreated the container with `docker-compose up -d --force-recreate`
 
-- 3X-UI is in active development, sometimes you may fix your problem by updating. Run `docker-compose pull` and then `docker-compose up -d` to update your container but do not do this if everything works perfectly fine, as new versions may introduce new bugs. Also new transport protocol XHTTP may be updated in near future, so you may want to update your set up.
+- 3X-UI is in active development. Sometimes updating fixes problems - run `docker-compose pull` and then `docker-compose up -d`. However, don't update if everything works fine since new versions may introduce bugs. Also, the new XHTTP transport protocol may be updated in the near future, so you may want to revisit this setup later.
 
 - Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. XRay can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret/secret` before forwarding to XRay. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
 
