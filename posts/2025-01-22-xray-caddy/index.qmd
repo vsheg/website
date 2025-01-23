@@ -161,7 +161,7 @@ Simple no-path routing case is covered below:
 1. Configure XRay's inbound to use gRPC transport
 2. Add gRPC-specific routing to your Caddy configuration:
 
-```{filename="/etc/caddy/Caddyfile"}
+```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
   reverse_proxy /secret/3x* http://localhost:8080
   reverse_proxy h2c://localhost:8443 # <1>
@@ -187,7 +187,6 @@ https://service.example.com {
   
   reverse_proxy /secret/sub* http://localhost:8081 # <1>
   reverse_proxy /secret/json* http://localhost:8081 # <2>
-
 }
 ```
 1. Handles all requests to the 'ordinary' subscription service.
@@ -213,14 +212,23 @@ This completes the setup.
 
 
 - Caddy tries to use HTTP3, but it may be blocked, e.g. in Russia HTTP3 is allowed only for specific domains, international HTTP3 traffic [may not work](https://github.com/kelmenhorst/quic-censorship/issues/4). You can disable HTTP3 in Caddy by adding the following to the `Caddyfile`:
-  ```{filename="/etc/caddy/Caddyfile"}
+  ```{.txt filename="/etc/caddy/Caddyfile"}
   {
     servers {
       protocols h1 h2
     }
   }
   ```
+  This disables HTTP3 globally for all Caddy domains and services. If you want to disable HTTP3 only for a specific service, explicitly advertise HTTP v1 & v2 protocols during connection:
+  ```{.txt filename="/etc/caddy/Caddyfile"}
+  https://service.example.com {
+    tls {
+      alpn h2 http/1.1
+    }
 
+  # reverse_proxy directives
+  }
+  ```
 - If you have problems setting up XRay, you can bind it to localhost explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if XRay is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
 
 - I had an issue where XRay ignored listen IPs configured via web console, so I patched its database directly. The fix was simple: I connected to my VPS via VS Code SSH extension with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor), opened `~/3x-ui/db/x-ui.db`, edited `webListen` and `subListen` fields in the `settings` table, then recreated the container with `docker-compose up -d --force-recreate`
@@ -229,4 +237,4 @@ This completes the setup.
 
 - Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. XRay can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret/secret` before forwarding to XRay. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
 
-- When Caddy routes e.g. `/secret/sub*` paths to XRay and an error occurs on XRay side, Caddy return the respond from XRay and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
+- When Caddy routes e.g. `/secret/sub*` paths to XRay and an error occurs on XRay side, Caddy returns the respond from XRay and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
