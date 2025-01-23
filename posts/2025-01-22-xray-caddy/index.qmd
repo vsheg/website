@@ -158,7 +158,7 @@ Again, the service can rely on `/secret` or `/websocket` paths, choose another p
 Both WebSocket and gRPC protocols operate over HTTP, so they can be routed through a CDN (e.g. Cloudflare). When routing XRay traffic through CDN, your server’s IP remains hidden behind their network. Keep in mind the extra hop may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
 :::
 
-# Troubleshooting {#troubleshooting}
+## Troubleshooting {#troubleshooting}
 
 - Caddy distinguishes `/secret/3x/`, `/secret/3x`, `/secret/3x*`, and `/secret/3x/*` paths. If 3X-UI is not accessible via `https://service.example.com/secret/3x`, try adding a trailing slash and recheck paths in both Caddy and 3X-UI configurations (and in the browser!).
 
