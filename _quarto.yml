@@ -45,3 +45,5 @@ css: style.css
 reference-location: margin
 citation-location: margin
 callout-appearance: minimal
+
+lightbox: true
