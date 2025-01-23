@@ -3,7 +3,8 @@ project:
 
 website:
   title: sheg.cc
-  site-url: https://sheg.cc
+  site-url: https://sheg.cc/
+  google-analytics: G-LZBXW9YKWW
   description: "sheg"
   navbar:
     left:
