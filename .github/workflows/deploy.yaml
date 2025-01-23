@@ -19,7 +19,7 @@ jobs:
       - run: make
       - run: quarto render
       - run: make rss
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
         with:
           name: github-pages
           path: _site/
