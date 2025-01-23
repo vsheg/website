@@ -1,8 +1,14 @@
 ---
+title: Blog & notes
+page-layout: full
+comments: false
 listing:
+  id: posts
   contents: ./
   sort: "date desc"
-  feed: true
-  categories: true
-comments: false
+  categories: unnumbered
+  # TODO: image-placeholder: ""
 ---
+
+::: {#posts}
+:::
