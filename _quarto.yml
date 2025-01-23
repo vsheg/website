@@ -16,10 +16,12 @@ website:
         href: teaching/
       - text: Contact
         href: contact/
-
     right:
       - icon: rss
         href: feed.xml
+  search:
+    location: navbar
+    type: textbox
 
 crossref:
   eq-prefix: "" # TODO: add parentheses around equation numbers
