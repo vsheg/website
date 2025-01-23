@@ -1,12 +1,11 @@
 ---
-date: "2021-01"
+title: Молекулярные взаимодействия в классической молекулярной динамике
+date: 2021-01
 bibliography: ../../assets/citation.legacy.yaml
 categories:
     - molecular dynamics
     - russian
 ---
-
-# Молекулярные взаимодействия
 
 ## Уравнение движения {#sec-motion-equation}
 
