@@ -1,3 +1,11 @@
+toc: true
+toc-location: left
+toc-depth: 2
+toc-title: Contents
+
+number-sections: true
+number-depth: 2
+
 comments:
   giscus:
     repo: vsheg/website
