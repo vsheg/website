@@ -31,10 +31,14 @@ crossref:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
     code-copy: hover
     code-annotations: hover
     html-math-method: mathjax
+
+filters:
+  - auto-dark
 
 css: style.css
 
