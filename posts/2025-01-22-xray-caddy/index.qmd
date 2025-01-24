@@ -27,15 +27,15 @@ $$
 \underbrace{\text{https}}_\text{protocol} \text{://} \underbrace{\text{service.example.com}}_\text{visible} \underbrace{\text{/secret/3x/panel}}_\text{hidden}
 $$
 
-However, paths are encrypted, VPN servers use lots of traffic, so it's not hard to suspect that traffic for a specific domain `service.example.com` is VPN traffic. So, to remove suspicion you should host a real website on the same domain and this website should not be a hello world page, but a real web service with potentially high traffic, e.g. a file sharing or video streaming service which you, actually, may **want to host and use**.
+However, paths are encrypted, VPN servers use lots of traffic, so it's not hard to suspect that traffic for a specific domain `service.example.com` is VPN traffic. To remove suspicion, you should host a real website on the same domain. This website should not be a hello world page, but a real web service with potentially high traffic, e.g. a file sharing or video streaming service which you may actually **want to use**.
 
 ::: {.callout-warning}
-Here `/secret/*` paths are used to hide services behind a real website, it's better to choose a less suspicious path in real set up, any random path would work better.
+Here `/secret/*` paths are used to hide services behind a real website. It's better to choose a less obvious path in a real setup; any random path would work better.
 :::
 
 ## Prerequisites
 
-Choose a service you want to use, this service:
+Choose a service you want to use. This service:
 
 - must have a web UI that will be accessible via the domain `service.example.com` when anyone visits it.
 
@@ -99,10 +99,10 @@ services:
 3. Again, configure the 3X-UI web interface port, here we bind it to the VPS's `8080` port.
 4. Subscription service is optional, ignore it if you don't use it.
 
-Note that XRay is bound to the `localhost` (`127.0.0.1`), meaning it won't be directly accessible from outside the host machine. Again, we will use Caddy to forward requests to XRay based on the URL path.
+Note that XRay is bound to `localhost` (`127.0.0.1`), meaning it won't be directly accessible from outside the host machine. Again, we will use Caddy to forward requests to XRay based on the URL path.
 
 ::: {.callout-tip}
-Temporary use `network_mode: host` in the `compose.yaml` to test XRay without Caddy, it should already work with specified ports. See more in the [PS](#ps) section below.
+Temporary use `network_mode: host` in the `compose.yaml` to test XRay without Caddy, it should already work with specified ports. See more in the [PS](#ps) section above.
 :::
 
 I briefly describe how to configure XRay, but you should understand what you are doing and how to apply it to your specific case:
@@ -194,9 +194,7 @@ https://service.example.com {
 
 You need to enable subscription service in 3X-UI panel settings, configure its listen IP (`0.0.0.0` in this set up), port (`8081` on host and `81` inside the container^[see `compose.yaml` for 3X-UI below]), and two paths[^subs] in order to generate correct subscription links automatically.
 
-[^subs]: This is tricky as actually you need to provide full URIs:
-   - `https://service.example.com/secret/sub/`
-   - `https://service.example.com/secret/json/`
+[^subs]: This is tricky as actually you need to provide full URIs: `https://service.example.com/secret/sub/` and `https://service.example.com/secret/json/`
 
 ::: {.callout-warning}
 Subscription service returns client configurations when a secret after `/sub/` (or `/json/`) is provided, e.g. `service.example.com/secret/sub/ow32h8fq66dhxwt4`. Caddy encrypts all connections and paths, however, if the secret is leaked, the client configuration can be seen. More complicated paths for subscription service can be used to mitigate this, e.g. `service.example.com/secret/sub-random-string/`. I.e. threat paths as another secret.
@@ -225,11 +223,10 @@ This completes the setup.
     tls {
       alpn h2 http/1.1
     }
-
-  # reverse_proxy directives
+    # ...
   }
   ```
-- If you have problems setting up XRay, you can bind it to localhost explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if XRay is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
+- If you have problems setting up XRay, you can bind it to `localhost` explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if XRay is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
 
 - I had an issue where XRay ignored listen IPs configured via web console, so I patched its database directly. The fix was simple: I connected to my VPS via VS Code SSH extension with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor), opened `~/3x-ui/db/x-ui.db`, edited `webListen` and `subListen` fields in the `settings` table, then recreated the container with `docker-compose up -d --force-recreate`
 
@@ -238,3 +235,16 @@ This completes the setup.
 - Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. XRay can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret/secret` before forwarding to XRay. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
 
 - When Caddy routes e.g. `/secret/sub*` paths to XRay and an error occurs on XRay side, Caddy returns the respond from XRay and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
+
+- Network performance can be improved with BBR^[Bottleneck Bandwidth and Round-trip propagation time] congestion control. BBR helps achieve better throughput on connections with packet loss. Configure in `/etc/sysctl.conf`:
+
+  ```{.txt filename="/etc/sysctl.conf"}
+  net.core.default_qdisc=fq
+  net.ipv4.tcp_congestion_control=bbr
+  ```
+
+  Then apply changes with:
+
+  ```bash
+  sudo sysctl -p
+  ```
