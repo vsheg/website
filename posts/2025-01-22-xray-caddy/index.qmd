@@ -5,12 +5,12 @@ categories:
   - networks
 ---
 
-VLESS VPN protocol implemented in XRay can use HTTP for transport, allowing web servers to handle traffic proxying, encryption, and custom routing.
+VLESS VPN protocol implemented in Xray can use HTTP for transport, allowing web servers to handle traffic proxying, encryption, and custom routing.
 
 Caddy is a cool & lightweight web server with automatic HTTPS encryption and HTTP3. It provides reverse proxy capabilities, WebSocket^[used in real-time communication scenarios, e.g. chat applications; it provides a persistent bi-directional connection between client and server and works on top of HTTP] and gRPC^[used in server-to-server communication (usually), but it can also be used for client-server communication; it works on top of HTTP too] support.
 
 ::: {.callout-warning}
-This is **not** a detailed guide on setting up Caddy or XRay. This is **advanced configuration** and assumes **you have knowledge** of both. If not, do not add extra complexity to your setup. Find step-by-step guides, learn the basics, and then return here.
+This is **not** a detailed guide on setting up Caddy or Xray. This is **advanced configuration** and assumes **you have knowledge** of both. If not, do not add extra complexity to your setup. Find step-by-step guides, learn the basics, and then return here.
 :::
 
 I assume Caddy is installed on a host machine as the **main web server** and Docker is used to run services like 3X-UI; also you have a domain with manageable DNS records, i.e. you can create `A`/`AAAA` and `CNAME` records for subdomains.
@@ -19,7 +19,7 @@ I assume Caddy is installed on a host machine as the **main web server** and Doc
 
 Caddy can route traffic to different handlers based on URL path, e.g. `service.example.com/path1` and `service.example.com/path2` can be handled by different services.
 
-This allows serving your main website while directing specific paths to the XRay server. For example, you can run a website at `service.example.com` while the 3X-UI interface is accessible at `service.example.com/secret/3x/`. You can host multiple services on the same domain and **port**, differentiating them by path.
+This allows serving your main website while directing specific paths to the Xray server. For example, you can run a website at `service.example.com` while the 3X-UI interface is accessible at `service.example.com/secret/3x/`. You can host multiple services on the same domain and **port**, differentiating them by path.
 
 When you communicate with any service via HTTPS encrypted connection, any intermediaries (like your ISP) can see only the domain name (`service.example.com`) and the port (443), but all paths (e.g. `service.example.com/secret/3x`) are encrypted.
 
@@ -32,6 +32,60 @@ However, paths are encrypted, VPN servers use lots of traffic, so it's not hard 
 ::: {.callout-warning}
 Here `/secret/*` paths are used to hide services behind a real website. It's better to choose a less obvious path in a real setup; any random path would work better.
 :::
+
+The following diagram shows^[arrows indicate flow from users to services, but all connections are bidirectional] key components of this setup.
+```{mermaid}
+flowchart TD
+
+    subgraph Users
+        user1([User 1])
+        user2([User 2])
+        user3([User 3])
+    end
+
+    subgraph Intermediates
+        ISP([ISP])
+        CDN(["CDN (optional)"])
+        Hoster([hoster])
+    end
+
+    subgraph VPS
+        
+        caddy443([Caddy <br> host's 0.0.0.0:443])
+
+        subgraph Web service
+            dockerweb([Docker <br> localhost:8081])
+            service([web service <br> container's 0.0.0.0:80])
+        end
+
+        subgraph 3X-UI service
+          dockervpn([Docker <br> localhost:8443 ])
+          xxxvpn([Xray VPN <br> container's 0.0.0.0:443])
+          
+          dockerui([Docker <br> localhost:8080])
+          xxxui([3X-UI web console <br> container's 0.0.0.0:80])
+          
+          dockersub([Docker <br> localhost:8180])
+          xxxsub([3X-UI subscriptions <br> container's 0.0.0.0:81])
+        end
+
+    end
+
+    user1 -->|HTTP1 :443| ISP
+    user2 -->|HTTP2 :443| ISP
+    user3 -->|HTTP3 :443| ISP
+    ISP --> CDN --> Hoster
+
+    Hoster -->|HTTP1 :443| caddy443
+    Hoster -->|HTTP2 :443| caddy443
+    Hoster -->|HTTP3 :443| caddy443
+
+    caddy443 -->|/secret/websocket| dockervpn -->|NAT| xxxvpn
+    caddy443 -->|/secret/3x*| dockerui -->|NAT| xxxui
+    caddy443 -->|"/secret/sub* (optional)"| dockersub -->|NAT| xxxsub 
+    
+    caddy443 -->|other| dockerweb -->|NAT| service
+```
 
 ## Prerequisites
 
@@ -92,48 +146,48 @@ services:
     ports:
         - 127.0.0.1:8443:443 # VPN # <2>
         - 127.0.0.1:8080:80 # web UI # <3>
-        - 127.0.0.1:8081:81 # subscription service # <4>
+        - 127.0.0.1:8181:81 # subscription service # <4>
 ```
 1. Same domain as for the web service, we use it to hide VPN traffic.
 2. You must configure the VPN port in the 3X-UI, here we bind it to the VPS's `8443` port.
 3. Again, configure the 3X-UI web interface port, here we bind it to the VPS's `8080` port.
 4. Subscription service is optional, ignore it if you don't use it.
 
-Note that XRay is bound to `localhost` (`127.0.0.1`), meaning it won't be directly accessible from outside the host machine. Again, we will use Caddy to forward requests to XRay based on the URL path.
+Note that Xray is bound to `localhost` (`127.0.0.1`), meaning it won't be directly accessible from outside the host machine. Again, we will use Caddy to forward requests to Xray based on the URL path.
 
 ::: {.callout-tip}
-Temporary use `network_mode: host` in the `compose.yaml` to test XRay without Caddy, it should already work with specified ports. See more in the [PS](#ps) section above.
+Temporary use `network_mode: host` in the `compose.yaml` to test Xray without Caddy, it should already work with specified ports. See more in the [PS](#ps) section above.
 :::
 
-I briefly describe how to configure XRay, but you should understand what you are doing and how to apply it to your specific case:
+I briefly describe how to configure Xray, but you should understand what you are doing and how to apply it to your specific case:
 
 - In 3X-UI set listen IPs to `0.0.0.0` (for both web `80` and VPN `443` ports), binding to `0.0.0.0` inside the container makes it accessible from outside, where outside means the host machine (VPS) with Caddy.
 - Select and configure transport WebSocket protocol^[You can use gRPC too, but it does not support path-based routing, so it will always point to `service.example.com/`, it can still be managed by Caddy (see example below), but it looses the point of hiding VPN traffic behind a real service].
-- Configure inbound paths (e.g. `/secret/3x` for UI and `/websocket` for transport^[If the real web service uses `/websocket` path, choose another path for XRay, e.g. `/secret/websocket`]) in 3X-UI settings. Paths are arbitrary but they must match in both 3X-UI and Caddy configs.
+- Configure inbound paths (e.g. `/secret/3x` for UI and `/websocket` for transport^[If the real web service uses `/websocket` path, choose another path for Xray, e.g. `/secret/websocket`]) in 3X-UI settings. Paths are arbitrary but they must match in both 3X-UI and Caddy configs.
 - Configure listen IPs, ports and paths for subscription service if you use it; it can be proxied through Caddy too.
 
 ::: {.callout-warning}
-All this steps are iterative, you will need to reconfigure XRay when Caddy is set up and vice versa. Do not take this too literally.
+All this steps are iterative, you will need to reconfigure Xray when Caddy is set up and vice versa. Do not take this too literally.
 :::
 
 ::: {.callout-info}
-When testing, I had better results with WebSocket transport than gRPC. However, your experience may differ. Also, XRay developers added a new VLESS transport called XHTTP in [December 2024](https://github.com/XTLS/Xray-core/discussions/4113). While it works with Caddy, my tests showed issues, maybe due to limited client support. You can experiment with it too.
+When testing, I had better results with WebSocket transport than gRPC. However, your experience may differ. Also, Xray developers added a new VLESS transport called XHTTP in [December 2024](https://github.com/XTLS/Xray-core/discussions/4113). While it works with Caddy, my tests showed issues, maybe due to limited client support. You can experiment with it too.
 :::
 
-## Configure Caddy to proxy specific paths to XRay
+## Configure Caddy to proxy specific paths to Xray
 
-After all basic components are here, you can add XRay-specific routing based on your chosen transport method.
+After all basic components are here, you can add Xray-specific routing based on your chosen transport method.
 
 ### Transport option 1: WebSocket
+
+To set up WebSocket transport:
+
+1. configure Xray's inbound to use WebSocket transport,
+2. add WebSocket routing to your Caddy configuration.
 
 ::: {.column-margin}
 ![3X-UI inbound configuration for WebSocket transport](inbound-websocket.png)
 :::
-
-To set up WebSocket transport:
-
-1. Configure XRay's inbound to use WebSocket transport
-2. Add WebSocket routing to your Caddy configuration:
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
@@ -146,10 +200,10 @@ https://service.example.com {
 2. This line handles all requests to VPN traffic at `service.example.com/websocket`.
 3. All other requests are handled by the real web service.
 
-Do not forget to reload Caddy. 3X-UI will be available at `https://service.example.com/secret/3x`, while XRay will operate at `service.example.com/secret/websocket` (you must configure this paths in 3X-UI or choose your own!). To generate appropriate user links, add *external proxy* to the inbound settings in 3X-UI.
+Do not forget to reload Caddy. 3X-UI will be available at `https://service.example.com/secret/3x`, while Xray will operate at `service.example.com/secret/websocket` (you must configure this paths in 3X-UI or choose your own!). To generate appropriate user links, add *external proxy* to the inbound settings in 3X-UI.
 
 ::: {.callout-warning}
-As was mentioned before, the real web service may rely on `/secret*` paths, choose another path for XRay if needed.
+As was mentioned before, the real web service may rely on `/secret*` paths, choose another path for Xray if needed.
 :::
 
 
@@ -158,8 +212,8 @@ As was mentioned before, the real web service may rely on `/secret*` paths, choo
 As was mentioned before, gRPC does not support path-based routing, however, it can be managed by Caddy. If your web service operates on non-root path by default (e.g. `service.example.com/panel`), you can still set up Caddy to resolve both services, but this will make your setup messier. Alternatively, you can hide your gRPC-based VPN behind a domain with dev-like path, e.g. `api.example.com`, this may look more natural in explaining high traffic usage.
 Simple no-path routing case is covered below:
 
-1. Configure XRay's inbound to use gRPC transport
-2. Add gRPC-specific routing to your Caddy configuration:
+1. Configure Xray's inbound to use gRPC transport,
+2. add gRPC-specific routing to your Caddy configuration.
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
@@ -169,15 +223,15 @@ https://service.example.com {
 ```
 1. This line handles all requests to VPN traffic at `service.example.com`, `h2c` is HTTP2 without encryption.
 
-3X-UI will be available at `service.example.com/secret/3x`, while XRay will operate at `https://service.example.com/`. The web service is omitted in the config.
+3X-UI will be available at `service.example.com/secret/3x`, while Xray will operate at `https://service.example.com/`. The web service is omitted in the config.
 
 ::: {.callout-note}
-Both WebSocket and gRPC protocols operate over HTTP, so they can be routed through a CDN (e.g. Cloudflare). When routing XRay traffic through CDN, your server’s IP remains hidden behind their network. Keep in mind the extra hop may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
+Both WebSocket and gRPC protocols operate over HTTP, so they can be routed through a CDN (e.g. Cloudflare). When routing Xray traffic through CDN, your server’s IP remains hidden behind their network. Keep in mind the extra hop may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
 :::
 
 ## Subscription service (optional)
 
-XRay can advertise client configurations via a subscription service. It can be proxied through Caddy too. 3X-UI generate two types of subscription links: 'ordinary' and JSON.
+Xray can advertise client configurations via a subscription service. It can be proxied through Caddy too. 3X-UI generate two types of subscription links: 'ordinary' and JSON.
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 
@@ -185,14 +239,14 @@ https://service.example.com {
   reverse_proxy /secret/3x* http://localhost:8080
   reverse_proxy /secret/websocket http://localhost:8443
   
-  reverse_proxy /secret/sub* http://localhost:8081 # <1>
-  reverse_proxy /secret/json* http://localhost:8081 # <2>
+  reverse_proxy /secret/sub* http://localhost:8181 # <1>
+  reverse_proxy /secret/json* http://localhost:8181 # <2>
 }
 ```
 1. Handles all requests to the 'ordinary' subscription service.
 2. Handles all requests to the JSON subscription service.
 
-You need to enable subscription service in 3X-UI panel settings, configure its listen IP (`0.0.0.0` in this set up), port (`8081` on host and `81` inside the container^[see `compose.yaml` for 3X-UI below]), and two paths[^subs] in order to generate correct subscription links automatically.
+You need to enable subscription service in 3X-UI panel settings, configure its listen IP (`0.0.0.0` in this set up), port (`8181` on host and `81` inside the container^[see `compose.yaml` for 3X-UI below]), and two paths[^subs] in order to generate correct subscription links automatically.
 
 [^subs]: This is tricky as actually you need to provide full URIs: `https://service.example.com/secret/sub/` and `https://service.example.com/secret/json/`
 
@@ -226,15 +280,15 @@ This completes the setup.
     # ...
   }
   ```
-- If you have problems setting up XRay, you can bind it to `localhost` explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if XRay is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
+- If you have problems setting up Xray, you can bind it to `localhost` explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if Xray is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
 
-- I had an issue where XRay ignored listen IPs configured via web console, so I patched its database directly. The fix was simple: I connected to my VPS via VS Code SSH extension with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor), opened `~/3x-ui/db/x-ui.db`, edited `webListen` and `subListen` fields in the `settings` table, then recreated the container with `docker-compose up -d --force-recreate`
+- I had an issue where Xray ignored listen IPs configured via web console, so I patched its database directly. The fix was simple: I connected to my VPS via VS Code SSH extension with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor), opened `~/3x-ui/db/x-ui.db`, edited `webListen` and `subListen` fields in the `settings` table, then recreated the container with `docker-compose up -d --force-recreate`
 
 - 3X-UI is in active development. Sometimes updating fixes problems - run `docker-compose pull` and then `docker-compose up -d`. However, don't update if everything works fine since new versions may introduce bugs. Also, the new XHTTP transport protocol may be updated in the near future, so you may want to revisit this setup later.
 
-- Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. XRay can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret/secret` before forwarding to XRay. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
+- Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. Xray can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret/secret` before forwarding to Xray. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
 
-- When Caddy routes e.g. `/secret/sub*` paths to XRay and an error occurs on XRay side, Caddy returns the respond from XRay and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
+- When Caddy routes e.g. `/secret/sub*` paths to Xray and an error occurs on Xray side, Caddy returns the respond from Xray and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
 
 - Network performance can be improved with BBR^[Bottleneck Bandwidth and Round-trip propagation time] congestion control. BBR helps achieve better throughput on connections with packet loss. Configure in `/etc/sysctl.conf`:
 
