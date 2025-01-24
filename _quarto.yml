@@ -33,6 +33,8 @@ format:
   html:
     theme:
       light: cosmo
+    mermaid:
+      theme: neutral
     code-copy: hover
     code-annotations: hover
     html-math-method: mathjax
