@@ -6,3 +6,17 @@
     font-size: 1em;
     line-height: 1em;
 }
+
+p {
+    hyphens: auto;
+}
+
+code {
+    hyphens: none;
+}
+
+a.secret-link:not(:hover) {
+    text-decoration: none;
+    color: inherit;
+    font-weight: inherit;
+}

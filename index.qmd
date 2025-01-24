@@ -11,7 +11,7 @@ listing:
   max-items: 3
 ---
 
-## Latest Posts
+## Latest [posts](/posts){.secret-link}
 
 ::: {#posts}
 :::
