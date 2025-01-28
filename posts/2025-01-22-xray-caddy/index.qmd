@@ -286,7 +286,7 @@ https://service.example.com {
 ```
 
 ::: {.callout-note}
-WebSocket, gRPC, and XHTTP protocols operate over HTTP, so they can be routed through a CDN (e.g. Cloudflare, Fastly, Bunny). When routing Xray traffic through a CDN, your server’s IP remains hidden behind their network. However, your traffic is decrypted at the CDN edge, so it's not end-to-end encrypted or private. Also, a CDN may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
+WebSocket, gRPC, and XHTTP protocols operate over HTTP^[Technically, WebSocket is a distinct protocol, it uses HTTP to initiate connection but then operates directly over TCP. As WebSocket is a standard web protocol, it still can be proxied over some CDNs, same for gRPC], so they can be routed through a CDN (e.g. Cloudflare, Fastly, Bunny). When proxying Xray traffic through a CDN, your server's IP remains hidden behind their network. However, your traffic is decrypted at the CDN edge, so it's not end-to-end encrypted or private. Also, a CDN may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
 :::
 
 ## Subscription service (optional)
