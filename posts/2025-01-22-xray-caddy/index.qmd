@@ -161,7 +161,7 @@ services:
 Note that Xray is bound to `localhost` (`127.0.0.1`), meaning it won't be directly accessible from outside the host machine. Again, we will use Caddy to forward requests to Xray based on the URL path.
 
 ::: {.callout-tip}
-Temporary use `network_mode: host` in the `compose.yaml` to test Xray without Caddy, it should already work with specified ports. See more in the [PS](#ps) section above.
+Temporary use `network_mode: host` in the `compose.yaml` to test Xray without Caddy, it should already work with specified ports. See more in the [P.S.](#ps) section above.
 :::
 
 I briefly describe how to configure Xray, but you should understand what you are doing and how to apply it to your specific case:
@@ -179,16 +179,16 @@ All this steps are iterative, you will need to reconfigure Xray when Caddy is se
 
 After all basic components are here, you can add Xray-specific routing based on your chosen transport method.
 
-### Transport option A: WebSocket
+### Option A: WebSocket transport
+
+::: {.column-margin}
+![3X-UI inbound configuration for WebSocket transport](inbound-websocket.png)
+:::
 
 To set up WebSocket transport:
 
 1. configure Xray's inbound to use WebSocket transport in 3X-UI panel, set path to `/secret/websocket`;
 2. add WebSocket routing to your Caddy configuration.
-
-::: {.column-margin}
-![3X-UI inbound configuration for WebSocket transport](inbound-websocket.png)
-:::
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
@@ -207,7 +207,11 @@ Do not forget to reload Caddy. 3X-UI will be available at `https://service.examp
 As was mentioned before, the real web service may rely on `/secret*` paths, choose another path for Xray if needed.
 :::
 
-### Transport option B: gRPC
+### Option B: gRPC transport 
+
+::: {.column-margin}
+![3X-UI inbound configuration for gRPC transport](inbound-grpc.png)
+:::
 
 gRPC is a protocol to call functions (called _methods_) on a remote server and receive the results. Technically, gRPC does not support path-based routing, it sends all traffic to the root path of the domain (`service.example.com/`) and uses _service names_ to explicitly tell the server which method to call. Practically, it can be managed by Caddy path-based routing.
 
@@ -215,10 +219,6 @@ To set up gRPC transport:
 
 1. configure Xray's inbound to use gRPC transport, set up a service name (`secret/grpc`)^[slash symbols `/` are thread as a part of the service name] instead of a path (`/secret/grpc`) in 3X-UI;
 2. add gRPC-specific routing to your Caddy configuration as an ordinary path (`/secret/grpc*`) and explicitly set the transport to `h2c` (HTTP2 without encryption) used by gRPC.
-
-::: {.column-margin}
-![3X-UI inbound configuration for gRPC transport](inbound-grpc.png)
-:::
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
@@ -230,25 +230,13 @@ https://service.example.com {
 
 3X-UI will be available at `service.example.com/secret/3x`, while Xray will operate at `https://service.example.com/`. The web service is omitted in the config.
 
-### Transport option C: XHTTP with multitransport
-
-A new VLESS transport called XHTTP was added in [December 2024](https://github.com/XTLS/Xray-core/discussions/4113). It works on top of ordinary HTTP, making it harder to distinguish from regular web traffic.
+### Option C: XHTTP with multitransport
 
 ::: {.column-margin}
 ![3X-UI inbound configuration for XHTTP transport](inbound-xhttp.png)
 :::
 
-::: {.column-margin}
-My test of different VLESS transports: pings are measured between Eastern Europe and Eastern US, traffic was proxied through a CDN, best results are:
-
-| Transport  | Download  | Ping   |
-|------------|-----------|--------|
-| WebSocket  | ~215 Mb/s | ~150 ms |
-| gRPC       | ~95 Mb/s  | ~150 ms |
-| XHTTP      | ~65 Mb/s  | ~145 ms |
-
-With the release of XHTTP protocol, WebSocket and gRPC become deprecated. However, XHTTP is the slowest of the three (with slightly better ping) according to my tests. Also, my tests showed XHTTP is unreliable (e.g. long connection times, DNS resolution errors), maybe due to limited client support. Still, you can experiment with it too.
-:::
+A new VLESS transport called XHTTP was added in [December 2024](https://github.com/XTLS/Xray-core/discussions/4113). It works on top of ordinary HTTP, making it harder to distinguish from regular web traffic.
 
 As a general idea of path-based routing was presented, here we demonstrate not only single XHTTP transport, but complete multitransport (WebSocket + gRPC + XHTTP) setup. This means that different clients can connect to the same server using different transport protocols at the same time.
 
@@ -315,11 +303,24 @@ You need to enable subscription service in 3X-UI panel settings, configure its l
 Subscription service returns client configurations when a secret after `/sub/` (or `/json/`) is provided, e.g. `service.example.com/secret/sub/ow32h8fq66dhxwt4`. Caddy encrypts all connections and paths, however, if the secret is leaked, the client configuration can be seen. More complicated paths for subscription service can be used to mitigate this, e.g. `service.example.com/secret/sub-random-string/`. I.e. threat paths as another secret.
 :::
 
-***
-
 This completes the setup.
 
+***
+
 ## Post scriptum {#ps}
+
+::: {.column-margin}
+My test of different VLESS transports: pings are measured between Eastern Europe and Eastern US, traffic was proxied through a CDN, best results are:
+
+| Transport  | Download  | Ping   |
+|------------|-----------|--------|
+| WebSocket  | ~215 Mb/s | ~150 ms |
+| gRPC       | ~95 Mb/s  | ~150 ms |
+| XHTTP      | ~65 Mb/s  | ~145 ms |
+
+With the release of XHTTP protocol, WebSocket and gRPC become deprecated. However, XHTTP is the slowest of the three (with slightly better ping) according to my tests. Also, my tests showed XHTTP is unreliable (e.g. long connection times, DNS resolution errors), maybe due to limited client support. Still, you can experiment with it too.
+:::
+
 
 - Caddy distinguishes `/secret/3x/`, `/secret/3x`, `/secret/3x*`, and `/secret/3x/*` paths. If 3X-UI is not accessible via `https://service.example.com/secret/3x`, try adding a trailing slash and recheck paths in both Caddy and 3X-UI configurations (and in the browser!).
 
