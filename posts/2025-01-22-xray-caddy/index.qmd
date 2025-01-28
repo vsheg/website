@@ -151,7 +151,7 @@ services:
     ports:
         - 127.0.0.1:8443:443 # VPN # <2>
         - 127.0.0.1:8080:80 # web UI # <3>
-        - 127.0.0.1:8181:81 # subscription service # <4>
+        - 127.0.0.1:8180:81 # subscription service # <4>
 ```
 1. Same domain as for the web service, we use it to hide VPN traffic.
 2. You must configure the VPN port in the 3X-UI, here we bind it to the VPS's `8443` port.
@@ -300,14 +300,14 @@ https://service.example.com {
   reverse_proxy /secret/websocket* http://localhost:8443
   # ...
   
-  reverse_proxy /secret/sub* http://localhost:8181 # <1>
-  reverse_proxy /secret/json* http://localhost:8181 # <2>
+  reverse_proxy /secret/sub* http://localhost:8180 # <1>
+  reverse_proxy /secret/json* http://localhost:8180 # <2>
 }
 ```
 1. Handles all requests to the 'ordinary' subscription service.
 2. Handles all requests to the JSON subscription service.
 
-You need to enable subscription service in 3X-UI panel settings, configure its listen IP (`0.0.0.0` in this set up), port (`8181` on host and `81` inside the container^[see `compose.yaml` for 3X-UI below]), and two paths[^subs] in order to generate correct subscription links automatically.
+You need to enable subscription service in 3X-UI panel settings, configure its listen IP (`0.0.0.0` in this set up), port (`8180` on host and `81` inside the container^[see `compose.yaml` for 3X-UI below]), and two paths[^subs] in order to generate correct subscription links automatically.
 
 [^subs]: This is tricky as actually you need to provide full URIs: `https://service.example.com/secret/sub/` and `https://service.example.com/secret/json/`
 
