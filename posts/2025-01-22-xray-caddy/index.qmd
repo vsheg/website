@@ -21,7 +21,12 @@ Caddy can route traffic to different handlers based on URL path, e.g. `service.e
 
 This allows serving your main website while directing specific paths to the Xray server. For example, you can run a website at `service.example.com` while the 3X-UI interface is accessible at `service.example.com/secret/3x/`. You can host multiple services on the same domain and **port**, differentiating them by path.
 
-When you communicate with any service via HTTPS encrypted connection, any intermediaries (like your ISP) can see only the domain name (`service.example.com`) and the port (443), but all paths (e.g. `service.example.com/secret/3x`) are encrypted.
+When you communicate with any service via HTTPS encrypted connection, intermediaries[^cdn] (like your ISP) can see only the domain name (`service.example.com`) and the port (443), but all paths (e.g. in `service.example.com/secret/3x`) are encrypted.
+
+[^cdn]: 
+    If you use a CDN (e.g. Cloudflare) to proxy your website data, it decrypts and re-encrypts HTTPS traffic to cache it and apply routing rules. CDNs create two separate SSL connections: one between the client and the CDN, and another between the CDN and the origin server (your VPS). While all connections over the internet are encrypted, the CDN can see your data decrypted (unless you use double encryption).
+
+    This means that the CDN can see the full URL path and the data you send and receive. The difference between a CDN and an ISP is that you must explicitly configure a CDN by adding DNS records to route traffic through it. Only then can the CDN issue certificates for your domain, present them to clients, and decrypt traffic to apply caching and routing rules. ISPs or third-party CDNs cannot decrypt your traffic and see the full URL paths without explicitly configuring DNS records to allow them to do so.
 
 $$
 \underbrace{\text{https}}_\text{protocol} \text{://} \underbrace{\text{service.example.com}}_\text{visible} \underbrace{\text{/secret/3x/panel}}_\text{hidden}
@@ -170,19 +175,15 @@ I briefly describe how to configure Xray, but you should understand what you are
 All this steps are iterative, you will need to reconfigure Xray when Caddy is set up and vice versa. Do not take this too literally.
 :::
 
-::: {.callout-info}
-When testing, I had better results with WebSocket transport than gRPC. However, your experience may differ. Also, Xray developers added a new VLESS transport called XHTTP in [December 2024](https://github.com/XTLS/Xray-core/discussions/4113). While it works with Caddy, my tests showed issues, maybe due to limited client support. You can experiment with it too.
-:::
-
 ## Configure Caddy to proxy specific paths to Xray
 
 After all basic components are here, you can add Xray-specific routing based on your chosen transport method.
 
-### Transport option 1: WebSocket
+### Transport option A: WebSocket
 
 To set up WebSocket transport:
 
-1. configure Xray's inbound to use WebSocket transport,
+1. configure Xray's inbound to use WebSocket transport in 3X-UI panel, set path to `/secret/websocket`;
 2. add WebSocket routing to your Caddy configuration.
 
 ::: {.column-margin}
@@ -192,7 +193,7 @@ To set up WebSocket transport:
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
   reverse_proxy /secret/3x* http://localhost:8080  # <1>
-  reverse_proxy /secret/websocket http://localhost:8443 # <2>
+  reverse_proxy /secret/websocket* http://localhost:8443 # <2>
   reverse_proxy http://localhost:8081 # <3>
 }
 ```
@@ -206,27 +207,86 @@ Do not forget to reload Caddy. 3X-UI will be available at `https://service.examp
 As was mentioned before, the real web service may rely on `/secret*` paths, choose another path for Xray if needed.
 :::
 
+### Transport option B: gRPC
 
-### Transport option 2: gRPC (no path-based routing)
+gRPC is a protocol to call functions (called _methods_) on a remote server and receive the results. Technically, gRPC does not support path-based routing, it sends all traffic to the root path of the domain (`service.example.com/`) and uses _service names_ to explicitly tell the server which method to call. Practically, it can be managed by Caddy path-based routing.
 
-As was mentioned before, gRPC does not support path-based routing, however, it can be managed by Caddy. If your web service operates on non-root path by default (e.g. `service.example.com/panel`), you can still set up Caddy to resolve both services, but this will make your setup messier. Alternatively, you can hide your gRPC-based VPN behind a domain with dev-like path, e.g. `api.example.com`, this may look more natural in explaining high traffic usage.
-Simple no-path routing case is covered below:
+To set up gRPC transport:
 
-1. Configure Xray's inbound to use gRPC transport,
-2. add gRPC-specific routing to your Caddy configuration.
+1. configure Xray's inbound to use gRPC transport, set up a service name (`secret/grpc`)^[slash symbols `/` are thread as a part of the service name] instead of a path (`/secret/grpc`) in 3X-UI;
+2. add gRPC-specific routing to your Caddy configuration as an ordinary path (`/secret/grpc*`) and explicitly set the transport to `h2c` (HTTP2 without encryption) used by gRPC.
+
+::: {.column-margin}
+![3X-UI inbound configuration for gRPC transport](inbound-grpc.png)
+:::
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
   reverse_proxy /secret/3x* http://localhost:8080
-  reverse_proxy h2c://localhost:8443 # <1>
+  reverse_proxy /secret/grpc* h2c://localhost:8443 # <1>
 }
 ```
 1. This line handles all requests to VPN traffic at `service.example.com`, `h2c` is HTTP2 without encryption.
 
 3X-UI will be available at `service.example.com/secret/3x`, while Xray will operate at `https://service.example.com/`. The web service is omitted in the config.
 
+### Transport option C: XHTTP with multitransport
+
+A new VLESS transport called XHTTP was added in [December 2024](https://github.com/XTLS/Xray-core/discussions/4113). It works on top of ordinary HTTP, making it harder to distinguish from regular web traffic.
+
+::: {.column-margin}
+![3X-UI inbound configuration for XHTTP transport](inbound-xhttp.png)
+:::
+
+::: {.column-margin}
+My test of different VLESS transports: pings are measured between Eastern Europe and Eastern US, traffic was proxied through a CDN, best results are:
+
+| Transport  | Download  | Ping   |
+|------------|-----------|--------|
+| WebSocket  | ~215 Mb/s | ~150 ms |
+| gRPC       | ~95 Mb/s  | ~150 ms |
+| XHTTP      | ~65 Mb/s  | ~145 ms |
+
+With the release of XHTTP protocol, WebSocket and gRPC become deprecated. However, XHTTP is the slowest of the three (with slightly better ping) according to my tests. Also, my tests showed XHTTP is unreliable (e.g. long connection times, DNS resolution errors), maybe due to limited client support. Still, you can experiment with it too.
+:::
+
+As a general idea of path-based routing was presented, here we demonstrate not only single XHTTP transport, but complete multitransport (WebSocket + gRPC + XHTTP) setup. This means that different clients can connect to the same server using different transport protocols at the same time.
+
+Configure three different inbounds in 3X-UI:
+
+- one for WebSocket with `/secret/websocket` path and `443` port (inside the container);
+- another for gRPC with `secret/grpc` service name and `444` port (inside the container);
+- and the last for XHTTP with `/secret/xhttp` path and `445` port (inside the container).
+
+Bind ports to the host machine:
+
+```{.yaml filename="~/3x-ui/compose.yaml"}
+services:
+  3x-ui:
+    # ...
+    ports:
+        - 127.0.0.1:8443:443 # websocket VPN
+        - 127.0.0.1:8444:444 # gRPC VPN # <1>
+        - 127.0.0.1:8445:445 # XHTTP VPN # <2>
+        - 127.0.0.1:8080:80 # web UI
+    # ...
+```
+1. Look carefully: ports are different.
+2. Do not overlap ports.
+
+Then configure Caddy to handle all paths and ports accordingly:
+
+```{.txt filename="/etc/caddy/Caddyfile"}
+https://service.example.com {
+  reverse_proxy /secret/3x* http://localhost:8080
+  reverse_proxy /secret/websocket* http://localhost:8443
+  reverse_proxy /secret/grpc* h2c://localhost:8444
+  reverse_proxy /secret/xhttp* http://localhost:8445
+}
+```
+
 ::: {.callout-note}
-Both WebSocket and gRPC protocols operate over HTTP, so they can be routed through a CDN (e.g. Cloudflare). When routing Xray traffic through CDN, your server’s IP remains hidden behind their network. Keep in mind the extra hop may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
+WebSocket, gRPC, and XHTTP protocols operate over HTTP, so they can be routed through a CDN (e.g. Cloudflare, Fastly, Bunny). When routing Xray traffic through a CDN, your server’s IP remains hidden behind their network. However, your traffic is decrypted at the CDN edge, so it's not end-to-end encrypted or private. Also, a CDN may increase latency (ping), though it may also improve overall speeds by routing traffic through the optimized network.
 :::
 
 ## Subscription service (optional)
@@ -237,7 +297,8 @@ Xray can advertise client configurations via a subscription service. It can be p
 
 https://service.example.com {    
   reverse_proxy /secret/3x* http://localhost:8080
-  reverse_proxy /secret/websocket http://localhost:8443
+  reverse_proxy /secret/websocket* http://localhost:8443
+  # ...
   
   reverse_proxy /secret/sub* http://localhost:8181 # <1>
   reverse_proxy /secret/json* http://localhost:8181 # <2>
