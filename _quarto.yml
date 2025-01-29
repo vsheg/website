@@ -61,3 +61,5 @@ citation-location: margin
 callout-appearance: minimal
 
 lightbox: true
+
+csl: https://www.zotero.org/styles/gost-r-7-0-5-2008-numeric
