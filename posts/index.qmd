@@ -2,12 +2,15 @@
 title: Blog & notes
 page-layout: full
 comments: false
+image-lazy-loading: true
 listing:
   id: posts
   contents: ./
   feed: true
   sort: "date desc"
   categories: unnumbered
+  image-height: 200pt
+  # TODO: type: grid
   # TODO: image-placeholder: ""
 ---
 

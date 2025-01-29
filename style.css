@@ -20,3 +20,8 @@ a.secret-link:not(:hover) {
     color: inherit;
     font-weight: inherit;
 }
+
+/* SERIF FONT FOR BODY TEXT */
+main.content p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
