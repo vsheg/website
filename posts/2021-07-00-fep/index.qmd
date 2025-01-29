@@ -29,7 +29,7 @@ $$ \Delta F_{\mathcal{A}\mathcal{B}} = F_{\mathcal{B}} - F_{\mathcal{A}} = - k T
 $$
 \begin{aligned}
 Q_{\mathcal{A}} &:= \dfrac{1}{N! h^{3N}} \int_\text{ФП} e^{- \beta H(\mathbf{p}, \mathbf{q})} \mathrm{d} \mathbf{p} \mathrm{d} \mathbf{q} = \\
-&= \dfrac{1}{N! h^{3N}} \int_\text{ФП} \exp \left\{ - \beta \left[\sum_{i=1}^N \dfrac{\mathbf{p}_i^2}{2m_i}\right] + U_{\mathcal{A}} (\mathbf{q}_1, \cdots, \mathbf{q}_N)\right\} \mathrm{d} \mathbf{п} \mathrm{d} \mathbf{q},
+&= \dfrac{1}{N! h^{3N}} \int_\text{ФП} \exp \left\{ - \beta \left[\sum_{i=1}^N \dfrac{\mathbf{p}_i^2}{2m_i}\right] + U_{\mathcal{A}} (\mathbf{q}_1, \cdots, \mathbf{q}_N)\right\} \mathrm{d} \mathbf{p} \mathrm{d} \mathbf{q},
 \end{aligned}
 $${#eq-def-Q}
 
