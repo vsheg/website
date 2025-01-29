@@ -1,0 +1,122 @@
+---
+title: Теория возмущений свободной энергии
+date: 2021-07
+bibliography: ../../assets/citation.legacy.yaml
+categories:
+    - molecular dynamics
+    - russian
+---
+
+## Статистические суммы
+
+::: column-margin
+Информацию по разделу см. в [@Tuckerman2010, с. 312]
+:::
+
+Пусть имеем термодинамическую систему, состоящую из молекулы лиганда $\mathrm{L}$ и белка $\mathrm{E}$: в состоянии $\mathcal{A}$ лиганд $\mathrm{L}$ и белок $\mathrm{E}$ и не связаны, в состоянии $\mathcal{B}$ --- имеет место комплекс $\rm{ES}$, соответственно введём потенциальные энергии $U_{\mathcal{A}}(\mathbf{r})$ и $U_{\mathcal{B}}(\mathbf{r})$ для несвязанного и связанного состояний. Свободная энергия Гельмгольца перехода в связанное состояние [@Tuckerman2010, с. 138]
+$$ \Delta F_{\mathcal{A}\mathcal{B}} = F_{\mathcal{B}} - F_{\mathcal{A}} $$ {#eq-DF-def}
+
+может быть выражена через суммы по состояниям:
+
+$$ \Delta F_{\mathcal{A}\mathcal{B}} = F_{\mathcal{B}} - F_{\mathcal{A}} = - k T \ln \dfrac{Q_{\mathcal{B}}}{Q_{\mathcal{A}}}, $$ {#eq-DF-by-Q}
+
+где, например,
+
+$$
+\begin{aligned}
+Q_{\mathcal{A}} &:= \dfrac{1}{N! h^{3N}} \int_\text{ФП} e^{- \beta H(\mathbf{p}, \mathbf{q})} \mathrm{d} \mathbf{p} \mathrm{d} \mathbf{q} = \\
+&= \dfrac{1}{N! h^{3N}} \int_\text{ФП} \exp \left\{ - \beta \left[\sum_{i=1}^N \dfrac{\mathbf{p}_i^2}{2m_i}\right] + U_{\mathcal{A}} (\mathbf{q}_1, \cdots, \mathbf{q}_N)\right\} \mathrm{d} \mathbf{п} \mathrm{d} \mathbf{q},
+\end{aligned}
+$${#eq-def-Q}
+
+где $H$ --- гамильтониан системы $\mathcal{A}$, $N$ --- число частиц в ней, $\beta = 1 / kT$, $\mathrm{d} \mathbf{p} \mathrm{d} \mathbf{q}$ --- точка ФП; интегрирование ведётся по всему ФП, что эквивалентно интегрированию по области, соответствующей состоянию $\mathcal{A}$, т.е. там, где вероятность пронаблюдать микросостояние состояния $\mathcal{A}$ не нулевая.
+
+Сократив в @eq-DF-by-Q числитель и знаменатель на импульсозависимую часть $\exp \{ \sum_i \frac{\mathbf{p}_i^2}{2 m_i} \}$, перейдём к конфигурационным интегралам:
+
+$$ \Delta F_{\mathcal{A}\mathcal{B}} = F_{\mathcal{B}} - F_{\mathcal{A}} = -kT \ln \dfrac{Z_{\mathcal{B}}}{Z_{\mathcal{A}}}, $$ {#eq-DF-by-Z}
+
+где
+
+$$ Z_{\mathcal{A}} := \int e^{ -\beta U_{\mathcal{A}} (\mathbf{q}_1, \cdots, \mathbf{q}_2) } \mathrm{d} \mathbf{q}. $${#eq-conf-int-A}
+
+Оценить $\Delta F$ непосредственно по уравнениям @eq-DF-by-Q и @eq-DF-by-Z сложно, поскольку методы МД и Монте-Карло не позволяют непосредственно рассчитывать статистические суммы и интегралы, однако позволяют получить хорошие средние оценки ТД функций.
+
+Уравнение @eq-DF-by-Z можно переформулировать через средние ТД величины. Конфигурационный интеграл представим в виде интеграла от двух множителей-экспонент:
+$$Z_{\mathcal{B}} = \int e^{-\beta U_{\mathcal{B}}} \mathrm{d} \mathbf{q} = 
+\int e^{-\beta U_{\mathcal{B}}} e^{\beta U_{\mathcal{A}}} e^{-\beta U_{\mathcal{A}} } \mathrm{d} \mathbf{q} = 
+\int e^{- \beta (U_{\mathcal{B}}-U_{\mathcal{A}})} \underbrace{ e^{-\beta U_{\mathcal{A}}} }_{\rho_{\mathcal{A}}} \mathrm{d} \mathbf{q},
+$$ {#eq-conf-int-expressed-by-rho}
+где $\rho_{\mathcal{A}}$ --- функция распределения, соответствующая состоянию $\mathcal{A}.$ Среднее значение произвольной функции $y$ по ансамблю $\mathcal{A}$ можно вычислить через функцию распределения $\rho_{\mathcal{A}}$:
+$$
+\langle y \rangle_{\mathcal{A}} := \dfrac 1 {Z_{\mathcal{A}}} \int_\text{ФП} \rho_{\mathcal{A}} (\mathbf{p}, \mathbf{q}) \cdot y(\mathbf{p}, \mathbf{q}) \mathrm{d} \mathbf{p} \mathrm{d} \mathbf{q},
+$${#eq-ensemble-avg}
+
+учитывая @eq-conf-int-expressed-by-rho и @eq-ensemble-avg, дробь в уравнении @eq-DF-by-Z примет вид:
+
+$$
+\dfrac{Z_{\mathcal{B}}}{Z_{\mathcal{A}}} = \dfrac 1 {Z_{\mathcal{A}}} \int e^{-\beta U_{\mathcal{A}}} e^{-\beta (U_{\mathcal{B}} - U_{\mathcal{A})}} = \langle e^{-\beta (U_{\mathcal{B}} - U_{\mathcal{A}})} \rangle_{\mathcal{A}},
+$$
+
+т.е. среднее берётся из распределения, соответствующего состоянию $\mathcal{A}$.
+
+Наконец, 
+
+$$
+\Delta F_{\mathcal A \mathcal B} = -kT \ln \langle e^{-\beta (U_{\mathcal B} - U_{\mathcal A})} \rangle_{\mathcal A}.
+$$ {#eq-free-energy-perturbation}
+
+Уравнение @eq-free-energy-perturbation известно как _возмущение свободной энергии_. Опишем, как следует использовать это уравнение. Состоянию $\mathcal A$ отвечает функция распределения $\rho_{\mathcal A}$ и потенциал $U_{\mathcal A}$, в ходе численного эксперимента мы получаем точки ФП, соответствующие этому распределению, и затем используем их для моделирования состояния $\mathcal B,$ заменив потенциал на $U_{\mathcal B}$. Однако, распределению $\mathcal B$ соответствует другая функция распределения $\rho_{\mathcal B}$, поэтому точки ФП следует _перевзвесить_^[англ. _reweighting_], поделив на исходное $e^{-\beta U_{\mathcal A}}$ и умножив на $e^{-\beta U_{\mathcal B}}$.
+
+Таким образом, при расчёте $\Delta F$ по @eq-free-energy-perturbation мы собираем статистику по ФП, соответствующую начальному состоянию, и затем используем эти наблюдения для оценки $\Delta F$, как если бы они были взяты из распределения состояния $\mathcal B$. Ограничением этого подхода является то, что микросостояния из распределения $\mathcal A$ могут не быть микросостояниями с высокой вероятностью в распределении $\mathcal B$, в этом случае разность $U_{\mathcal B} - U_{\mathcal A}$ будет большой и экспоненциальный фактор $e^{-\beta (U_{\mathcal B} - U_{\mathcal A})} \to 0$, соответствующие состояния будут иметь малый вес в среднем по ансамблю $\langle \cdots \rangle_{\mathcal A}$ и, как следствие, сходимость будет медленной. Другими словами, требуется, чтобы состояние $\mathcal B$ было небольшим возмущением состояния $\mathcal A$ и их области в ФП существенно перекрывались.
+
+В постановке задачи, состоянию $\mathcal A$ соответствует несвязанные белок s:{E} и лиганд s:{L}, состоянию $\mathcal B$ --- фермент-субстратный комплекс s:{EL}, на масштабах системы «лиганд---белок---гидратная оболочка» переход из несвязанного в связанное состояние в принципе можно считать небольшим возмущением.
+
+## Термодинамическое интегрирование
+
+Выбор начального и конечного состояний не ограничивается связыванием в комплекс, состояния могут соответствовать любым областям в ФП. В случае, когда $\mathcal{A}$ и $\mathcal{B}$ достаточно далеки, вводят промежуточные состояния, переходы между которыми можно считаться малым возмущением. Уравнение @eq-free-energy-perturbation в этом обобщении имеет вид:
+$$
+\Delta F_{\mathcal{A}\mathcal{B}} = -kT \sum_{i} \ln \langle e^{-\beta (U_{i+1} - U_i)} \rangle_i,
+$$
+где $i$ --- номер промежуточного состояния, $U_i$ --- соответствующий ему потенциал, усреднение ведётся по функции распределения $e^{-\beta U_i}$ этого состояния.
+
+Однако, можно пойти дальше и от суммирования дискретных состояний перейти к непрерывному интегрированию.
+Введём путь трансформации $\lambda = 0..1$ --- величину по сути аналогичную координате реакции между двумя состояниями ТД системы. Пользуясь $\lambda$ мы можем определить потенциальную энергию $U(\lambda)$ промежуточных состояний:
+
+$$
+\begin{cases}
+    U(\lambda) = f(\lambda) U_{\mathcal{A}} + g(\lambda) U_{\mathcal{B}}, \\
+    f(\lambda) \text{ монотонно убывает от $1$ до $0$}, \\
+    g(\lambda) \text{ монотонно возрастает от $0$ до $1$}.
+\end{cases}
+$$
+
+Из выражения свободной энергии, соответствующей состоянию $U(\lambda)$:
+$$ F(\lambda) = - k T \ln Q(\lambda), $$
+можно получить соотношение для производной свободной энергии $F$ по параметру пути $\lambda$:
+$$ 
+\begin{aligned}
+\frac{\partial F}{\partial \lambda} &= -\frac{kT}{Q} \frac{\partial Q}{\partial \lambda} = -\frac{kT}{Z} \frac{\partial Z}{\partial \lambda} \\
+&= -\frac{kT}{Z} \frac{\partial}{\partial \lambda} \int_{\mathrm{ФП}} e^{-\beta U(\mathbf{q}; \lambda)} \, \mathrm{d}\mathbf{q} \\
+&= -\frac{kT}{Z} \int_{\mathrm{ФП}} \left(-\beta \frac{\partial U(\mathbf{q}; \lambda)}{\partial \lambda}\right) e^{-\beta U(\mathbf{q}; \lambda)} \, \mathrm{d}\mathbf{q} \\
+&= \left\langle \frac{\partial U(\lambda)}{\partial \lambda} \right\rangle_\lambda
+\end{aligned}
+$$ {#eq-TD-int}
+
+т.е. $\partial F / \partial \lambda$ может быть рассчитана через среднее по ансамблю с распределением $e^{-\beta U(\lambda)}$ при $\lambda = \mathrm{const}$.
+
+Изменения свободной энергии при переходе из $\mathcal{A}$ в $\mathcal{B}$ затем может быть рассчитано через интеграл по пути $\lambda$:
+
+$$ \Delta F_{\mathcal{A}\mathcal{B}} = \int_0^1 \left\langle \frac{\partial U}{\partial \lambda} \right\rangle_\lambda \, \mathrm{d}\lambda $$ {#eq-DF-by-avg-lambda-int}
+
+Уравнение @eq-DF-by-avg-lambda-int называется формулой термодинамического интегрирования [@Zwanzig1954], этот интеграл не зависит от выбора $f(\lambda)$ и $g(\lambda)$, однако, при выборе удачного вида (т.н. выпуклая линейная комбинация)
+$$ U(\lambda) = \lambda U_{\mathcal{A}} + (1 - \lambda) U_{\mathcal{B}}, $$
+уравнение @eq-DF-by-avg-lambda-int упростится до
+$$
+\Delta F_{\mathcal{A}\mathcal{B}} = \int_0^1 \langle U_{\mathcal{B}} - U_{\mathcal{A}} \rangle \mathrm{d} \lambda.
+$$
+
+На практике, однако, от интегрирования по $\lambda$ вновь переходят к суммированию по некоторым промежуточным состояниям $\lambda_1, \cdots, \lambda_n$:
+$$
+\Delta F_{\mathcal{A}\mathcal{B}} = \sum_{0 \le \lambda_k \le 1} \left\langle \frac{\partial U}{\partial \lambda} \right\rangle_{\lambda_k},
+$$ {#eq-DF-avg-lambda-sum}
+точки ФП для вычисления средних $\langle \partial U / \lambda \rangle_{\lambda_k}$ берутся из  распределения $e^{-\beta U(\lambda = \lambda_k)}$.
