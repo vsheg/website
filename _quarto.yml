@@ -21,7 +21,7 @@ website:
   search:
     location: navbar
     type: textbox
-  page-footer: '[🦧](https://duckduckgo.com/?q=orangutan&iax=images&ia=images){.secret-link target="_blank"} Vsevolod Shegolev, 2025'
+  page-footer: '[🦧](https://duckduckgo.com/?q=orangutan&iax=images&ia=images){.secret-link target="_blank"}'
 
 crossref:
   eq-prefix: "" # TODO: add parentheses around equation numbers
