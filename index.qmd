@@ -1,6 +1,5 @@
 ---
-title: Vsevolod Shegolev
-subtitle: Personal website
+pagetitle:  Vsevolod Shegolev - Personal website
 page-layout: full
 listing:
   id: posts
