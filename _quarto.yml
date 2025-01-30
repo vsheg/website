@@ -6,6 +6,7 @@ project:
 website:
   title: sheg.cc
   site-url: https://sheg.cc/
+  favicon: assets/favicon.svg
   repo-url: https://github.com/vsheg/website
   repo-actions: [edit, issue]
   google-analytics: G-LZBXW9YKWW
