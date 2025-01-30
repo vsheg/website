@@ -3,8 +3,6 @@ title: Blog & notes
 page-layout: full
 comments: false
 image-lazy-loading: true
-include-in-header: 
-  text: ''
 listing:
   id: posts
   contents: ./
