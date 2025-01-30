@@ -6,9 +6,6 @@ toc-title: Contents
 number-sections: true
 number-depth: 2
 
-comments:
-  giscus:
-    repo: vsheg/website
-    category: Posts
-    input-position: bottom
-    mapping: title
+format:
+  html:
+    include-in-header: ../remark42.html
