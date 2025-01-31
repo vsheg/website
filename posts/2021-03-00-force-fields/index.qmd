@@ -114,17 +114,17 @@ U_a = k_\theta (\theta - \bar \theta)^2 + k_t (r_t - \bar r_t)^2,
 $$
 добавление новых степеней свободы в СП мотивировано попыткой лучшего описания колебательный спектров.
 
-4. Вид потенциала взаимодействия двух ковалентно несвязанных атомов $\text{X}$ и $\text{Y}$ задаются [уравнением Ленарда --- Джонса](../2021-01-00-molecular-interactions/index.qmd#eq-U-LJ). Его можно переформулировать через параметры глубины потенциальной ямы (энергии взаимодействия) $\epsilon_{\mathrm X, \mathrm Y}$ и соответствующего ей расстояния $r^{\min}_{\mathrm X,\mathrm Y}$:
+4. Вид потенциала взаимодействия двух ковалентно несвязанных атомов $\text{X}$ и $\text{Y}$ задаются [уравнением Ленарда --- Джонса](../2021-01-00-molecular-interactions/index.qmd#eq-U-LJ). Его можно переформулировать через параметры глубины потенциальной ямы (энергии взаимодействия) $\epsilon_{\ce X, \ce Y}$ и соответствующего ей расстояния $r^{\min}_{\ce X,\ce Y}$:
 $$
-U_\text{LJ}(r) = \epsilon_{\mathrm X, \mathrm Y} \left\{ \left(\dfrac{r^\text{min}_{\mathrm X, \mathrm Y}}{r}\right)^{12} - 2 \left(\dfrac{r^\text{min}_{\mathrm X, \mathrm Y}}{r} \right)^6 \right\}.
+U_\text{LJ}(r) = \epsilon_{\ce X, \ce Y} \left\{ \left(\dfrac{r^\text{min}_{\ce X, \ce Y}}{r}\right)^{12} - 2 \left(\dfrac{r^\text{min}_{\ce X, \ce Y}}{r} \right)^6 \right\}.
 $$
-Если природа взаимодействующих атомов идентична ($\text{X} = \text{Y}$), то параметры $\epsilon_{\mathrm X, \mathrm X}$ и $r^{\min}_{\mathrm X, \mathrm X}$ берутся непосредственно из СП для соответствующего $\text{X}$ типа атома, если $\text{X} \ne \text{Y}$, то параметры попарных взаимодействий необходимо вычислять. В силовых полях `OPLS-AA` и `GROMOS` они вычисляются как среднее геометрическое
+Если природа взаимодействующих атомов идентична ($\text{X} = \text{Y}$), то параметры $\epsilon_{\ce X, \ce X}$ и $r^{\min}_{\ce X, \ce X}$ берутся непосредственно из СП для соответствующего $\text{X}$ типа атома, если $\text{X} \ne \text{Y}$, то параметры попарных взаимодействий необходимо вычислять. В силовых полях `OPLS-AA` и `GROMOS` они вычисляются как среднее геометрическое
 $$
-\epsilon_{\mathrm X,\mathrm Y} := \sqrt{\epsilon_{\mathrm X, \mathrm X} \cdot \epsilon_{\mathrm Y,\mathrm Y}}, \qquad r^{\min}_{\mathrm X,\mathrm Y} := \sqrt{r^{\min}_{\mathrm X,\mathrm X} \cdot r^{\min}_{\mathrm Y,\mathrm Y}},
+\epsilon_{\ce X,\ce Y} := \sqrt{\epsilon_{\ce X, \ce X} \cdot \epsilon_{\ce Y,\ce Y}}, \qquad r^{\min}_{\ce X,\ce Y} := \sqrt{r^{\min}_{\ce X,\ce X} \cdot r^{\min}_{\ce Y,\ce Y}},
 $$
-в силовых полях `CHARMM` и `AMBER` аналогично вычисляется $\epsilon_{\mathrm X,\mathrm Y}$, а $r^{\min}_{\mathrm X,\mathrm Y}$ как среднее арифметическое:
+в силовых полях `CHARMM` и `AMBER` аналогично вычисляется $\epsilon_{\ce X,\ce Y}$, а $r^{\min}_{\ce X,\ce Y}$ как среднее арифметическое:
 $$
-r^{\min}_{\mathrm X,\mathrm Y} = \dfrac 1 2 ( r^{\min}_{\mathrm X,\mathrm X} + r^{\min}_{\mathrm Y,\mathrm Y} ).
+r^{\min}_{\ce X,\ce Y} = \dfrac 1 2 ( r^{\min}_{\ce X,\ce X} + r^{\min}_{\ce Y,\ce Y} ).
 $$
 
 1. Поскольку параметры потенциала вычисляются для пар разных атомов по весьма простым правилам, для лучшей воспроизводимости экспериментальных барьеров вращения торсионных углов в разных СП вводятся масштабирующие множители к **1-4 взаимодействиям**. В `AMBER` величина кулоновских и леннардджонсоновских взаимодействия умножаются на $1 / 2$ и $5 / 6$ соответственно, в `OPLS-AA` оба на $1 / 2$, `GROMOS` и `CHARMM` применяют разные корректировки к разным парам атомов.
