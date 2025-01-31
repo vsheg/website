@@ -8,4 +8,4 @@ number-depth: 2
 
 format:
   html:
-    include-in-header: ../remark42.html
+    include-in-header: ../includes.html
