@@ -4,8 +4,8 @@ project:
     - robots.txt
 
 website:
-  title: sheg.cc
-  site-url: https://sheg.cc/
+  title: vsheg.com
+  site-url: https://vsheg.com/
   favicon: assets/favicon.svg
   repo-url: https://github.com/vsheg/website
   repo-actions: [edit, issue]
