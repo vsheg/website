@@ -348,7 +348,7 @@ With the release of XHTTP protocol, WebSocket and gRPC become deprecated. Howeve
 
 - 3X-UI is in active development. Sometimes updating fixes problems - run `docker-compose pull` and then `docker-compose up -d`. However, don't update if everything works fine since new versions may introduce bugs. Also, the new XHTTP transport protocol may be updated in the near future, so you may want to revisit this setup later.
 
-- Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. Xray can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret/secret` before forwarding to Xray. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
+- Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. Xray can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret` before forwarding to Xray. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
 
 - When Caddy routes e.g. `/secret/sub*` paths to Xray and an error occurs on Xray side, Caddy returns the respond from Xray and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
 
