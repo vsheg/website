@@ -52,7 +52,7 @@ format:
       margin-width: 300px
     code-copy: hover
     code-annotations: hover
-    html-math-method: mathjax
+    html-math-method: katex
 
 filters:
   - auto-dark
