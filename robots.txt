@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://sheg.cc/sitemap.xml
+Sitemap: https://vsheg.com/sitemap.xml

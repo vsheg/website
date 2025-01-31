@@ -5,8 +5,8 @@ about:
   image: profile.jpg
   links:
     - icon: envelope-at
-      text: hi@sheg.cc
-      href: mailto:hi@sheg.cc?&body=Hi%20Vsevolod%2C%0A%0A%0A
+      text: mail@vsheg.com
+      href: mailto:mail@vsheg.com?&body=Hi%20Vsevolod%2C%0A%0A%0A
     - icon: send
       text: "t.me/vsheg"
       href: https://t.me/vsheg
