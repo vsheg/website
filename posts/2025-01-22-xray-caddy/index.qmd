@@ -7,7 +7,7 @@ categories:
 
 VLESS VPN protocol implemented in Xray can use HTTP for transport, allowing web servers to handle traffic proxying, encryption, and custom routing.
 
-Caddy is a cool & lightweight web server with automatic HTTPS encryption and HTTP3. It provides reverse proxy capabilities, WebSocket^[used in real-time communication scenarios, e.g. chat applications; it provides a persistent bi-directional connection between client and server and works on top of HTTP] and gRPC^[used in server-to-server communication (usually), but it can also be used for client-server communication; it works on top of HTTP too] support.
+Caddy is a cool & lightweight web server with automatic HTTPS encryption and HTTP/3. It provides reverse proxy capabilities, WebSocket^[used in real-time communication scenarios, e.g. chat applications; it provides a persistent bi-directional connection between client and server and works on top of HTTP] and gRPC^[used in server-to-server communication (usually), but it can also be used for client-server communication; it works on top of HTTP too] support.
 
 ::: {.callout-warning}
 This is **not** a detailed guide on setting up Caddy or Xray. This is **advanced configuration** and assumes **you have knowledge** of both. If not, do not add extra complexity to your setup. Find step-by-step guides, learn the basics, and then return here.
@@ -76,14 +76,14 @@ flowchart TD
 
     end
 
-    user1 -->|HTTP1 :443| ISP
-    user2 -->|HTTP2 :443| ISP
-    user3 -->|HTTP3 :443| ISP
+    user1 -->|HTTP/1.1 :443| ISP
+    user2 -->|HTTP/2 :443| ISP
+    user3 -->|HTTP/3 :443| ISP
     ISP --> CDN --> Hoster
 
-    Hoster -->|HTTP1 :443| caddy443
-    Hoster -->|HTTP2 :443| caddy443
-    Hoster -->|HTTP3 :443| caddy443
+    Hoster -->|HTTP/1.1 :443| caddy443
+    Hoster -->|HTTP/2 :443| caddy443
+    Hoster -->|HTTP/3 :443| caddy443
 
     caddy443 -->|/secret/websocket| dockervpn -->|NAT| xxxvpn
     caddy443 -->|/secret/3x*| dockerui -->|NAT| xxxui
@@ -218,7 +218,7 @@ gRPC is a protocol to call functions (called _methods_) on a remote server and r
 To set up gRPC transport:
 
 1. configure Xray's inbound to use gRPC transport, set up a service name (`secret/grpc`)^[slash symbols `/` are thread as a part of the service name] instead of a path (`/secret/grpc`) in 3X-UI;
-2. add gRPC-specific routing to your Caddy configuration as an ordinary path (`/secret/grpc*`) and explicitly set the transport to `h2c` (HTTP2 without encryption) used by gRPC.
+2. add gRPC-specific routing to your Caddy configuration as an ordinary path (`/secret/grpc*`) and explicitly set the transport to `h2c` (HTTP/2 without encryption) used by gRPC.
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
 https://service.example.com {
@@ -226,7 +226,7 @@ https://service.example.com {
   reverse_proxy /secret/grpc* h2c://localhost:8443 # <1>
 }
 ```
-1. This line handles all requests to VPN traffic at `service.example.com`, `h2c` is HTTP2 without encryption.
+1. This line handles all requests to VPN traffic at `service.example.com`, `h2c` is HTTP/2 without encryption.
 
 3X-UI will be available at `service.example.com/secret/3x`, while Xray will operate at `https://service.example.com/`. The web service is omitted in the config.
 
@@ -325,7 +325,7 @@ With the release of XHTTP protocol, WebSocket and gRPC become deprecated. Howeve
 - Caddy distinguishes `/secret/3x/`, `/secret/3x`, `/secret/3x*`, and `/secret/3x/*` paths. If 3X-UI is not accessible via `https://service.example.com/secret/3x`, try adding a trailing slash and recheck paths in both Caddy and 3X-UI configurations (and in the browser!).
 
 
-- Caddy tries to use HTTP3, but it may be blocked, e.g. in Russia HTTP3 is allowed only for specific domains, international HTTP3 traffic [may not work](https://github.com/kelmenhorst/quic-censorship/issues/4). You can disable HTTP3 in Caddy by adding the following to the `Caddyfile`:
+- Caddy tries to use HTTP/3, but it may be blocked, e.g. in Russia HTTP/3 is allowed only for specific domains, international HTTP/3 traffic [may not work](https://github.com/kelmenhorst/quic-censorship/issues/4). You can disable HTTP/3 in Caddy by adding the following to the `Caddyfile`:
   ```{.txt filename="/etc/caddy/Caddyfile"}
   {
     servers {
@@ -333,7 +333,7 @@ With the release of XHTTP protocol, WebSocket and gRPC become deprecated. Howeve
     }
   }
   ```
-  This disables HTTP3 globally for all Caddy domains and services. If you want to disable HTTP3 only for a specific service, explicitly advertise HTTP v1 & v2 protocols during connection:
+  This disables HTTP/3 globally for all Caddy domains and services. If you want to disable HTTP/3 only for a specific service, explicitly advertise HTTP v1 & v2 protocols during connection:
   ```{.txt filename="/etc/caddy/Caddyfile"}
   https://service.example.com {
     tls {
