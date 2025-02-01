@@ -168,7 +168,7 @@ I briefly describe how to configure Xray, but you should understand what you are
 
 - In 3X-UI set listen IPs to `0.0.0.0` (for both web `80` and VPN `443` ports), binding to `0.0.0.0` inside the container makes it accessible from outside, where outside means the host machine (VPS) with Caddy.
 - Select and configure transport WebSocket protocol^[You can use gRPC too, but it does not support path-based routing, so it will always point to `service.example.com/`, it can still be managed by Caddy (see example below), but it looses the point of hiding VPN traffic behind a real service].
-- Configure inbound paths (e.g. `/secret/3x` for UI and `/websocket` for transport^[If the real web service uses `/websocket` path, choose another path for Xray, e.g. `/secret/websocket`]) in 3X-UI settings. Paths are arbitrary but they must match in both 3X-UI and Caddy configs.
+- Configure inbound paths (e.g. `/secret/3x` for UI and `/secret/websocket` for transport^[If the real web service uses `/secret*` paths, choose another for Xray, e.g. `/top-secret/*`]) in 3X-UI settings. Paths are arbitrary but they must match in both 3X-UI and Caddy configs.
 - Configure listen IPs, ports and paths for subscription service if you use it; it can be proxied through Caddy too.
 
 ::: {.callout-warning}
@@ -217,7 +217,7 @@ gRPC is a protocol to call functions (called _methods_) on a remote server and r
 
 To set up gRPC transport:
 
-1. configure Xray's inbound to use gRPC transport, set up a service name (`secret/grpc`)^[slash symbols `/` are thread as a part of the service name] instead of a path (`/secret/grpc`) in 3X-UI;
+1. configure Xray's inbound to use gRPC transport in 3X-UI panel, set service name `secret/grpc` (slash symbols `/` are treated as regular text in the service name, not as path separators);
 2. add gRPC-specific routing to your Caddy configuration as an ordinary path (`/secret/grpc*`) and explicitly set the transport to `h2c` (HTTP/2 without encryption) used by gRPC.
 
 ```{.txt filename="/etc/caddy/Caddyfile"}
@@ -310,15 +310,16 @@ This completes the setup.
 ## Post scriptum {#ps}
 
 ::: {.column-margin}
-My test of different VLESS transports: pings are measured between Eastern Europe and Eastern US, traffic was proxied through a CDN, best results are:
+Subjective performance testing of VLESS transports between Eastern Europe and Eastern US via CDN (unfriendly conditions), best results observed:
 
 | Transport  | Download  | Ping   |
 |------------|-----------|--------|
-| WebSocket  | ~215 Mb/s | ~150 ms |
-| gRPC       | ~95 Mb/s  | ~150 ms |
-| XHTTP      | ~65 Mb/s  | ~145 ms |
+| WebSocket  | ~215 Mb/s | ~145 ms |
+| gRPC       | ~120 Mb/s  | ~145 ms |
+| XHTTP      | ~80 Mb/s  | ~135 ms |
 
-With the release of XHTTP protocol, WebSocket and gRPC become deprecated. However, XHTTP is the slowest of the three (with slightly better ping) according to my tests. Also, my tests showed XHTTP is unreliable (e.g. long connection times, DNS resolution errors), maybe due to limited client support. Still, you can experiment with it too.
+
+Tests show XHTTP protocol has lower speeds compared to WebSocket and gRPC, though ping times are slightly better. XHTTP also exhibited reliability issues in testing, with slow connection times and DNS errors, possibly due to limited client support. Different CDN providers may prioritize or support WebSocket and gRPC protocols differently.
 :::
 
 
@@ -350,7 +351,7 @@ With the release of XHTTP protocol, WebSocket and gRPC become deprecated. Howeve
 
 - Caddy can modify paths. You may want to set up simple paths in 3X-UI and then manage all paths in Caddy. E.g. Xray can operate at `/*` paths inside the container, Caddy can handle connections to `service.example.com/secret/*` on the host and strip prefix `/secret` before forwarding to Xray. See `handle_path` directive in [Caddy documentation](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path).
 
-- When Caddy routes e.g. `/secret/sub*` paths to Xray and an error occurs on Xray side, Caddy returns the respond from Xray and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/handle_path#handle-path) in Caddy documentation.
+- When Caddy routes e.g. `/secret/sub*` paths to Xray and an error occurs on Xray side, Caddy returns the respond from Xray and it will differ from the standard response of the real web service. This potentially exposes that you have something interesting behind the `/secret/sub*` paths. To mitigate this, you can set up Caddy to manage errors too. See [error handling](https://caddyserver.com/docs/caddyfile/directives/error) in Caddy documentation.
 
 - Network performance can be improved with BBR^[Bottleneck Bandwidth and Round-trip propagation time] congestion control. BBR helps achieve better throughput on connections with packet loss. Configure in `/etc/sysctl.conf`:
 
