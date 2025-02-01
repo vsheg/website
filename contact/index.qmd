@@ -18,7 +18,7 @@ about:
       href: https://linkedin.com/in/vsheg
     - icon: cpu
       text: moll
-      href: https://moll.sheg.cc
+      href: https://moll.vsheg.com
 ---
 
 a charming guy doing *in silico* drug design & chemical enzymology
