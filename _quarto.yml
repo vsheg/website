@@ -34,6 +34,8 @@ website:
   page-footer:
     center: |
       [🦧](https://duckduckgo.com/?q=orangutan&iax=images&ia=images){.secret-link target="_blank"}
+    right: |
+      [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0){.secret-link target="_blank"}
 
 crossref:
   eq-prefix: "" # TODO: add parentheses around equation numbers
