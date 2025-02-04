@@ -12,32 +12,37 @@ at the origin $(0, 0)$ measures the distance $d$ to the satellite.
 The satellite's location is modeled by an _uncorrelated bivariate Gaussian distribution_:
 
 $
-  f_(X,Y) (x, y) = 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y)^2)^2 / (2 sigma_Y^2)}
+  f_(X,Y) (x, y) &equiv f_(X,Y) (X = x,Y = y) \
+                 &= 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y)^2)^2 / (2 sigma_Y^2)}.
 $
 
 The measured distance $d$ follows a _conditional univariate distribution_:
 
 $
-  f(D = d | X = x, Y = y) = 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)}
+  f_D (d | x^*, y^*) & equiv f_D (D = d | X = x^*, Y = y^*) \
+                     &= 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt(x^(*2) + y^(*2)))^2 / (2 sigma^2_D)},
 $
 
-*N.B.* The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$
+where $(x^*, y^*)$ is the exact satellite position and $sigma_D$ is the variance of the
+distance measurement.
+
+*N.B.* The unconditional distribution $f_D (D=d)$ can be obtained by substituting $x^*=macron(x)$ and $y^*=macron(y)$
 
 == Conditional probability density
 
 Using Bayes theorem:
 
 $
-  Pr[A|B] = (Pr[A] dot Pr[B|A]) / Pr[B],
+  Pr[A | B] = (Pr[A] dot Pr[B | A]) / (Pr[B]),
 $
 
 the conditional probability density for the satellite being at $(x, y)$ given a measured
 distance $d^*$ is
 
 $
-  f(X = x, Y = y | D = d^*)
-    &= (f(X = x, Y = y) dot f(D = d^*|X = x, Y = y)) / f(D = d^*) \
-    &= underbrace(1 / f(D = d^*), const) f(X = x, Y = y) dot f(D = d^*|X = x, Y = y).
+  f_(X,Y) (X = x, Y = y | D = d^*)
+    &= (f_(X,Y) (X = x, Y = y) dot f_D ( D = d^* | X = x, Y = y)) / (f_D ( D = d^*)) \
+    &= underbrace(1 / (f_D ( D = d^*)), const) dot f_(X,Y) (x, y) dot f_D (d^* | x, y).
 $
 
 By substituting the bivariate and univariate Gaussian distributions, we obtain:
@@ -51,9 +56,10 @@ The marginal probability constant $const(d)$ can be obtained by integrating the
 conditional probability density:
 
 $
-  const(d) = f(D = d)
-    &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f(D = d, X=x, Y=y) dd(x) dd(y) \
-    &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f(D = d|X=x, Y=y) dot f_(X,Y)(x, y) dd(x) dd(y)
+  const(d^*)
+    &= f_D (D = d^*) \
+    &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f_(X, Y, D)(X=x, Y=y, D = d^*) dd(x) dd(y) \
+    &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f_D (d^* | x, y) dot f_(X,Y)(x, y) dd(x) dd(y)
 $
 
 This integral contains multiple exponential terms that make it challenging to solve
@@ -69,7 +75,7 @@ However, the pre-exponential constants can be omitted because:
 
 == Visualization
 
-Now both the unconditional $f(X, Y)$ and conditional $f(X, Y | D = d^*)$ probability
+Now both the unconditional $f_(X,Y) (x, y)$ and conditional $f_(X,Y) (x, y | d^*)$ probability
 densities can be visualized using the derived expressions.
 
 The radio station at position $(0, 0)$ measures distance $d$ to the satellite (depicted as
