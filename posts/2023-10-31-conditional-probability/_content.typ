@@ -21,17 +21,20 @@ $
   f(D = d | X = x, Y = y) = 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)}
 $
 
-*N.B.* The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$
+#quote[
+  The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$
+]
 
 == Conditional probability density
 
-Using Bayes' theorem, the conditional probability density for the satellite being at $(x, y)$ given
+Using Bayes theorem, the conditional probability density for the satellite being at $(x, y)$ given
 a measured distance $d^*$ is
 
-Bayes' theorem:
-$
-  Pr[A|B] = (Pr[A] dot Pr[B|A]) / Pr[B]
-$
+#quote[Bayes theorem:
+  $
+    Pr[A|B] = (Pr[A] dot Pr[B|A]) / Pr[B]
+  $
+]
 
 $
   f(X = x, Y = y | D = d^*)
