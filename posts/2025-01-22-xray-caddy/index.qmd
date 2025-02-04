@@ -343,6 +343,18 @@ Tests show XHTTP protocol has lower speeds compared to WebSocket and gRPC, thoug
     # ...
   }
   ```
+
+- Caddy's reverse proxy aggregates chunks into larger ones before sending to optimize network efficiency. While good for throughput, buffering can increase latency. To disable it, use `flush_interval -1`:
+  ```{.txt filename="/etc/caddy/Caddyfile"}
+  https://service.example.com {
+    # ...
+    reverse_proxy /secret/websocket* http://localhost:8443 {
+      flush_interval -1
+    }
+    # ...
+  }
+  ```
+
 - If you have problems setting up Xray, you can bind it to `localhost` explicitly by adding `network_mode: host` in the `compose.yaml` to 3X-UI service. This disables container's network isolation and binds the container to the host's ports. After that you can inspect ports on the host machine and check if Xray is working. Note that if you configured listen IPs to `0.0.0.0` in 3X-UI, your container will be accessible from outside the VPS without encryption, so use this only for testing^[When network mode is set to host, Docker uses a specific network driver, which may work faster than the default (bridge) driver which performs network translation (NAT), but now your container may conflict with other ports on the host machine, e.g. if your container expects port 443 but it's already used by Caddy. Moreover, the performance increase is negligible - expect about 1-2 ms in ping time and a few percent in throughput. You won't notice it, but your setup will be less secure].
 
 - I had an issue where Xray ignored listen IPs configured via web console, so I patched its database directly. The fix was simple: I connected to my VPS via VS Code SSH extension with installed [SQLite3 Editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor), opened `~/3x-ui/db/x-ui.db`, edited `webListen` and `subListen` fields in the `settings` table, then recreated the container with `docker-compose up -d --force-recreate`
