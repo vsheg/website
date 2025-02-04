@@ -10,8 +10,10 @@ jobs:
   render:
     runs-on: ubuntu-latest
     steps:
-      - run: sudo apt-get install -y fd-find && cp $(which fdfind) /usr/local/bin/fd
-      - run: sudo apt install -y pandoc zsh
+      - run: |
+          sudo apt update
+          sudo apt install -y fd-find pandoc zsh
+          cp "$(which fdfind)" /usr/local/bin/fd
       - uses: astral-sh/setup-uv@v5
       - uses: quarto-dev/quarto-actions/setup@v2
       - uses: actions/checkout@v4
