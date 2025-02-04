@@ -56,8 +56,16 @@ $
     &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f(D = d|X=x, Y=y) dot f_(X,Y)(x, y) dd(x) dd(y)
 $
 
-This normalization does not affect the distribution's shape and is therefore can be
-omitted in visualization and maximization.
+This integral contains multiple exponential terms that make it challenging to solve
+analytically or compute numerically due to rapid growth and potential numerical overflow.
+
+However, the pre-exponential constants can be omitted because:
+
+- For finding the most probable location through density maximization, the constant only
+  affects the scale but not the location of the maximum.
+
+- For visualizing the probability density shape, exact values are not required, so constants
+  can be omitted.
 
 == Visualization
 
