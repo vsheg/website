@@ -12,8 +12,12 @@ jobs:
     steps:
       - run: |
           sudo apt update
-          sudo apt install -y fd-find pandoc zsh
+          sudo apt install -y fd-find zsh
           cp "$(which fdfind)" /usr/local/bin/fd
+          sudo apt purge --auto-remove pandoc
+          wget https://github.com/jgm/pandoc/releases/download/3.6.2/pandoc-3.6.2-1-amd64.deb
+          sudo dpkg -i pandoc-3.6.2-1-amd64.deb
+
       - uses: astral-sh/setup-uv@v5
       - uses: quarto-dev/quarto-actions/setup@v2
       - uses: actions/checkout@v4
