@@ -43,7 +43,7 @@ $
 By substituting the bivariate and univariate Gaussian distributions, we obtain:
 
 $   &= const dot 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y)^2)^2 / (2 sigma_Y^2)} dot 1 / (sqrt(2 pi) sigma_D) exp {-(d^* - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)} \
-  &= const/(sqrt(2pi)^3 sigma_X sigma_Y sigma_D) exp{ -(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y)^2)^2 / (2 sigma_Y^2) -(d - sqrt(x^2 + y^2))^2 / (2 sigma^2_D) }. $
+  &= underbrace(const/(sqrt(2pi)^3 sigma_X sigma_Y sigma_D), const_2) exp{ -(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y)^2)^2 / (2 sigma_Y^2) -(d - sqrt(x^2 + y^2))^2 / (2 sigma^2_D) }. $
 
 == Marginalization
 
