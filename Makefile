@@ -1,6 +1,6 @@
 SHELL := /bin/zsh
 
-all: update-submodules posts
+all: update-submodules posts uv
 
 update-submodules:
 	git submodule update --recursive --remote --force
@@ -16,6 +16,8 @@ posts:
 	fd -p -g "**/posts/*/*.typ" --exec pandoc -o {.}.md {}
 	fd -p -g "**/posts/*/*.md" --exec mv {} {.}.qmd
 
+uv:
+	uv sync
 
 rss:
 	mv _site/posts/index.xml _site/feed.xml
