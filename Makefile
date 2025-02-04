@@ -10,6 +10,7 @@ clean:
 	rm -rf **/index_files/
 	rm -rf **/*.quarto_ipynb
 	rm -rf site_libs* 404_files/
+	rm -rf **/*.html
 
 posts:
 	fd -p -g "**/posts/*/*.typ" --exec pandoc -o {.}.md {}
