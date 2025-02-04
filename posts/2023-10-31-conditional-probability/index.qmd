@@ -9,6 +9,4 @@ categories:
 
 {{< include _content.qmd >}}
 
-## Visualization
-
 {{< embed satellite.ipynb#plot >}}

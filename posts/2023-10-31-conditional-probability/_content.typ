@@ -57,3 +57,10 @@ $
 
 This normalization does not affect the distribution's shape and is therefore often omitted
 in visualization and maximization.
+
+== Visualization
+
+Now both the conditional $f(X, Y | D = d^*)$ and unconditional $f(X, Y)$ probability
+densities can be visualized using the derived expressions.
+
+// embed code
