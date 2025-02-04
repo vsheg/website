@@ -1,11 +1,3 @@
-// ---
-// title: Geometrical interpretation of conditional probability
-// date: 2022-02-24
-// updated: 2025-02-04
-// categories:
-//     - machine learning
-// ---
-
 #import "../../defs.typ": *
 
 Conditional probability is a foundational concept in probability theory that can be
