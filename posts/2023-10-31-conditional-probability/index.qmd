@@ -2,6 +2,7 @@
 title: Visualizing conditional probability
 date: 2023-10-31
 updated: 2025-02-04
+image: image.png
 categories:
     - machine learning
 ---
