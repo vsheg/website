@@ -9,4 +9,10 @@ categories:
 
 {{< include _content.qmd >}}
 
-{{< embed satellite.ipynb#plot >}}
+_A priori_ satellite location distribution:
+
+{{< embed satellite.ipynb#plot1 >}}
+
+_A posteriori_ satellite location distribution given the measurement:
+
+{{< embed satellite.ipynb#plot2 >}}
