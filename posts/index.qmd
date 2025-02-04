@@ -5,7 +5,7 @@ comments: false
 image-lazy-loading: true
 listing:
   id: posts
-  contents: ./
+  contents: ./*/*.qmd
   feed: true
   sort: "date desc"
   categories: unnumbered
