@@ -29,7 +29,7 @@ $
   f(D = d | X = x, Y = y) = 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)}
 $
 
-#quote[The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$]
+*N.B.* The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$
 
 == Conditional probability density
 
