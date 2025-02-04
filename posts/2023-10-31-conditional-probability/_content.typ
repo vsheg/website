@@ -55,12 +55,12 @@ $
     &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f(D = d|X=x, Y=y) dot f_(X,Y)(x, y) dd(x) dd(y)
 $
 
-This normalization does not affect the distribution's shape and is therefore often omitted
-in visualization and maximization.
+This normalization does not affect the distribution's shape and is therefore can be
+omitted in visualization and maximization.
 
 == Visualization
 
-Now both the conditional $f(X, Y | D = d^*)$ and unconditional $f(X, Y)$ probability
+Now both the unconditional $f(X, Y)$ and conditional $f(X, Y | D = d^*)$ probability
 densities can be visualized using the derived expressions.
 
 // embed code
