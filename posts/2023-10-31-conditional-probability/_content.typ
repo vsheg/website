@@ -9,32 +9,30 @@ illustrate both unconditional and conditional probability densities.
 Consider a satellite with mean Earth coordinates $(macron(x), macron(y))$. A radio station
 at the origin $(0, 0)$ measures the distance $d$ to the satellite.
 
-The satellite's location is modeled by an *uncorrelated bivariate Gaussian distribution*:
+The satellite's location is modeled by an _uncorrelated bivariate Gaussian distribution_:
 
 $
   f_(X,Y) (x, y) = 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y)^2)^2 / (2 sigma_Y^2)}
 $
 
-The measured distance $d$ follows a *conditional univariate distribution*:
+The measured distance $d$ follows a _conditional univariate distribution_:
 
 $
   f(D = d | X = x, Y = y) = 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)}
 $
 
-#quote[
-  The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$
-]
+*N.B.* The unconditional distribution $f(D=d)$ can be obtained by substituting $x=macron(x)$ and $y=macron(y)$
 
 == Conditional probability density
 
-Using Bayes theorem, the conditional probability density for the satellite being at $(x, y)$ given
-a measured distance $d^*$ is
+Using Bayes theorem:
 
-#quote[Bayes theorem:
-  $
-    Pr[A|B] = (Pr[A] dot Pr[B|A]) / Pr[B]
-  $
-]
+$
+  Pr[A|B] = (Pr[A] dot Pr[B|A]) / Pr[B],
+$
+
+the conditional probability density for the satellite being at $(x, y)$ given a measured
+distance $d^*$ is
 
 $
   f(X = x, Y = y | D = d^*)
