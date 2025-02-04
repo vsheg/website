@@ -72,4 +72,9 @@ However, the pre-exponential constants can be omitted because:
 Now both the unconditional $f(X, Y)$ and conditional $f(X, Y | D = d^*)$ probability
 densities can be visualized using the derived expressions.
 
+The radio station at position $(0, 0)$ measures distance $d$ to the satellite (depicted as
+a circle). The satellite's position probability density is shown by the color gradient.
+The measured distance $d$ constrains the probable satellite location to a circular arc in
+the conditional density.
+
 // embed code
