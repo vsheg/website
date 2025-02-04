@@ -10,4 +10,4 @@ categories:
 
 ## Visualization
 
-{{< embed satellite.ipynb#plot >}}
+{{< embed _satellite.ipynb#plot >}}
