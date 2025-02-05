@@ -4,6 +4,8 @@ Conditional probability is a fundamental concept in probability theory; however,
 interpretation is not always intuitive. Here, an easy-to-visualize example is used to
 illustrate the concept.
 
+#image("image.jpg")
+
 == Model: radar tracking UFO
 
 Consider a UFO with mean Earth coordinates $(macron(x), macron(y))$. A radar at the origin $(0, 0)$ measures
