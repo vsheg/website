@@ -29,9 +29,12 @@ $
                      &= 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt((x^*)^2 + (y^*)^2))^2 / (2 sigma^2_D)},
 $
 
-where $(x^*, y^*)$ is s specific UFO position and $sigma_D$.
+where $(x^*, y^*)$ is a specific UFO position, and $sqrt((x^*)^2 + (y^*)^2)$ is the exact
+distance (unknown) from the radar to the UFO.
 
-*N.B.* The unconditional distribution $f_D (D=d)$ can be obtained by substituting $x^*=macron(x)$ and $y^*=macron(y)$
+*N.B.* The unconditional distribution $f_D (D=d)$ can be obtained by substituting $x^*=macron(x)$ and $y^*=macron(y)$,
+it will model measurements of the distance to the UFO without knowing its exact position,
+only the average.
 
 Our goal is to find and visualize the conditional pdf $f_(X,Y) (x, y | d^*)$ of the UFO
 position given a measured distance $d^*$ and compare it with the unconditional pdf $f_(X,Y) (x, y)$.
@@ -88,7 +91,7 @@ The non-directional radar at position $(0, 0)$ measures distance $d$ (depicted a
 circle) to the UFO. The UFO is hovering around the mean position $(4, 4)$ with s.d. $sigma_X = sigma_Y = 3$.
 The corresponding probability density is shown by the color gradient. The measured
 distance $d$ constrains the probable UFO location to a circular arc in the conditional
-density. The standard deviation $sigma_D$ determines the width of the arc and was chosen
-to be $sigma_D = 0.5$ (relatively small compared to fluctuations of UFO position).
+density. The s.d. $sigma_D$ determines the width of the arc and was chosen to be $sigma_D = 0.5$ (relatively
+small compared to fluctuations in the UFO position).
 
 // embed code
