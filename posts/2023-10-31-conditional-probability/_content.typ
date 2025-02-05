@@ -4,31 +4,37 @@ Conditional probability is a fundamental concept in probability theory; however,
 interpretation is not always intuitive. Here, an easy-to-visualize example is used to
 illustrate the concept.
 
-== Model: radar tracking UFO
+== Model: non-directional radar tracking UFO
 
-Consider a UFO with mean Earth coordinates $(macron(x), macron(y))$. A radar at the origin $(0, 0)$ measures
-the distance $d$ to the UFO.
+A UFO hovers above a field with average position $(macron(x), macron(y))$ and standard
+deviations $sigma_X$, $sigma_Y$. At the field's center $(0, 0)$, a #link("https://en.wikipedia.org/wiki/Non-directional_beacon", "non-directional radar") measures
+only the distance $d$ to the UFO with standard deviation $sigma_D$, but cannot determine
+its direction or exact position.
 
 #image("image.jpg", width: 30%)
 
-The UFO's location is modeled by an _uncorrelated bivariate Gaussian distribution_:
+The UFO's location is modeled by an _uncorrelated bivariate Gaussian distribution_ of two
+random variables $X$ and $Y$:
 
 $
   f_(X,Y) (x, y) &equiv f_(X,Y) (X = x,Y = y) \
                  &= 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2)}.
 $
 
-The measured distance $d$ follows a _conditional univariate distribution_:
+The distance $d$ from the antenna to the UFO follows a _conditional univariate Gaussian distribution_ of
+a single random variable $D$ given the UFO's position $(X, Y)$:
 
 $
   f_D (d | x^*, y^*) & equiv f_D (D = d | X = x^*, Y = y^*) \
                      &= 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt((x^*)^2 + (y^*)^2))^2 / (2 sigma^2_D)},
 $
 
-where $(x^*, y^*)$ is the exact UFO position and $sigma_D$ is the standard deviation (with
-variance $sigma_D^2$) of the distance measurement.
+where $(x^*, y^*)$ is s specific UFO position and $sigma_D$.
 
 *N.B.* The unconditional distribution $f_D (D=d)$ can be obtained by substituting $x^*=macron(x)$ and $y^*=macron(y)$
+
+Our goal is to find and visualize the conditional pdf $f_(X,Y) (x, y | d^*)$ of the UFO
+position given a measured distance $d^*$ and compare it with the unconditional pdf $f_(X,Y) (x, y)$.
 
 == Conditional probability density
 
@@ -75,12 +81,14 @@ doesn't affect density shape or maximum position.
 
 == Visualization
 
-Now both the unconditional $f_(X,Y) (x, y)$ and conditional $f_(X,Y) (x, y | d^*)$
-densities can be visualized using the derived expressions.
+Now the unconditional $f_(X,Y) (x, y)$ and conditional $f_(X,Y) (x, y | d^*)$
+densities can be visualized and compared.
 
-The radar at position $(0, 0)$ measures distance $d$ (depicted as a circle) to the UFO.
-The UFO is hovering around the mean position $(4, 4)$ with s.d. $sigma_X = sigma_Y = 3$,
-corresponding probability density is shown by the color gradient. The measured distance $d$ constrains
-the probable UFO location to a circular arc in the conditional density.
+The non-directional radar at position $(0, 0)$ measures distance $d$ (depicted as a
+circle) to the UFO. The UFO is hovering around the mean position $(4, 4)$ with s.d. $sigma_X = sigma_Y = 3$.
+The corresponding probability density is shown by the color gradient. The measured
+distance $d$ constrains the probable UFO location to a circular arc in the conditional
+density. The standard deviation $sigma_D$ determines the width of the arc and was chosen
+to be $sigma_D = 0.5$ (relatively small compared to fluctuations of UFO position).
 
 // embed code
