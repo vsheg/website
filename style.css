@@ -20,3 +20,7 @@ a.secret-link:not(:hover) {
     color: inherit;
     font-weight: inherit;
 }
+
+.katex-display {
+    overflow: auto hidden
+}
