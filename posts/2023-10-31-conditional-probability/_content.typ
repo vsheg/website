@@ -21,7 +21,7 @@ $
                  &= 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2)}.
 $
 
-The distance $d$ from the antenna to the UFO follows a _conditional univariate Gaussian distribution_ of
+The distance $d$ from the radar antenna to the UFO follows a _conditional univariate Gaussian distribution_ of
 a single random variable $D$ given the UFO's position $(X, Y)$:
 
 $
