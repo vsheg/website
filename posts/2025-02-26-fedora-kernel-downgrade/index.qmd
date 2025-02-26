@@ -1,6 +1,5 @@
 ---
 date: 2025-02-26
-image: posts/2025-02-26-fedora-kernel-downgrade/cover.png
 title: "Fedora: Downgrade kernel"
 categories:
   - admin
@@ -9,6 +8,8 @@ categories:
 Fedora's approach to kernel updates is like a 'rolling release'. Kernels are updated frequently, and this may break your system. After I applied Fedora updates, it installed the new kernel version `6.13.4`, causing the NVIDIA driver and CUDA drivers to break.
 
 Interestingly, Fedora's repo may not store previous kernel versions (this is when I considered switching to another Linux distro again), so the downgrading process is not straightforward. In this post, I want to summarize commands that worked for me.
+
+![Linux](cover.jpg)
 
 ## Select another kernel in bootloader
 
