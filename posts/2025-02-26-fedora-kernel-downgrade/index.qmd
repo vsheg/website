@@ -1,6 +1,7 @@
 ---
 date: 2025-02-26
-title: "Fedora: downgrade kernel"
+image: posts/2025-02-26-fedora-kernel-downgrade/cover.png
+title: "Fedora: Downgrade kernel"
 categories:
   - admin
 ---
