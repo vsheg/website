@@ -68,8 +68,10 @@ To verify that the default kernel has been set correctly:
 sudo grubby --default-index
 ```
 
-Reboot to load the selected kernel.
+After rebooting, verify if your system already has all necessary kernel packages installed. If everything works correctly, no further action may be needed.
 
+However, if packages aren't available, you'll need to identify which kernel packages are required. Typically, `kernel-devel` is sufficient for compiling kernel modules.
+Proceed to the next section to check available versions of `kernel-devel` and return here if necessary.
 
 ## Downgrade `kernel-devel` 
 
@@ -97,7 +99,10 @@ kernel-devel.x86_64 6.13.4-200.fc41 updates
 ```
 </details>
 
-In my case, `kernel-devel-6.11.4-301.fc41` was available.
+In my case, only `kernel-devel-6.11.4-301.fc41` was available. I needed to return to downgrade the kernel from `6.12.15` (`index=1`) to `6.11.4` (`index=2`):
+
++ Return to the previous kernel section, select the previous kernel version, and reboot.
++ After the reboot, continue with the `kernel-devel` downgrade.
 
 ### Option 1: Explicitly install the previous version
 
@@ -139,6 +144,24 @@ sudo dnf install kernel-headers-$(uname -r)
 ```bash
 sudo dnf downgrade kernel-headers
 ```
+
+## Pin kernel version
+
+As Fedora packages are updated frequently, you could simply avoid running the `dnf upgrade` command to prevent kernel updates for a few days. There's a good chance that developers will fix the issue, allowing you to update to the latest kernel version later.
+However, this is not an ideal solution.
+
+You can pin the kernel version by excluding specific packages from updates:
+
+```bash
+nano /etc/dnf/dnf.conf
+```
+
+Add the following line:
+
+```txt
+exclude=kernel*
+```
+N.B. Do not forget that you prevent kernel updates. Add a reminder to your to-dos in a couple of weeks to remove this line if you want to update the kernel.
 
 ***
 
