@@ -1,7 +1,3 @@
-
-
-= Introduction
-
 When setting up a self-hosted DERP (Designated Encrypted Relay for Packets) server for Tailscale, you might encounter a situation where port 443 on your host machine is already in use by another service like Caddy. In this post, I'll explain how to configure Caddy as a reverse proxy for your DERP server, allowing both services to coexist.
 
 = Caddy configuration
@@ -81,12 +77,4 @@ The `OmitDefaultRegions` option controls whether clients connect only to your se
 }
 ```
 
-= Conclusion
-
-With this setup, you now have a self-hosted DERP server for Tailscale running behind Caddy. This configuration allows you to:
-
-- Use Caddy's automatic TLS certificate management
-- Run both services on the same machine
-- Control which DERP servers your Tailscale clients connect to
-
-For production environments, you might want to set `OmitDefaultRegions` to `false` to allow fallback to Tailscale's official DERP servers when your self-hosted server is unavailable.
+For production environments, you might want to set `OmitDefaultRegions` to `false` to allow fallback to Tailscale's official DERP servers.
