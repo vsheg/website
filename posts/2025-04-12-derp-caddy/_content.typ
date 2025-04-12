@@ -21,8 +21,6 @@ https://derp.example.com {
 
 Port 443 on the host is used by Caddy, so we bind the DERP server's port 443 to port 8450 (or any other available) on the host.
 
-```
-
 Also, it's possible to specify the key type for the TLS certificate. Use this if the default key type is not suitable.
 
 ```caddy
