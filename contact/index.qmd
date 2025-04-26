@@ -18,7 +18,7 @@ about:
       href: https://linkedin.com/in/vsheg
 ---
 
-a charming guy specializing in computational biochemistry, machine learning, and *in silico* drug design
+a charming guy interested in computational biochemistry, machine learning, and *in silico* drug design
 
 - PhD student in **Biotechnology** @ Lomonosov MSU
 - MSc in **Chemical Enzymology** @ Lomonosov MSU 
