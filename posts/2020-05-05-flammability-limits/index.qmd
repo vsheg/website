@@ -1,0 +1,10 @@
+---
+title: Modeling flammability limits in hydrogen-air mixtures using _Mathematica_
+date: 2020-05-05
+date-modified: 2025-04-30
+categories:
+    - chemistry
+    - mathematica
+---
+
+{{< include _content.qmd >}}
