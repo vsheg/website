@@ -13,7 +13,7 @@ To model equilibria, we need to write three types of equations:
 
 - Equations of charge balance to ensure that the total charge in the solution is zero.
   $
-    underbrace(["H"]^+ + ["Na"]^+, "positive ions") = underbrace(["OH"]^- + ["HZ"]^- + 2["Z"]^(2-), "negative ions")
+    underbrace(["H"^+] + ["Na"^+], "positive ions") = underbrace(["OH"^-] + ["HZ"^-] + 2["Z"^(2-)], "negative ions")
   $
 
 - So-called mass balance equations which impose conservation of matter (ions and atoms of each type).
@@ -23,7 +23,7 @@ To model equilibria, we need to write three types of equations:
 
 - All equilibrium constants for all reactions in the system.
   $
-    10^(-"p"K_(a,1)) = (["H"]^+ dot ["HZ"^-]) / (["H"_2"Z"]), quad 10^(-"p"K_(a,2)) = (["H"^+] dot ["Z"^(2-)]) / ["HZ"^-]
+    10^(-"p"K_(a,1)) = (["H"^+] dot ["HZ"^-]) / (["H"_2"Z"]), quad 10^(-"p"K_(a,2)) = (["H"^+] dot ["Z"^(2-)]) / ["HZ"^-]
   $
   $ 10^(-"p"K_w) = ["H"^+] dot ["OH"^-] $
   These equations represent stepwise acid constants $K_(a, 1)$, $K_(a, 2)$ and water ion product $K_w$ respectively.
