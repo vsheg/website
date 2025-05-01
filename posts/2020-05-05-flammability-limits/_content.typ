@@ -132,11 +132,6 @@ makeEq[reag_] := Module[{mask, factors, act, pre, emp, consts},
   act = Pick[activations, mask];
   pre = Pick[preExponential, mask];
   emp = Pick[empirical, mask];
-```
-
-The rate constants follow the Arrhenius equation with temperature dependence:
-
-```mathematica
   consts = Replace[
     Transpose[{pre, act, emp}],
     {a_, e_, n_} :> a (T/298)^n Exp[-( e/(8.31 T))],
@@ -145,6 +140,7 @@ The rate constants follow the Arrhenius equation with temperature dependence:
   c[reag]'[t] == factors . consts
 ]
 ```
+The rate constants follow the Arrhenius equation with temperature dependence.
 
 Next, we build a complete system of differential equations for all reagents:
 
@@ -156,11 +152,6 @@ makeSys[init_, temp_] := Module[{eqs, inits, unconditioned, sys},
   unconditioned = c[#][0]==0&/@unconditioned;
 
   sys = Join[eqs, inits, unconditioned]/.T->temp;
-```
-
-We need to handle some special cases and simplifications:
-
-```mathematica
   sys = Select[sys, FreeQ[#,c["M"]'[t]==0.]&&FreeQ[#,c["M"][0]]&];
   sys = sys/.c["M"][t]->c["H2"][t]+c["N2"][t]+c["O2"][t];
   sys = sys/.c["N2"][_]->cN2;
@@ -242,10 +233,7 @@ ListContourPlot[
     Text[Style["2nd limit", 20, White], Scaled[{.7, .5}], Automatic, {1, 0.4}],
     Text[Style["3rd limit", 20, White], Scaled[{.5, .7}], Automatic, {1, -0.2}]
   },
-  FrameLabel -> {
-    "\!\(\*StyleBox[\"T\",\nFontSlant->\"Italic\"]\), K",
-    "\!\(\*StyleBox[\"p\",\nFontSlant->\"Italic\"]\), atm"
-  },
+  FrameLabel -> {"T, K", "p, atm"},
   PlotLegends -> Automatic,
   ColorFunction -> "TemperatureMap",
   PlotLabel -> "-lg [duration]"
