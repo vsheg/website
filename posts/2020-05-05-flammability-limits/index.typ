@@ -1,3 +1,12 @@
+#import "../../defs.typ": *
+
+#show: post.with(date: "2020-05-05", date-modified: "2025-04-30", categories: (
+  "chemistry",
+  "mathematica",
+))
+
+= Modeling flammability limits in hydrogen-air mixtures using _Mathematica_
+
 This post demonstrates how to use Mathematica to calculate and visualize the 3 flammability limits that occur in hydrogen-air mixtures. The implementation calculates reaction durations across various pressure and temperature conditions to identify these critical boundaries.
 
 == Equations of hydrogen combustion

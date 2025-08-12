@@ -1,3 +1,11 @@
+#import "../../defs.typ": *
+
+#show: post.with(date: "2025-04-12", categories: (
+  "chemistry",
+  "networks",
+))
+
+= Running Tailscale DERP server behind Caddy
 
 When setting up a self-hosted DERP (Designated Encrypted Relay for Packets) server for Tailscale, you might encounter a situation where port 443 on your host machine is already in use by another service like Caddy.
 Unfortunately, it's not easy to configure the DERP server behind a reverse proxy, as it does not work via HTTP and requires TLS management to be done manually (see #link("https://github.com/tailscale/tailscale/issues/7745", "this issue")).

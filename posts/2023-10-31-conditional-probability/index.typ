@@ -1,4 +1,11 @@
 #import "../../defs.typ": *
+#import "@preview/callisto:0.2.4"
+
+#show: post.with(date: "2023-10-31", date-modified: "2025-02-04", categories: (
+  "ML",
+))
+
+= Visualizing conditional probability
 
 Conditional probability is a fundamental concept in probability theory; however, its
 interpretation is not always intuitive. Here, an easy-to-visualize example is used to
@@ -18,7 +25,7 @@ random variables $X$ and $Y$:
 
 $
   f_(X,Y) (x, y) &equiv f_(X,Y) (X = x,Y = y) \
-                 &= 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2)}.
+  &= 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2)}.
 $
 
 The distance $d$ from the radar antenna to the UFO follows a _conditional univariate Gaussian distribution_ of
@@ -26,7 +33,7 @@ a single random variable $D$ given the UFO's position $(X, Y)$:
 
 $
   f_D (d | x^*, y^*) & equiv f_D (D = d | X = x^*, Y = y^*) \
-                     &= 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt((x^*)^2 + (y^*)^2))^2 / (2 sigma^2_D)},
+  &= 1 / (sqrt(2 pi) sigma_D) exp {-(d - sqrt((x^*)^2 + (y^*)^2))^2 / (2 sigma^2_D)},
 $
 
 where $(x^*, y^*)$ is a specific UFO position, and $sqrt((x^*)^2 + (y^*)^2)$ is the exact
@@ -51,15 +58,17 @@ the conditional probability density of the UFO being at $(x, y)$ given a measure
 
 $
   f_(X,Y) (X = x, Y = y | D = d^*)
-    &= (f_(X,Y) (X = x, Y = y) dot f_D ( D = d^* | X = x, Y = y)) / (f_D ( D = d^*)) \
-    &= underbrace(1 / (f_D ( D = d^*)), const) dot f_(X,Y) (x, y) dot f_D (d^* | x, y),
+  &= (f_(X,Y) (X = x, Y = y) dot f_D ( D = d^* | X = x, Y = y)) / (f_D ( D = d^*)) \
+  &= underbrace(1 / (f_D ( D = d^*)), const) dot f_(X,Y) (x, y) dot f_D (d^* | x, y),
 $
 
 where $const equiv const(d^*)$ is the normalization constant for fixed $d^*$. By
 substituting the bivariate and univariate Gaussian distributions:
 
-$   &= const dot 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2)} dot 1 / (sqrt(2 pi) sigma_D) exp {-(d^* - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)} \
-  &= underbrace(const/(sqrt(2pi)^3 sigma_X sigma_Y sigma_D), const') exp{ -(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2) -(d^* - sqrt(x^2 + y^2))^2 / (2 sigma^2_D) }, $
+$
+  &= const dot 1/(2pi sigma_X sigma_Y) exp{-(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2)} dot 1 / (sqrt(2 pi) sigma_D) exp {-(d^* - sqrt(x^2 + y^2))^2 / (2 sigma^2_D)} \
+  &= underbrace(const/(sqrt(2pi)^3 sigma_X sigma_Y sigma_D), const') exp{ -(x - macron(x))^2 / (2 sigma_X^2) -(y - macron(y))^2 / (2 sigma_Y^2) -(d^* - sqrt(x^2 + y^2))^2 / (2 sigma^2_D) },
+$
 
 where $const' equiv const/(sqrt(2pi)^3 sigma_X sigma_Y sigma_D)$ is a new normalization
 constant for given distribution parameters $sigma_X$, $sigma_Y$, and $sigma_D$.
@@ -71,9 +80,9 @@ probability density:
 
 $
   1 / (const(d^*))
-    &= f_D (D = d^*) \
-    &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f_(X, Y, D)(X=x, Y=y, D = d^*) dd(x) dd(y) \
-    &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f_D (d^* | x, y) dot f_(X,Y)(x, y) dd(x) dd(y).
+  &= f_D (D = d^*) \
+  &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f_(X, Y, D)(X=x, Y=y, D = d^*) dd(x) dd(y) \
+  &= integral_(-oo)^(+oo) integral_(-oo)^(+oo) f_D (d^* | x, y) dot f_(X,Y)(x, y) dd(x) dd(y).
 $
 
 This integral contains different exponential terms, making it challenging to solve
@@ -94,4 +103,15 @@ distance $d$ constrains the probable UFO location to a circular arc in the condi
 density. The s.d. $sigma_D$ determines the width of the arc and was chosen to be $sigma_D = 0.5$ (relatively
 small compared to fluctuations in the UFO position).
 
-// embed code
+_A priori_ distribution:
+
+
+#let (render, Cell, In, Out) = callisto.config(
+  nb: json("satellite.ipynb"),
+)
+
+#Out(11, count: "execution")
+
+_A posteriori_ distribution:
+
+#Out(12, count: "execution")
