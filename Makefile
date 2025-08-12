@@ -6,11 +6,11 @@ update-submodules:
 	git submodule update --recursive --remote --force
 
 clean:
-	rm -rf _site
-	rm -rf **/index_files/
-	rm -rf **/*.quarto_ipynb
-	rm -rf site_libs* 404_files/
-	rm -rf **/*.html
+	rm -rf _site || true
+	rm -rf **/index_files/ || true
+	rm -rf **/*.quarto_ipynb || true
+	rm -rf site_libs* 404_files/ || true
+	rm -rf **/index.html || true
 
 posts:
 	fd -p -g "**/posts/*/*.typ" --exec pandoc -o {.}.md {}

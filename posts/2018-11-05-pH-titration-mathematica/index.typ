@@ -1,3 +1,12 @@
+#import "../../defs.typ": *
+
+#show: post.with(date: "2018-11-05", date-modified: "2025-04-30", categories: (
+  "chemistry",
+  "mathematica",
+))
+
+= Calculating titration curves in _Mathematica_
+
 Computer algebra systems are useful for solving chemical equilibria. Here, a simple example is presented: the titration of a dibasic acid with a strong base. The goal is to derive the pH titration curve and identify the equivalence points.
 
 == Chemical equilibria
