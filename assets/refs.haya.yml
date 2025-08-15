@@ -1,0 +1,1658 @@
+"2014":
+  author:
+    - Васильева, И. А.
+    - Аксенова, В. А.
+  date: "2014"
+  location: Москва
+  title:
+    Федеральные клинические рекомендации по диагностике и лечению туберкулеза органов
+    дыхания
+  type: book
+2014a:
+  author:
+    - Nelson, David L.
+    - Cox, Michael M.
+  date: "2012"
+  location: Нью-Йорк
+  page-range: 823–825
+  publisher: W. H. Freeman and Company
+  title: Lehninger principles of biochemistry
+  type: book
+Baker2015:
+  accessed: "2022-04-29"
+  author:
+    - Baker, Christopher M.
+  date: 2015-03
+  doi: 10.1002/wcms.1215
+  language: en
+  page-range: 241-254
+  title: Polarizable force fields for molecular dynamics simulations of biomolecules
+  type: article
+  url: https://onlinelibrary.wiley.com/doi/10.1002/wcms.1215
+Baldin2019:
+  author:
+    - Baldin, S.M.
+    - Kirilin, E.M.
+    - Švedas, V. K.
+  date: "2019"
+  parent:
+    title: 12th international conference “Biocatalysis. Fundamentals & applications"
+    type: proceedings
+  title:
+    Modeling of substrate binding with L,D-transpeptidase 2 from M. tuberculosis by advanced
+    metadynamics
+  type: conference
+Balint2021:
+  author:
+    - Bálint, Donatella
+    - Jäntschi, Lorentz
+  date: "2021"
+  doi: 10.3390/math9222855
+  parent:
+    issn: 2227-7390
+    issue: "22"
+    title: Mathematics
+    type: periodical
+    volume: "9"
+  title: Comparison of molecular geometry optimization methods based on molecular descriptors
+  type: article
+  url: https://www.mdpi.com/2227-7390/9/22/2855
+Barducci2008:
+  author:
+    - Barducci, Alessandro
+    - Bussi, Giovanni
+    - Parrinello, Michele
+  date: "2008"
+  doi: 10.1103/PhysRevLett.100.020603
+  parent:
+    issn: 00319007
+    issue: "2"
+    title: Physical Review Letters
+    type: periodical
+    volume: "100"
+  title: "Well-tempered metadynamics: A smoothly converging and tunable free-energy method"
+  type: article
+Barducci2011:
+  author:
+    - Barducci, Alessandro
+    - Bonomi, Massimiliano
+    - Parrinello, Michele
+  date: "2011"
+  doi: 10.1002/wcms.31
+  page-range: 826–843
+  parent:
+    issn: "17590876"
+    issue: "5"
+    title: "Wiley Interdisciplinary Reviews: Computational Molecular Science"
+    type: periodical
+    volume: "1"
+  publisher: Wiley Online Library
+  title: Metadynamics
+  type: article
+Bayly1993:
+  author:
+    - Bayly, Christopher I.
+    - Cieplak, Piotr
+    - Cornell, Wendy
+    - Kollman, Peter A.
+  date: "1993-10-01"
+  doi: 10.1021/j100142a004
+  page-range: 10269-10280
+  parent:
+    issn: 0022-3654
+    issue: "40"
+    title: The Journal of Physical Chemistry
+    type: periodical
+    volume: "97"
+  publisher: American Chemical Society
+  title:
+    "A well-behaved electrostatic potential based method using charge restraints for
+    deriving atomic charges: the RESP model"
+  type: article
+  url: https://doi.org/10.1021/j100142a004
+Bekker2004:
+  author:
+    - Bekker, Henk
+    - Van Den Berg, Jur P.
+    - Wassenaar, Tsjerk A.
+  date: "2004"
+  doi: 10.1002/jcc.20050
+  note: as
+  page-range: 1037–1046
+  parent:
+    issn: 01928651
+    issue: "8"
+    title: Journal of Computational Chemistry
+    type: periodical
+    volume: "25"
+  title:
+    A method to obtain a near-minimal-volume molecular simulation of a macromolecule,
+    using periodic boundary conditions and rotational constraints
+  type: article
+Berendsen1984:
+  author:
+    - Berendsen, H. J.C.
+    - Postma, J. P.M.
+    - Van Gunsteren, W. F.
+    - Dinola, A.
+    - Haak, J. R.
+  date: "1984"
+  doi: 10.1063/1.448118
+  page-range: 3684–3690
+  parent:
+    issn: 00219606
+    issue: "8"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "81"
+  title: Molecular dynamics with coupling to an external bath
+  type: article
+Biarrotte-Sorin2006:
+  author:
+    - Biarrotte-Sorin, Sabrina
+    - Hugonnet, Jean Emmanuel
+    - Delfosse, Vanessa
+    - Mainardi, Jean Luc
+    - Gutmann, Laurent
+    - Arthur, Michel
+    - Mayer, Claudine
+  date: "2006"
+  doi: 10.1016/j.jmb.2006.03.014
+  page-range: 533–538
+  parent:
+    issn: 00222836
+    issue: "3"
+    title: Journal of Molecular Biology
+    type: periodical
+    volume: "359"
+  title: Crystal structure of a novel β-lactam-insensitive peptidoglycan transpeptidase
+  type: article
+Bielnicki2006:
+  author:
+    - Bielnicki, Jakub
+    - Devedjiev, Yancho
+    - Derewenda, Urszula
+    - Dauter, Zbigniew
+    - Joachimiak, Andrzej
+    - Derewenda, Zygmunt S.
+  date: "2006"
+  doi: 10.1002/prot.20702
+  page-range: 144–151
+  parent:
+    issn: 08873585
+    issue: "1"
+    title: "Proteins: Structure, Function and Genetics"
+    type: periodical
+    volume: "62"
+  publisher: Wiley Online Library
+  title:
+    "B. subtilis ykuD protein at 2.0 Å resolution: Insights into the structure and function
+    of a novel, ubiquitous family of bacterial enzymes"
+  type: article
+Billones2016:
+  author:
+    - Billones, Junie B.
+    - Carrillo, Maria Constancia O.
+    - Organo, Voltaire G.
+    - Macalino, Stephani Joy Y.
+    - Sy, Jamie Bernadette A.
+    - Emnacen, Inno A.
+    - Clavio, Nina Abigail B.
+    - Concepcion, Gisela P.
+  date: "2016"
+  doi: 10.2147/DDDT.S97043
+  language: eng
+  page-range: 1147-1157
+  parent:
+    issn: 1177-8881
+    title: Drug design, development and therapy
+    type: periodical
+    volume: "10"
+  title:
+    "Toward antituberculosis drugs: in silico screening of synthetic compounds against
+    Mycobacterium tuberculosisl,d-transpeptidase 2."
+  type: article
+Bjelkmar2010:
+  accessed: "2022-04-29"
+  author:
+    - Bjelkmar, Pär
+    - Larsson, Per
+    - Cuendet, Michel A.
+    - Hess, Berk
+    - Lindahl, Erik
+  date: "2010-02-09"
+  doi: 10.1021/ct900549r
+  language: en
+  page-range: 459-466
+  parent:
+    issn:
+      - 1549-9618
+      - 1549-9626
+    issue: "2"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "6"
+  title:
+    "Implementation of the CHARMM Force Field in GROMACS: Analysis of Protein Stability
+    Effects from Correction Maps, Virtual Interaction Sites, and Water Models"
+  type: article
+  url: https://pubs.acs.org/doi/10.1021/ct900549r
+Bohm1994:
+  author:
+    - Böhm, Hans-Joachim
+  date: "1994-06-01"
+  doi: 10.1007/BF00126743
+  page-range: 243-256
+  parent:
+    issn: 1573-4951
+    issue: "3"
+    title: Journal of Computer-Aided Molecular Design
+    type: periodical
+    volume: "8"
+  title:
+    The development of a simple empirical scoring function to estimate the binding constant
+    for a protein-ligand complex of known three-dimensional structure
+  type: article
+  url: https://doi.org/10.1007/BF00126743
+Both2013:
+  author:
+    - Böth, Dominic
+    - Steiner, Eva Maria
+    - Stadler, Daniela
+    - Lindqvist, Ylva
+    - Schnell, Robert
+    - Schneider, Gunter
+  date: "2013"
+  doi: 10.1107/S0907444912049268
+  page-range: 432–441
+  parent:
+    issn: 09074449
+    issue: "3"
+    title: "Acta Crystallographica Section D: Biological Crystallography"
+    type: periodical
+    volume: "69"
+  publisher: International Union of Crystallography
+  title: Structure of LdtMt2, an L,D-transpeptidase from mycobacterium tuberculosis
+  type: article
+Both2013a:
+  author:
+    - Böth, Dominic
+    - Steiner, Eva Maria
+    - Stadler, Daniela
+    - Lindqvist, Ylva
+    - Schnell, Robert
+    - Schneider, Gunter
+  date: "2013"
+  doi: 10.1107/S0907444912049268
+  page-range: 432–441
+  parent:
+    issn: 09074449
+    issue: "3"
+    title: "Acta Crystallographica Section D: Biological Crystallography"
+    type: periodical
+    volume: "69"
+  publisher: International Union of Crystallography
+  title: Structure of LdtMt2, an L,D-transpeptidase from mycobacterium tuberculosis
+  type: article
+Brunger2020:
+  author:
+    - Brünger, Axel T.
+  page-range: "39"
+  parent:
+    title: "Нью-Хейвен (Коннектикут): Yale Univ Press"
+    type: periodical
+  title: "X-plor version 3.1: A system for x-ray crystallography and NMR"
+  type: article
+Case2005:
+  author:
+    - Case, David A.
+    - Cheatham, Thomas E.
+    - Darden, Tom
+    - Gohlke, Holger
+    - Luo, Ray
+    - Merz, Kenneth M.
+    - Onufriev, Alexey
+    - Simmerling, Carlos
+    - Wang, Bing
+    - Woods, Robert J.
+  date: "2005"
+  doi: 10.1002/jcc.20290
+  page-range: 1668–1688
+  parent:
+    issn: 01928651
+    issue: "16"
+    title: Journal of Computational Chemistry
+    type: periodical
+    volume: "26"
+  title: The Amber biomolecular simulation programs
+  type: article
+Cava2011:
+  author:
+    - Cava, Felipe
+    - De Pedro, Miguel A.
+    - Lam, Hubert
+    - Davis, Brigid M.
+    - Waldor, Matthew K.
+  date: "2011"
+  doi: 10.1038/emboj.2011.246
+  page-range: 3442–3453
+  parent:
+    issn: 02614189
+    issue: "16"
+    title: EMBO Journal
+    type: periodical
+    volume: "30"
+  publisher: John Wiley & Sons, Ltd
+  title:
+    Distinct pathways for modification of the bacterial cell wall by non-canonical D-amino
+    acids
+  type: article
+Chipot2007:
+  author:
+    - Chipot, Ch.
+    - Pohorille, A.
+  date: "2007"
+  language: English
+  location: Berlin; New York
+  publisher: Springer
+  title: "Free energy calculations : theory and applications in chemistry and biology"
+  type: book
+Cordillot2013:
+  author:
+    - Cordillot, Mathilde
+    - Dubée, Vincent
+    - Triboulet, Sébastien
+    - Dubost, Lionel
+    - Marie, Arul
+    - Hugonnet, Jean-Emmanuel
+    - Arthur, Michel
+    - Mainardi, Jean-Luc
+  date: 2013-12
+  doi: 10.1128/AAC.01663-13
+  language: eng
+  page-range: 5940-5945
+  parent:
+    issn:
+      - 1098-6596
+      - 0066-4804
+    issue: "12"
+    title: Antimicrobial agents and chemotherapy
+    type: periodical
+    volume: "57"
+  title:
+    In vitro cross-linking of Mycobacterium tuberculosis peptidoglycan by L,D-transpeptidases
+    and inactivation of these enzymes by carbapenems.
+  type: article
+Davidchack2009:
+  author:
+    - Davidchack, Ruslan L.
+    - Handel, Richard
+    - Tretyakov, M. V.
+  date: "2009"
+  doi: 10.1063/1.3149788
+  parent:
+    issn: 00219606
+    issue: "23"
+    title: Journal of Chemical Physics
+    type: periodical
+    volume: "130"
+  title: Langevin thermostat for rigid body dynamics
+  type: article
+Dickson2014:
+  author:
+    - Dickson, Callum J.
+    - Madej, Benjamin D.
+    - Skjevik, Åge A.
+    - Betz, Robin M.
+    - Teigen, Knut
+    - Gould, Ian R.
+    - Walker, Ross C.
+  date: "2014-02-11"
+  doi: 10.1021/ct4010307
+  page-range: 865-879
+  parent:
+    issn: 1549-9618
+    issue: "2"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "10"
+  publisher: American Chemical Society
+  title: "Lipid14: The Amber Lipid Force Field"
+  type: article
+  url: https://doi.org/10.1021/ct4010307
+Durant2002:
+  author:
+    - Durant, Joseph L.
+    - Leland, Burton A.
+    - Henry, Douglas R.
+    - Nourse, James G.
+  date: 2002
+  doi: 10.1021/ci010132r
+  language: eng
+  location: United States
+  page-range: 1273-1280
+  parent:
+    issn: 0095-2338
+    issue: "6"
+    title: Journal of chemical information and computer sciences
+    type: periodical
+    volume: "42"
+  title: Reoptimization of MDL keys for use in drug discovery.
+  type: article
+Feller1995:
+  author:
+    - Feller, Scott E.
+    - Zhang, Yuhong
+    - Pastor, Richard W.
+    - Brooks, Bernard R.
+  date: "1995"
+  doi: 10.1063/1.470648
+  page-range: 4613–4621
+  parent:
+    issn: 00219606
+    issue: "11"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "103"
+  publisher: American Institute of Physics
+  title: "Constant pressure molecular dynamics simulation: The Langevin piston method"
+  type: article
+Galimzyanov2016:
+  author:
+    - Галимзянов, Б.Н.
+    - Мокшин, А.В.
+  date: "2016"
+  location: Казань
+  publisher: КФУ
+  title: "Основы моделирования молекулярной динамики: учебное пособие"
+  type: book
+Glowacki2009:
+  author:
+    - Glowacki, David R.
+    - Paci, Emanuele
+    - Shalashilin, Dmitrii V.
+  date: "2009"
+  doi: 10.1021/jp9074898
+  page-range: 16603–16611
+  parent:
+    issn: "15206106"
+    issue: "52"
+    title: Journal of Physical Chemistry B
+    type: periodical
+    volume: "113"
+  publisher: ACS Publications
+  title:
+    "Boxed molecular dynamics: A simple and general technique for accelerating rare event
+    kinetics and mapping free energy in large molecular systems"
+  type: article
+Gotz2012:
+  author:
+    - Götz, Andreas W.
+    - Williamson, Mark J.
+    - Xu, Dong
+    - Poole, Duncan
+    - Le Grand, Scott
+    - Walker, Ross C.
+  date: "2012"
+  doi: 10.1021/ct200909j
+  page-range: 1542–1555
+  parent:
+    issn: "15499618"
+    issue: "5"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "8"
+  title:
+    Routine microsecond molecular dynamics simulations with AMBER on GPUs. 1. generalized
+    born
+  type: article
+Gupta2010:
+  author:
+    - Gupta, Radhika
+    - Lavollay, Marie
+    - Mainardi, Jean Luc
+    - Arthur, Michel
+    - Bishai, William R.
+    - Lamichhane, Gyanu
+  date: "2010"
+  doi: 10.1038/nm.2120
+  page-range: 466–469
+  parent:
+    issn: "10788956"
+    issue: "4"
+    title: Nature Medicine
+    type: periodical
+    volume: "16"
+  title:
+    The Mycobacterium tuberculosis protein LdtMt2 is a nonclassical transpeptidase required
+    for virulence and resistance to amoxicillin
+  type: article
+Guvench2008:
+  author:
+    - Guvench, Olgun
+    - MacKerell, Alexander D.
+  date: "2008"
+  doi: 10.1007/978-1-59745-177-2_4
+  language: eng
+  page-range: 63-88
+  parent:
+    issn: 1064-3745
+    title: Methods in Molecular Biology (Clifton, N.J.)
+    type: periodical
+    volume: "443"
+  title: Comparison of protein force fields for molecular dynamics simulations
+  type: article
+Hett2008:
+  author:
+    - Hett, Erik C.
+    - Rubin, Eric J.
+  date: "2008"
+  doi: 10.1128/mmbr.00028-07
+  page-range: 126–156
+  parent:
+    issn: 1092-2172
+    issue: "1"
+    title: Microbiology and Molecular Biology Reviews
+    type: periodical
+    volume: "72"
+  title: "Bacterial growth and cell division: a Mycobacterial perspective"
+  type: article
+Hoover1985:
+  author:
+    - Hoover, William G.
+  date: "1985"
+  doi: 10.1103/PhysRevA.31.1695
+  page-range: 1695–1697
+  parent:
+    issn: "10502947"
+    issue: "3"
+    title: Physical Review A
+    type: periodical
+    volume: "31"
+  title: "Canonical dynamics: Equilibrium phase-space distributions"
+  type: article
+Hugonnet2009:
+  author:
+    - Hugonnet, Jean Emmanuel
+    - Tremblay, Lee W.
+    - Boshoff, Helena I.
+    - Barry, Clifton E.
+    - Blanchard, John S.
+  date: "2009"
+  doi: 10.1126/science.1167498
+  page-range: 1215–1218
+  parent:
+    issn: 00368075
+    issue: "5918"
+    title: Science (New York, N.Y.)
+    type: periodical
+    volume: "323"
+  title:
+    Meropenem-clavulanate is effective against extensively drug-resistant Mycobacterium
+    tuberculosis
+  type: article
+Humphrey1996:
+  author:
+    - Humphrey, William
+    - Dalke, Andrew
+    - Schulten, Klaus
+  date: "1996"
+  doi: 10.1016/0263-7855(96)00018-5
+  page-range: 33–38
+  parent:
+    issn: 02637855
+    issue: "1"
+    title: Journal of Molecular Graphics
+    type: periodical
+    volume: "14"
+  title: "VMD: Visual molecular dynamics"
+  type: article
+Hunter1990:
+  author:
+    - Hunter, Christopher A.
+    - Sanders, Jeremy K. M.
+  date: "1990-07-01"
+  doi: 10.1021/ja00170a016
+  page-range: 5525-5534
+  parent:
+    issn: 0002-7863
+    issue: "14"
+    title: Journal of the American Chemical Society
+    type: periodical
+    volume: "112"
+  publisher: American Chemical Society
+  title: The nature of .pi.-.pi. interactions
+  type: article
+  url: https://doi.org/10.1021/ja00170a016
+Jing2019:
+  author:
+    - Jing, Zhifeng
+    - Liu, Chengwen
+    - Cheng, Sara Y.
+    - Qi, Rui
+    - Walker, Brandon D.
+    - Piquemal, Jean-Philip
+    - Ren, Pengyu
+  date: "2019"
+  doi: 10.1146/annurev-biophys-070317-033349
+  page-range: 371-394
+  parent:
+    issue: "1"
+    title: Annual Review of Biophysics
+    type: periodical
+    volume: "48"
+  title: "Polarizable force fields for biomolecular simulations: Recent advances and applications"
+  type: article
+  url: https://doi.org/10.1146/annurev-biophys-070317-033349
+Jorgensen1981:
+  author:
+    - Jorgensen, William L.
+  date: "1981-01-01"
+  doi: 10.1021/ja00392a016
+  page-range: 335-340
+  parent:
+    issn: 0002-7863
+    issue: "2"
+    title: Journal of the American Chemical Society
+    type: periodical
+    volume: "103"
+  publisher: American Chemical Society
+  title:
+    Quantum and statistical mechanical studies of liquids. 10. Transferable intermolecular
+    potential functions for water, alcohols, and ethers. Application to liquid water
+  type: article
+  url: https://doi.org/10.1021/ja00392a016
+Jorgensen1983:
+  accessed: "2022-04-27"
+  author:
+    - Jorgensen, William L.
+    - Chandrasekhar, Jayaraman
+    - Madura, Jeffry D.
+    - Impey, Roger W.
+    - Klein, Michael L.
+  date: "1983-07-15"
+  doi: 10.1063/1.445869
+  page-range: 926-935
+  parent:
+    issn: 0021-9606
+    issue: "2"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "79"
+  publisher: American Institute of Physics
+  title: Comparison of simple potential functions for simulating liquid water
+  type: article
+  url: https://doi.org/10.1063/1.445869
+Jumper2021:
+  author:
+    - Jumper, John
+    - Evans, Richard
+    - Pritzel, Alexander
+    - Green, Tim
+    - Figurnov, Michael
+    - Ronneberger, Olaf
+    - Tunyasuvunakool, Kathryn
+    - Bates, Russ
+    - Žídek, Augustin
+    - Potapenko, Anna
+    - Bridgland, Alex
+    - Meyer, Clemens
+    - Kohl, Simon A. A.
+    - Ballard, Andrew J.
+    - Cowie, Andrew
+    - Romera-Paredes, Bernardino
+    - Nikolov, Stanislav
+    - Jain, Rishub
+    - Adler, Jonas
+    - Back, Trevor
+    - Petersen, Stig
+    - Reiman, David
+    - Clancy, Ellen
+    - Zielinski, Michal
+    - Steinegger, Martin
+    - Pacholska, Michalina
+    - Berghammer, Tamas
+    - Bodenstein, Sebastian
+    - Silver, David
+    - Vinyals, Oriol
+    - Senior, Andrew W.
+    - Kavukcuoglu, Koray
+    - Kohli, Pushmeet
+    - Hassabis, Demis
+  date: "2021-08-01"
+  doi: 10.1038/s41586-021-03819-2
+  page-range: 583-589
+  parent:
+    issn: 1476-4687
+    issue: "7873"
+    title: Nature
+    type: periodical
+    volume: "596"
+  title: Highly accurate protein structure prediction with AlphaFold
+  type: article
+  url: https://doi.org/10.1038/s41586-021-03819-2
+Kirschner2008:
+  author:
+    - Kirschner, Karl N.
+    - Yongye, Austin B.
+    - Tschampel, Sarah M.
+    - González-Outeiriño, Jorge
+    - Daniels, Charlisa R.
+    - Foley, B. Lachele
+    - Woods, Robert J.
+  date: "2008"
+  doi: 10.1002/jcc.20820
+  page-range: 622–655
+  parent:
+    issn: 01928651
+    issue: "4"
+    title: Journal of Computational Chemistry
+    type: periodical
+    volume: "29"
+  title: "GLYCAM06: A generalizable biomolecular force field. carbohydrates"
+  type: article
+Kmiecik2016:
+  author:
+    - Kmiecik, Sebastian
+    - Gront, Dominik
+    - Kolinski, Michal
+    - Wieteska, Lukasz
+    - Dawid, Aleksandra Elzbieta
+    - Kolinski, Andrzej
+  date: "2016-07-27"
+  doi: 10.1021/acs.chemrev.6b00163
+  page-range: 7898-7936
+  parent:
+    issn: 0009-2665
+    issue: "14"
+    title: Chemical Reviews
+    type: periodical
+    volume: "116"
+  publisher: American Chemical Society
+  title: Coarse-Grained Protein Models and Their Applications
+  type: article
+  url: https://doi.org/10.1021/acs.chemrev.6b00163
+Kumar2012:
+  author:
+    - Kumar, Pradeep
+    - Arora, Kriti
+    - Lloyd, John R.
+    - Lee, Ill Y.
+    - Nair, Vinod
+    - Fischer, Elizabeth
+    - Boshoff, Helena I.M.
+    - Barry, Clifton E.
+  date: "2012"
+  doi: 10.1111/j.1365-2958.2012.08199.x
+  page-range: 367–381
+  parent:
+    issn: 0950382X
+    issue: "2"
+    title: Molecular Microbiology
+    type: periodical
+    volume: "86"
+  publisher: Wiley Online Library
+  title: Meropenem inhibits D,D-carboxypeptidase activity in Mycobacterium tuberculosis
+  type: article
+Limongelli2013:
+  author:
+    - Limongelli, Vittorio
+    - Bonomi, Massimiliano
+    - Parrinello, Michele
+  date: "2013"
+  doi: 10.1073/pnas.1303186110
+  page-range: 6358–6363
+  parent:
+    issn: "10916490"
+    issue: "16"
+    title: Proceedings of the National Academy of Sciences of the United States of America
+    type: periodical
+    volume: "110"
+  title: Funnel metadynamics as accurate binding free-energy method
+  type: article
+Liu2018:
+  author:
+    - Liu, Xuewei
+    - Shi, Danfeng
+    - Zhou, Shuangyan
+    - Liu, Hongli
+    - Liu, Huanxiang
+    - Yao, Xiaojun
+  date: "2018"
+  doi: 10.1080/17460441.2018.1403419
+  page-range: 23-37
+  parent:
+    issue: "1"
+    title: Expert Opinion on Drug Discovery
+    type: periodical
+    volume: "13"
+  title: Molecular dynamics simulations and novel drug discovery
+  type: article
+  url: https://doi.org/10.1080/17460441.2018.1403419
+Liu2020:
+  author:
+    - Liu, Yang
+    - Grimm, Maximilian
+    - Dai, Wen-tao
+    - Hou, Mu-chun
+    - Xiao, Zhi-Xiong
+    - Cao, Yang
+  date: "2020-01-01"
+  doi: 10.1038/s41401-019-0228-6
+  page-range: 138-144
+  parent:
+    issn: 1745-7254
+    issue: "1"
+    title: Acta Pharmacologica Sinica
+    type: periodical
+    volume: "41"
+  title: "CB-Dock: a web server for cavity detection-guided protein–ligand blind docking"
+  type: article
+  url: https://doi.org/10.1038/s41401-019-0228-6
+Lu2012:
+  author:
+    - Lu, Yunxiang
+    - Liu, Yingtao
+    - Xu, Zhijian
+    - Li, Haiying
+    - Liu, Honglai
+    - Zhu, Weiliang
+  date: "2012"
+  doi: 10.1517/17460441.2012.678829
+  page-range: 375-383
+  parent:
+    issue: "5"
+    title: Expert Opinion on Drug Discovery
+    type: periodical
+    volume: "7"
+  title: Halogen bonding for rational drug design and new drug discovery
+  type: article
+  url: https://doi.org/10.1517/17460441.2012.678829
+Ma2010:
+  author:
+    - Ma, Zhenkun
+    - Lienhardt, Christian
+    - McIlleron, Helen
+    - Nunn, Andrew J.
+    - Wang, Xiexiu
+  date: "2010"
+  doi: 10.1016/S0140-6736(10)60359-9
+  page-range: 2100–2109
+  parent:
+    issn: "01406736"
+    issue: "9731"
+    volume: "375"
+  title: "Global tuberculosis drug development pipeline: the need and the reality"
+  type: web
+Mahoney2000:
+  accessed: "2022-04-27"
+  author:
+    - Mahoney, Michael W.
+    - Jorgensen, William L.
+  date: "2000-05-22"
+  doi: 10.1063/1.481505
+  page-range: 8910-8922
+  parent:
+    issn: 0021-9606
+    issue: "20"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "112"
+  publisher: American Institute of Physics
+  title:
+    A five-site model for liquid water and the reproduction of the density anomaly by
+    rigid, nonpolarizable potential functions
+  type: article
+  url: https://doi.org/10.1063/1.481505
+Martelli2021:
+  author:
+    - Martelli, Giulia
+    - Pessatti, Tomas Bohn
+    - Steiner, Eva Maria
+    - Cirillo, Martina
+    - Caso, Carolina
+    - Bisognin, Francesco
+    - Landreh, Michael
+    - Monte, Paola Dal
+    - Giacomini, Daria
+    - Schnell, Robert
+  date: "2021"
+  doi: https://doi.org/10.1016/j.chembiol.2021.03.008
+  page-range: 1321-1332.e5
+  parent:
+    issn: 2451-9456
+    issue: "9"
+    title: Cell Chemical Biology
+    type: periodical
+    volume: "28"
+  title:
+    N-Thio-β-lactams targeting L,D-transpeptidase-2, with activity against drug-resistant
+    strains of Mycobacterium tuberculosis
+  type: article
+  url: https://www.sciencedirect.com/science/article/pii/S2451945621001471
+Mathematica:
+  author:
+    - Wolfram Research Inc.
+  date: "2020"
+  title: Mathematica 12.1
+  type: web
+Muegge1999:
+  author:
+    - Muegge, I.
+    - Martin, Y. C.
+  date: "1999-03-11"
+  doi: 10.1021/jm980536j
+  language: eng
+  location: United States
+  page-range: 791-804
+  parent:
+    issn: 0022-2623
+    issue: "5"
+    title: Journal of medicinal chemistry
+    type: periodical
+    volume: "42"
+  title:
+    "A general and fast scoring function for protein-ligand interactions: a simplified
+    potential approach."
+  type: article
+Ngadjeua2018:
+  author:
+    - Ngadjeua, Flora
+    - Braud, Emmanuelle
+    - Saidjalolov, Saidbakhrom
+    - Iannazzo, Laura
+    - Schnappinger, Dirk
+    - Ehrt, Sabine
+    - Hugonnet, Jean Emmanuel
+    - Mengin-Lecreulx, Dominique
+    - Patin, Delphine
+    - Ethève-Quelquejeu, Mélanie
+    - Fonvielle, Matthieu
+    - Arthur, Michel
+  date: "2018"
+  doi: 10.1002/chem.201706082
+  page-range: 5743–5747
+  parent:
+    issn: "15213765"
+    issue: "22"
+    title: Chemistry - A European Journal
+    type: periodical
+    volume: "24"
+  title:
+    Critical impact of peptidoglycan precursor amidation on the activity of L,D-transpeptidases
+    from Enterococcus faecium and Mycobacterium tuberculosis
+  type: article
+Nose1984:
+  author:
+    - Nosé, Shuichi
+  date: "1984"
+  doi: 10.1063/1.447334
+  page-range: 511–519
+  parent:
+    issn: 00219606
+    issue: "1"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "81"
+  title: A unified formulation of the constant temperature molecular dynamics methods
+  type: article
+Onufriev2018:
+  accessed: "2022-04-27"
+  author:
+    - Onufriev, Alexey V.
+    - Izadi, Saeed
+  date: "2018-03-01"
+  doi: 10.1002/wcms.1347
+  page-range: e1347
+  parent:
+    issn: 1759-0876
+    issue: "2"
+    title: WIREs Computational Molecular Science
+    type: periodical
+    volume: "8"
+  publisher: John Wiley & Sons, Ltd
+  title: Water models for biomolecular simulations
+  type: article
+  url: https://doi.org/10.1002/wcms.1347
+PLUMED:
+  title:
+    PLUMED is an open-source, community-developed library that provides a wide range
+    of different methods
+  type: web
+  url: https://plumed.org
+Pettersen2004:
+  author:
+    - Pettersen, Eric F.
+    - Goddard, Thomas D.
+    - Huang, Conrad C.
+    - Couch, Gregory S.
+    - Greenblatt, Daniel M.
+    - Meng, Elaine C.
+    - Ferrin, Thomas E.
+  date: "2004"
+  doi: 10.1002/jcc.20084
+  page-range: 1605–1612
+  parent:
+    issn: 01928651
+    issue: "13"
+    title: Journal of Computational Chemistry
+    type: periodical
+    volume: "25"
+  title: UCSF Chimera - A visualization system for exploratory research and analysis
+  type: article
+Podryga2014:
+  author:
+    - Подрыга, Виктория Олеговна
+    - Поляков, Сергей Владимирович
+  date: "2014"
+  page-range: 20–41
+  parent:
+    issn: 2071-2898
+    title: Препринты Института прикладной математики им. М. В Келдыша РАН
+    type: periodical
+  title:
+    Молекулярно-динамическое моделирование процесса установления термодинамического равновесия
+    нагретого никеля
+  type: article
+R2019:
+  author: R Development Core Team 3.0.1.
+  date: "2013"
+  page-range: https://www.R–project.org
+  parent:
+    volume: "2"
+  title: A language and environment for statistical computing
+  type: web
+ROF2014:
+  author:
+    - Васильева, И. А.
+    - Багдасарян, Т. Р.
+  date: "2014"
+  location: Москва
+  note: "as: РОФ2014"
+  title:
+    Федеральные клинические рекомендации по диагностике и лечению туберкулеза органов
+    дыхания с множественной и широкой лекарственной устойчивостью возбудителя
+  type: book
+Rarey1996:
+  author:
+    - Rarey, M.
+    - Kramer, B.
+    - Lengauer, T.
+    - Klebe, G.
+  date: "1996-08-23"
+  doi: 10.1006/jmbi.1996.0477
+  language: eng
+  location: Netherlands
+  page-range: 470-489
+  parent:
+    issn: 0022-2836
+    issue: "3"
+    title: Journal of molecular biology
+    type: periodical
+    volume: "261"
+  title: A fast flexible docking method using an incremental construction algorithm.
+  type: article
+Rezac2009:
+  author:
+    - Řezáč, Jan
+    - Fanfrlík, Jindřich
+    - Salahub, Dennis
+    - Hobza, Pavel
+  date: "2009-07-14"
+  doi: 10.1021/ct9000922
+  page-range: 1749-1760
+  parent:
+    issn: 1549-9618
+    issue: "7"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "5"
+  publisher: American Chemical Society
+  title:
+    Semiempirical Quantum Chemical PM6 Method Augmented by Dispersion and H-Bonding Correction
+    Terms Reliably Describes Various Types of Noncovalent Complexes
+  type: article
+  url: https://doi.org/10.1021/ct9000922
+Robert2014:
+  author:
+    - Robert, Xavier
+    - Gouet, Patrice
+  date: "2014"
+  doi: 10.1093/nar/gku316
+  page-range: W320–W324
+  parent:
+    issn: "13624962"
+    issue: W1
+    title: Nucleic Acids Research
+    type: periodical
+    volume: "42"
+  publisher: Oxford University Press
+  title: Deciphering key features in protein structures with the new ENDscript server
+  type: article
+Roe2013:
+  author:
+    - Roe, Daniel R.
+    - Cheatham, Thomas E.
+  date: "2013"
+  doi: 10.1021/ct400341p
+  page-range: 3084–3095
+  parent:
+    issn: "15499618"
+    issue: "7"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "9"
+  title:
+    "PTRAJ and CPPTRAJ: Software for processing and analysis of molecular dynamics trajectory
+    data"
+  type: article
+Rullas2015:
+  author:
+    - Rullas, Joaquín
+    - Dhar, Neeraj
+    - McKinney, John D.
+    - García-Pérez, Adolfo
+    - Lelievre, Joël
+    - Diacon, Andreas H.
+    - Hugonnet, Jean-Emmanuel
+    - Arthur, Michel
+    - Angulo-Barturen, Iñigo
+    - Barros-Aguirre, David
+    - Ballell, Lluís
+  date: 2015-08
+  doi: 10.1128/AAC.01063-15
+  language: eng
+  page-range: 4997-4999
+  parent:
+    issn:
+      - 1098-6596
+      - 0066-4804
+    issue: "8"
+    title: Antimicrobial agents and chemotherapy
+    type: periodical
+    volume: "59"
+  title:
+    Combinations of β-Lactam Antibiotics Currently in Clinical Trials Are Efficacious
+    in a DHP-I-Deficient Mouse Model of Tuberculosis Infection.
+  type: article
+Salomon-Ferrer2013:
+  author:
+    - Salomon-Ferrer, Romelia
+    - Case, David A.
+    - Walker, Ross C.
+  date: "2013"
+  doi: 10.1002/wcms.1121
+  page-range: 198–210
+  parent:
+    issn: "17590876"
+    issue: "2"
+    title: "Wiley Interdisciplinary Reviews: Computational Molecular Science"
+    type: periodical
+    volume: "3"
+  title: An overview of the Amber biomolecular simulation package
+  type: article
+Salomon-Ferrer2013a:
+  author:
+    - Salomon-Ferrer, Romelia
+    - Case, David A.
+    - Walker, Ross C.
+  date: "2013"
+  doi: 10.1002/wcms.1121
+  page-range: 198–210
+  parent:
+    issn: "17590876"
+    issue: "2"
+    title: "Wiley Interdisciplinary Reviews: Computational Molecular Science"
+    type: periodical
+    volume: "3"
+  title: An overview of the Amber biomolecular simulation package
+  type: article
+Salomon-Ferrer2013b:
+  author:
+    - Salomon-Ferrer, Romelia
+    - Götz, Andreas W.
+    - Poole, Duncan
+    - Le Grand, Scott
+    - Walker, Ross C.
+  date: "2013"
+  doi: 10.1021/ct400314y
+  page-range: 3878–3888
+  parent:
+    issn: "15499618"
+    issue: "9"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "9"
+  title:
+    Routine microsecond molecular dynamics simulations with AMBER on GPUs. 2. Explicit
+    solvent particle mesh ewald
+  type: article
+Santos-Martins2021:
+  author:
+    - Santos-Martins, Diogo
+    - Solis-Vasquez, Leonardo
+    - Tillack, Andreas F
+    - Sanner, Michel F
+    - Koch, Andreas
+    - Forli, Stefano
+  date: "2021-02-09"
+  doi: 10.1021/acs.jctc.0c01006
+  page-range: 1060-1073
+  parent:
+    issn: 1549-9618
+    issue: "2"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "17"
+  publisher: American Chemical Society
+  title: Accelerating AutoDock4 with GPUs and Gradient-Based Local Search
+  type: article
+  url: https://doi.org/10.1021/acs.jctc.0c01006
+Shaytan2004:
+  author:
+    - Шайтан, К.В.
+    - Терёшкина, К.Б.
+  date: "2004"
+  location: Москва
+  publisher: МГУ
+  title: "Молекулярная динамика белков и пептидов: методическое пособие"
+  type: book
+Solapure2013:
+  author:
+    - Solapure, Suresh
+    - Dinesh, Neela
+    - Shandil, Radha
+    - Ramachandran, Vasanthi
+    - Sharma, Sreevalli
+    - Bhattacharjee, Deepa
+    - Ganguly, Samit
+    - Reddy, Jitendar
+    - Ahuja, Vijaykamal
+    - Panduga, Vijender
+    - Parab, Manish
+    - Vishwas, K. G.
+    - Kumar, Naveen
+    - Balganesh, Meenakshi
+    - Balasubramanian, V.
+  date: 2013-06
+  doi: 10.1128/AAC.00023-13
+  language: eng
+  page-range: 2506-2510
+  parent:
+    issn:
+      - 1098-6596
+      - 0066-4804
+    issue: "6"
+    title: Antimicrobial agents and chemotherapy
+    type: periodical
+    volume: "57"
+  title:
+    In vitro and in vivo efficacy of β-lactams against replicating and slowly growing/nonreplicating
+    Mycobacterium tuberculosis.
+  type: article
+Sterling2015:
+  author:
+    - Sterling, Teague
+    - Irwin, John J.
+  date: "2015-11-23"
+  doi: 10.1021/acs.jcim.5b00559
+  page-range: 2324-2337
+  parent:
+    issn: 1549-9596
+    issue: "11"
+    title: Journal of Chemical Information and Modeling
+    type: periodical
+    volume: "55"
+  publisher: American Chemical Society
+  title: ZINC 15 – Ligand Discovery for Everyone
+  type: article
+  url: https://doi.org/10.1021/acs.jcim.5b00559
+TBKeyFacts:
+  author:
+    - World Health Organization
+  date: "2020"
+  title: Tuberculosis. Key facts
+  type: web
+  url: https://who.int/en/news-room/fact-sheets/detail/tuberculosis
+Tian2020:
+  author:
+    - Tian, Chuan
+    - Kasavajhala, Koushik
+    - Belfon, Kellon A. A.
+    - Raguette, Lauren
+    - Huang, He
+    - Migues, Angela N.
+    - Bickel, John
+    - Wang, Yuzhang
+    - Pincay, Jorge
+    - Wu, Qin
+    - Simmerling, Carlos
+  date: "2020-01-14"
+  doi: 10.1021/acs.jctc.9b00591
+  page-range: 528-552
+  parent:
+    issn: 1549-9618
+    issue: "1"
+    title: Journal of Chemical Theory and Computation
+    type: periodical
+    volume: "16"
+  publisher: American Chemical Society
+  title:
+    "ff19SB: Amino-Acid-Specific Protein Backbone Parameters Trained against Quantum
+    Mechanics Energy Surfaces in Solution"
+  type: article
+  url: https://doi.org/10.1021/acs.jctc.9b00591
+Tuckerman2010:
+  author:
+    - Tuckerman, Mark E.
+  date: "2010"
+  language: English
+  location: Oxford
+  publisher: Oxford University Press
+  title: "Statistical mechanics: theory and molecular simulation"
+  type: book
+UniProtLdtMt2:
+  title: Mycobacterium tuberculosis (strain CDC 1551 / oshkosh)
+  type: web
+  url: https://uniprot.org/uniprot/O53223
+Vanquelef2011:
+  author:
+    - Vanquelef, Enguerran
+    - Simon, Sabrina
+    - Marquant, Gaelle
+    - Garcia, Elodie
+    - Klimerak, Geoffroy
+    - Delepine, Jean Charles
+    - Cieplak, Piotr
+    - Dupradeau, François-Yves
+  date: 2011-05
+  doi: 10.1093/nar/gkr288
+  page-range: W511-W517
+  parent:
+    issn: 0305-1048
+    issue: suppl₂
+    title: Nucleic Acids Research
+    type: periodical
+    volume: "39"
+  title:
+    "R.E.D. Server: a web service for deriving RESP and ESP charges and building force
+    field libraries for new molecules and molecular fragments"
+  type: article
+  url: https://doi.org/10.1093/nar/gkr288
+Verlet1967:
+  author:
+    - Verlet, Loup
+  date: "1967"
+  doi: 10.1103/PhysRev.159.98
+  page-range: 98–103
+  parent:
+    issn: 0031899X
+    issue: "1"
+    title: Physical Review
+    type: periodical
+    volume: "159"
+  title:
+    Computer "experiments" on classical fluids. I. Thermodynamical properties of Lennard-Jones
+    molecules
+  type: article
+Voevodin2019:
+  author:
+    - Voevodin, Vladimir V.
+    - Antonov, Alexander S.
+    - Nikitenko, Dmitry A.
+    - Shvets, Pavel A.
+    - Sobolev, Sergey I.
+    - Sidorov, Igor Yu
+    - Stefanov, Konstantin S.
+    - Voevodin, Vadim V.
+    - Zhumatiy, Sergey A.
+  date: "2019"
+  doi: 10.14529/js190201
+  page-range: 4–11
+  parent:
+    issn: "23138734"
+    issue: "2"
+    title: Supercomputing Frontiers and Innovations
+    type: periodical
+    volume: "6"
+  title:
+    "Supercomputer Lomonosov-2: Large scale, deep monitoring and fine analytics for the
+    user community"
+  type: article
+Wang2016:
+  author:
+    - Wang, Zhe
+    - Sun, Huiyong
+    - Yao, Xiaojun
+    - Li, Dan
+    - Xu, Lei
+    - Li, Youyong
+    - Tian, Sheng
+    - Hou, Tingjun
+  date: "2016-05-14"
+  doi: 10.1039/c6cp01555g
+  language: eng
+  location: England
+  page-range: 12964-12975
+  parent:
+    issn:
+      - 1463-9084
+      - 1463-9076
+    issue: "18"
+    title: "Physical chemistry chemical physics : PCCP"
+    type: periodical
+    volume: "18"
+  title:
+    "Comprehensive evaluation of ten docking programs on a diverse set of protein-ligand
+    complexes: the prediction accuracy of sampling power and scoring  power."
+  type: article
+Yeh1999:
+  author:
+    - Yeh, In Chul
+    - Berkowitz, Max L.
+  date: "1999"
+  doi: 10.1063/1.479595
+  page-range: 3155–3162
+  parent:
+    issn: 00219606
+    issue: "7"
+    title: Journal of Chemical Physics
+    type: periodical
+    volume: "111"
+  publisher: American Institute of Physics
+  title: Ewald summation for systems with slab geometry
+  type: article
+Zwanzig1954:
+  author:
+    - Zwanzig, Robert W.
+  date: "1954"
+  doi: 10.1063/1.1740409
+  page-range: 1420-1426
+  parent:
+    issue: "8"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "22"
+  title: High‐Temperature equation of state by a perturbation method. I. Nonpolar gases
+  type: article
+  url: https://doi.org/10.1063/1.1740409
+amber21:
+  date: "2021"
+  note: "as: amber21"
+  title: Amber 2021 Reference Manual
+  type: book
+atta-fynn:
+  author:
+    - Atta-fynn, Raymond
+    - Bylaska, Eric J
+    - Jong, Wibe A De
+  location: Ричленд (Вашингтон)
+  publisher: Pacific Northwest National Laboratory
+  title:
+    "Finite temperature free energy calculations in NWChem. Metadynamics and umbrella
+    sampling-wham: практическое пособие"
+  type: book
+  url: https://nwchemgit.github.io/nwchem-new-pmf.pdf
+gamess:
+  accessed: "2020-06-18"
+  author:
+    - Barca, Giuseppe M. J.
+    - Bertoni, Colleen
+    - Carrington, Laura
+    - Datta, Dipayan
+    - De Silva, Nuwan
+    - Deustua, J. Emiliano
+    - Fedorov, Dmitri G.
+    - Gour, Jeffrey R.
+    - Gunina, Anastasia O.
+    - Guidez, Emilie
+    - Harville, Taylor
+    - Irle, Stephan
+    - Ivanic, Joe
+    - Kowalski, Karol
+    - Leang, Sarom S.
+    - Li, Hui
+    - Li, Wei
+    - Lutz, Jesse J.
+    - Magoulas, Ilias
+    - Mato, Joani
+    - Mironov, Vladimir
+    - Nakata, Hiroya
+    - Pham, Buu Q.
+    - Piecuch, Piotr
+    - Poole, David
+    - Pruitt, Spencer R.
+    - Rendell, Alistair P.
+    - Roskop, Luke B.
+    - Ruedenberg, Klaus
+    - Sattasathuchana, Tosaporn
+    - Schmidt, Michael W.
+    - Shen, Jun
+    - Slipchenko, Lyudmila
+    - Sosonkina, Masha
+    - Sundriyal, Vaibhav
+    - Tiwari, Ananta
+    - Galvez Vallejo, Jorge L.
+    - Westheimer, Bryce
+    - Wloch, Marta
+    - Xu, Peng
+    - Zahariev, Federico
+    - Gordon, Mark S.
+  date: 2020-04
+  doi: 10.1063/5.0005188
+  language: english
+  note: "as: gamess"
+  page-range: "154102"
+  parent:
+    issn:
+      - 0021-9606
+      - 1089-7690
+    issue: "15"
+    title: The Journal of Chemical Physics
+    type: periodical
+    volume: "152"
+  title: Recent developments in the general atomic and molecular electronic structure system
+  type: article
+  url: http://aip.scitation.org/doi/10.1063/5.0005188
+globalTBReport:
+  author:
+    - World Health Organization
+  date: "2020"
+  doi: .1037//0033-2909.I26.1.78
+  page-range: 1–261
+  parent:
+    type: periodical
+  title: Global tuberculosis report 2019
+  type: article
+gromacs2022:
+  author:
+    - Bauer, Paul
+    - Hess, Berk
+    - Lindahl, Erik
+  date: 2022-02
+  doi: 10.5281/zenodo.6103568
+  note: "as: gromacs2022"
+  publisher: Zenodo
+  title: GROMACS 2022 manual
+  type: web
+  url: https://doi.org/10.5281/zenodo.6103568
+icd11tb:
+  author:
+    - International Classification of Diseases 11th Revision
+  date: "2019"
+  note: "as: icd11tb"
+  publisher: World Health Organization
+  title: ICD-11 Tuberculosis
+  type: web
+  url: https://id.who.int/icd/entity/2072728114
+mdanalysis:
+  author:
+    - Gowers, Richard J.
+    - Linke, Max
+    - Barnoud, Jonathan
+    - Reddy, Tyler J. E.
+    - Melo, Manuel N.
+    - Seyler, Sean L.
+    - Domański, Jan
+    - Dotson, David L.
+    - Buchoux, Sébastien
+    - Kenney, Ian M.
+    - Oliver Beckstein
+  date: "2016"
+  doi: 10.25080/Majora-629e541a-00e
+  note: "as: mdanalysis"
+  page-range: 98 - 105
+  parent:
+    title: Proceedings of the 15th Python in Science Conference
+    type: proceedings
+  title: "MDAnalysis: A python package for the rapid analysis of molecular dynamics simulations"
+  type: article
+namd-potential:
+  accessed: "2022-04-29"
+  note: "as: namd-potential"
+  title: Potential energy functions
+  type: web
+  url: https://www.ks.uiuc.edu/Research/namd/2.9/ug/node22.html
+pymol:
+  author:
+    - Schrödinger LLC
+  date: "2014"
+  doi: 10.1038/hr.2014.17
+  parent:
+    issn: 1348-4214
+  title: The PyMOL molecular graphics system, version 1.8
+  type: web
+  url: https://pymol.org
+rdkit:
+  note: "as: rdkit"
+  title: "RDKit: Open-source cheminformatics"
+  type: web
+  url: https://www.rdkit.org
+whoTbReport2021:
+  author:
+    - WHO. Global Tuberculosis Programme
+  date: "2021"
+  note: "as: whoTbReport2021"
+  page-range: "57"
+  title: Global tuberculosis report
+  type: report
+  url: https://www.who.int/publications/i/item/9789240037021
+zotero-undefined:
+  accessed: "2022-04-27"
+  title:
+    Water models for biomolecular simulations - Onufriev - 2018 - WIREs Computational
+    Molecular Science - Wiley Online Library
+  type: web
+  url: https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1347
+zotero-undefineda:
+  accessed: "2022-04-29"
+  title: "Citation for: Polarizable force fields for molecular dynamics simulations of biomolecules"
+  type: web
+  url: https://wires.onlinelibrary.wiley.com/action/showCitFormats?doi=10.1002%2Fwcms.1215
+zotero-undefinedb:
+  accessed: "2022-04-29"
+  title:
+    Polarizable force fields for molecular dynamics simulations of biomolecules - Baker
+    - 2015 - WIREs Computational Molecular Science - Wiley Online Library
+  type: web
+  url: https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1215
