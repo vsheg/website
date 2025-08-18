@@ -14,8 +14,7 @@
   set par(justify: true, linebreaks: "optimized")
   set text(hyphenate: true, costs: (hyphenation: 0%, runt: 50%, widow: 0%, orphan: 0%))
 
-  set heading(numbering: none)
-  show heading.where(level: 2): set heading(numbering: "1")
+  set heading(numbering: "1.")
 
   show ref: it => {
     let eq = math.equation
