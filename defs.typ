@@ -35,3 +35,5 @@
     bibliography(references)
   }
 }
+
+#let const = "const"
