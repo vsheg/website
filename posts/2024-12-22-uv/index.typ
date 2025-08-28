@@ -1,9 +1,13 @@
----
-date: 2024-12-22
-title: "`uv` as a system-wide Python environment manager"
-categories:
-    - python
----
+#import "../../defs.typ": *
+
+#show: post.with(
+  date: "2024-12-22",
+  categories: (
+    "python",
+  ),
+)
+
+= `uv` as a system-wide Python environment manager
 
 Creating new virtual environments for each project during quick prototyping, data analysis, or machine learning can be cumbersome.
 While managing a global environment with `pip` is simpler, it often leads to dependency conflicts and version mismatches,
@@ -14,28 +18,28 @@ Tools like `poetry` excel at managing project dependencies, but they can also ef
 `uv` is a modern Python environment manager written in Rust. Here's a brief overview of using `uv`
 to manage a global environment. Note that this approach works with `poetry` as well.
 
-## Installing `uv`
+== Installing `uv`
 
 `uv` is available via multiple sources, just a few examples:
 
-### macOS (and Linuxbrew)
+=== macOS (and Linuxbrew)
 ```bash
 brew install uv
 ```
 
-### Fedora (41+)
+=== Fedora (41+)
 ```bash
 sudo dnf install uv
 ```
 
-### `pipx`
+=== `pipx`
 ```bash
 pipx install uv
 ```
 
 When installed, `uv` provides a set of commands to manage Python environments, packages, and dependencies.
 
-## Creating a virtual environment
+== Creating a virtual environment
 
 Global virtual environments should be stored in the home directory:
 ```bash
@@ -51,58 +55,55 @@ uv init --python 3.12 --no-package --vcs none --no-readme --no-workspace
 This initializes a project named after your home directory (you can modify it later). `uv` generates two files and a directory:
 
 - A sample Python script:
-  ```{.python filename="hello.py"}
+  ```python
+  // filename: hello.py
    def main():
     print("Hello from sheg!")
 
 
    if __name__ == "__main__":
       main()
-
   ```
-   You can delete it:
+  You can delete it:
   ```bash
   rm hello.py
   ```
 - A configuration file where `uv` stores general information and will store all explicitly required packages:
 
-   ```{.toml filename="pyproject.toml"}
-   [project]
-   name = "sheg" # <1>
-   version = "0.1.0" # <2>
-   description = "Add your description here" # <3>
-   requires-python = ">=3.12" # <4>
-   dependencies = [] # <5>
-   ```
-   1. The project name defaults to your home directory. You can change it to any name you prefer.
-   2. As of this writing, tis is required and can't be deleted, but the version number is arbitrary.
-   3. Optional.
-   4. The minimum Python version.
-   5. Where all required packages will be listed.
+  ```toml
+  // filename: pyproject.toml
+  [project]
+  name = "sheg" # The project name defaults to your home directory. You can change it to any name you prefer.
+  version = "0.1.0" # As of this writing, this is required and can't be deleted, but the version number is arbitrary.
+  description = "Add your description here" # Optional.
+  requires-python = ">=3.12" # The minimum Python version.
+  dependencies = [] # Where all required packages will be listed.
+  ```
 
 - A `.venv` directory containing the virtual environment.
 
+#margin[
+  You can customize `pyproject.toml` using any text editor to change details such as the environment `name` or `description`. For example:
+  ```toml
+  // filename: pyproject.toml (example)
+  [project]
+  name = "global-env"
+  version = "6.6.6"
+  requires-python = ">=3.12"
+  dependencies = []
+  ```
+  If something breaks, delete `pyproject.toml` and start over.
+]
 
-::: {.callout-note}
-You can customize `pyproject.toml` using any text editor to change details such as the environment `name` or `description`. For example:
-```{.toml filename="pyproject.toml (example)"}
-[project]
-name = "global-env"
-version = "6.6.6"
-requires-python = ">=3.12"
-dependencies = []
-```
-If something breaks, delete `pyproject.toml` and start over.
-:::
-
-## Installing packages
+== Installing packages
 To install packages, use the `uv add` command followed by the package name (multiple packages can be added at once):
 ```bash
 uv add scikit-learn seaborn
 ```
 
 This updates `pyproject.toml` as follows:
-```{.toml filename="pyproject.toml"}
+```toml
+// filename: pyproject.toml
 [project]
 name = "sheg"
 version = "0.1.0"
@@ -115,29 +116,30 @@ dependencies = [
 Additionally, `uv` generates a `uv.lock` file which stores the exact versions of the installed packages to ensure reproducibility, e.g.
 for later installations or on another machine.
 
-::: {.callout-note}
-To remove a package:
-```bash
-uv remove seaborn
-```
-:::
+#margin[
+  To remove a package:
+  ```bash
+  uv remove seaborn
+  ```
+]
 
-## Modifying package versions
+== Modifying package versions
 
-`pyproject.toml` does not store the exact package versions, only some constraints (e.g., `seaborn>=0.13.2`). `uv` uses `pyproject.toml` to check with packages and their versions are required by the environment and then automatically resolves the exact versions and stores them in `uv.lock`.
+`pyproject.toml` does not store the exact package versions, only some constraints (e.g., `seaborn>=0.13.2`). `uv` uses `pyproject.toml` to check what packages and their versions are required by the environment and then automatically resolves the exact versions and stores them in `uv.lock`.
 
 You can modify the version constraints in `pyproject.toml`, e.g. to lower the minimum version of `scikit-learn`:
 
-```{.toml filename="pyproject.toml (example)"}
+```toml
+// filename: pyproject.toml (example)
 [project]
 name = "sheg"
 version = "0.1.0"
 dependencies = [
     "scikit-learn>=1.4.0",
-    "seaborn>=0.13.2", # <1>
+    "seaborn>=0.13.2",
 ]
 ```
-1.  This was changed from `1.6.0` to `1.4.0`.
+1. This was changed from `1.6.0` to `1.4.0`.
 
 Then, to apply the changes (resolve the exact versions and install/remove packages) run:
 
@@ -146,31 +148,30 @@ uv sync
 ```
 This updates the `uv.lock` file with the new specifications.
 
-
-## Hiding environment files (Optional)
+== Hiding environment files (Optional)
 To declutter your home directory, you can hide `pyproject.toml` and `uv.lock` files:
 
-### macOS:
+=== macOS:
 ```bash
 chflags hidden pyproject.toml uv.lock
 ```
 
-### Windows:
-Right-click the file, select **Properties**, and check the **Hidden** box.
+=== Windows:
+Right-click the file, select *Properties*, and check the *Hidden* box.
 
-### GNOME (Ubuntu, Fedora, etc.):
+=== GNOME (Ubuntu, Fedora, etc.):
 Create a `.hidden` file listing the files to hide:
 ```bash
 nano .hidden
 ```
 Add:
-```{filename=".hidden"}
+```
+// filename: .hidden
 pyproject.toml
 uv.lock
 ```
 
-
-## Running Python interpreter and commands
+== Running Python interpreter and commands
 
 To execute commands within your environment, prefix them with `uv run`.
 
@@ -190,10 +191,10 @@ uv run echo "Hello, world!"
 ```
 Do this if the command requires Python interpreter or packages from the environment.
 
-## Using VS Code notebooks
+== Using VS Code notebooks
 
 To use VS Code for Jupyter notebooks install `ipykernel`:
-   
+
 ```bash
 uv add ipykernel
 ```
@@ -206,13 +207,13 @@ uv run python -m ipykernel install --user
 
 Select your environment in VS Code:
 
-![](imgs/vscode.png)
+#image("imgs/vscode.png")
 
-::: {.callout-note}
-VS Code has [persistent issues](https://www.google.com/search?q=vscode+doesn't+see+a+python+kernel) with Jupyter extensions. Refreshing, restarting, or troubleshooting for half an hour may occasionally be necessary. Sometimes, it just works (or doesn't).
-:::
+#margin[
+  VS Code has #link("https://www.google.com/search?q=vscode+doesn't+see+a+python+kernel")[persistent issues] with Jupyter extensions. Refreshing, restarting, or troubleshooting for half an hour may occasionally be necessary. Sometimes, it just works (or doesn't).
+]
 
-## Using Jupyter
+== Using Jupyter
 
 To use Jupyter, you need to install it:
 
@@ -228,10 +229,9 @@ uv run jupyter lab
 
 This opens the Jupyter Lab interface in your browser:
 
-![](imgs/jupyter.png)
+#image("imgs/jupyter.png")
 
-
-## Checking the active environment
+== Checking the active environment
 
 `uv` resolves the current environment based on your working directory. If you're in a directory without `.venv`, `pyproject.toml`, or `uv.lock` (i.e., not in a `uv` project), it looks for an environment in the parent directories.
 
