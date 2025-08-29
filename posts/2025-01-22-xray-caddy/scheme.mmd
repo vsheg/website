@@ -1,0 +1,50 @@
+flowchart TD
+
+    subgraph Users
+        user1([User 1])
+        user2([User 2])
+        user3([User 3])
+    end
+
+    subgraph Intermediates
+        ISP([ISP])
+        CDN(["CDN (optional)"])
+        Hoster([hoster])
+    end
+
+    subgraph VPS
+
+        caddy443([Caddy <br> host's 0.0.0.0:443])
+
+        subgraph Web service
+            dockerweb([Docker <br> localhost:8081])
+            service([web service <br> container's 0.0.0.0:80])
+        end
+
+        subgraph 3X-UI service
+          dockervpn([Docker <br> localhost:8443 ])
+          xxxvpn([Xray VPN <br> container's 0.0.0.0:443])
+
+          dockerui([Docker <br> localhost:8080])
+          xxxui([3X-UI web console <br> container's 0.0.0.0:80])
+
+          dockersub([Docker <br> localhost:8180])
+          xxxsub([3X-UI subscriptions <br> container's 0.0.0.0:81])
+        end
+
+    end
+
+    user1 -->|HTTP/1.1 :443| ISP
+    user2 -->|HTTP/2 :443| ISP
+    user3 -->|HTTP/3 :443| ISP
+    ISP --> CDN --> Hoster
+
+    Hoster -->|HTTP/1.1 :443| caddy443
+    Hoster -->|HTTP/2 :443| caddy443
+    Hoster -->|HTTP/3 :443| caddy443
+
+    caddy443 -->|/secret/websocket| dockervpn -->|NAT| xxxvpn
+    caddy443 -->|/secret/3x*| dockerui -->|NAT| xxxui
+    caddy443 -->|"/secret/sub* (optional)"| dockersub -->|NAT| xxxsub
+
+    caddy443 -->|other| dockerweb -->|NAT| service
