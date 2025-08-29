@@ -1,7 +1,0 @@
----
-pagetitle:  Vsevolod Shegolev - Personal website
-page-layout: full
-include-in-header:
-    - text: <meta http-equiv="refresh" content="0; URL=/posts/">
----
-
