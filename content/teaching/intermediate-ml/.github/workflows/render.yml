@@ -1,0 +1,48 @@
+name: Render and publish
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - name: Install Menlo font
+        run: |
+          mkdir -p ~/.fonts
+          wget -O ~/.fonts/Menlo-Regular.ttf https://github.com/hbin/top-programming-fonts/raw/refs/heads/master/Menlo-Regular.ttf
+          fc-cache -f -v
+
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      
+      - uses: typst-community/setup-typst@v4
+        with:
+          typst-version: 0.13.0
+      
+      - run: make compile
+
+      - run: make readme
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/jekyll-build-pages@v1 # convert README.md to index.html
+
+      - run: cp _site/index.html index.html # copy index.html to root
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.' # upload entire repository
+      
+      - id: deployment
+        uses: actions/deploy-pages@v4

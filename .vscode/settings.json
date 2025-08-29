@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/__pycache__": true,
+        "**/.*": true
+    }
+}
