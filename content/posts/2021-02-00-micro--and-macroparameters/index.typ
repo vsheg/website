@@ -7,7 +7,7 @@
     "molecular dynamics",
     "russian",
   ),
-  references: "assets/refs.haya.yml",
+  references: "../assets/refs.haya.yml",
 )
 
 = Оценка термодинамических микро- и макропараметров в классической молекулярной динамике

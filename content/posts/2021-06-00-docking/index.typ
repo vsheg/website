@@ -6,7 +6,7 @@
     "molecular dynamics",
     "russian",
   ),
-  references: "assets/refs.haya.yml",
+  references: "../assets/refs.haya.yml",
 )
 
 = Молекулярный докинг

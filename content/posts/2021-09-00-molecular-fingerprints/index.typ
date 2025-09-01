@@ -7,7 +7,7 @@
     "chemoinformatics",
     "russian",
   ),
-  references: "assets/refs.haya.yml",
+  references: "../assets/refs.haya.yml",
 )
 
 = Оценка структурной схожести молекул
