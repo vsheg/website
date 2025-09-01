@@ -16,10 +16,19 @@ posts:
 	fd -p -g "**/posts/*/*.typ" --exec pandoc -o {.}.md {}
 	fd -p -g "**/posts/*/*.md" --exec mv {} {.}.qmd
 
+html:
+	mkdir -p html/posts
+	fd . content/posts -e typ --exec bash -c 'filepath={}; \
+		basename=$$(basename $$filepath .typ); \
+		dir=$$(dirname $$filepath | sed "s|^content/|html/|"); \
+		mkdir -p $$dir; \
+		typst compile --format html --features html $$filepath "$$dir/$$basename.html" --root .'
+
 uv:
 	uv sync
 
 rss:
 	mv _site/posts/index.xml _site/feed.xml
 
-.PHONY: clean posts rss
+.PHONY: clean posts rss html
+

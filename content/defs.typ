@@ -5,13 +5,17 @@
 // Template
 #let post(date: none, date-modified: none, categories: (), references: none, doc) = {
   // Marginalia setup
-  set page(width: 600pt)
-  show: marginalia.setup.with(outer: (width: 150pt))
+  // set page(width: 600pt)
+  // show: marginalia.setup.with(outer: (width: 150pt))
 
   // Code style (inline)
+  //
   show raw.line: box.with(fill: gray.transparentize(80%), outset: 0.3em, radius: 0.4em)
 
   set math.equation(numbering: "(1)")
+  show math.equation.where(block: false): it => html.elem("span", html.frame(it))
+  show math.equation.where(block: true): html.frame
+
 
   set par(justify: true, linebreaks: "optimized")
   set text(hyphenate: true, costs: (hyphenation: 0%, runt: 50%, widow: 0%, orphan: 0%))
