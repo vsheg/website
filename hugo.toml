@@ -1,0 +1,14 @@
+baseURL = "https://vsheg.com/"
+languageCode = "en-us"
+
+theme = 'formal'
+
+[[module.mounts]]
+source = "html"
+target = "content"
+
+[menu]
+[[menu.main]]
+name = "Posts"
+url = "/posts/"
+weight = 10
