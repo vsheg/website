@@ -13,26 +13,43 @@
   show raw.line: box.with(fill: gray.transparentize(80%), outset: 0.3em, radius: 0.4em)
 
   set math.equation(numbering: "(1)")
-  show math.equation.where(block: false): it => html.elem("span", html.frame(it))
-  show math.equation.where(block: true): html.frame
+
+  show math.equation.where(block: false): it => {
+    if target() == "html" {
+      html.elem("span", attrs: (role: "math"), html.frame(it))
+    } else {
+      it
+    }
+  }
+
+  show math.equation.where(block: true): it => {
+    if target() == "html" {
+      html.elem("figure", attrs: (role: "math"), html.frame(it))
+    } else {
+      it
+    }
+  }
 
 
   set par(justify: true, linebreaks: "optimized")
   set text(hyphenate: true, costs: (hyphenation: 0%, runt: 50%, widow: 0%, orphan: 0%))
 
-  set heading(numbering: "1.")
-
   show ref: it => {
-    let eq = math.equation
-    let el = it.element
-    if el != none and el.func() == eq {
-      numbering(
-        el.numbering,
-        ..counter(eq).at(el.location()),
-      )
+    if it.element != none {
+      // Use your custom scheme
+      link(it.target, it.element.body)
     } else {
+      // Default `ref`
       it
     }
+  }
+
+  outline()
+
+  date
+
+  if date-modified != none {
+    [ (updated: ] + date-modified + [) ]
   }
 
   doc
