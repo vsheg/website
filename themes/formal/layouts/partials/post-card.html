@@ -1,0 +1,7 @@
+<article class="post-card">
+    <a class="post-card-link" href="{{ .Permalink }}">
+        <div class="post-content">
+            {{ with .Summary }}{{ . | truncate 200 }}{{ end }}
+        </div>
+    </a>
+</article>
