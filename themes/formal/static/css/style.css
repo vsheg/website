@@ -150,6 +150,55 @@ main {
     font-size: 1.3rem;
 }
 
+/* Footnotes as left margin notes */
+/* Reserve left margin for margin notes */
+.post {
+    position: relative;
+    padding-left: 0;
+    /* Custom properties to manage margin note sizing/alignment */
+    --footnote-width: 270px;
+    /* widened from 180px (1.5x) */
+    --footnote-gap: 20px;
+}
+
+sup.footnote-ref {
+    font-size: 0.75em;
+    color: #0066cc;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+sup.footnote-ref:hover {
+    color: #004499;
+}
+
+span.footnote-body {
+    float: left;
+    clear: left;
+    width: var(--footnote-width);
+    margin-left: calc(-1 * (var(--footnote-width) + var(--footnote-gap)));
+    /* Pull into left margin */
+    margin-right: var(--footnote-gap);
+    /* Space from main text */
+    font-size: 0.8em;
+    line-height: 1.35;
+    color: #555;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: right;
+}
+
+/* Alignment fix for footnotes inside list items (lists add 30px padding) */
+.post-content li span.footnote-body {
+    margin-left: calc(-1 * (var(--footnote-width) + var(--footnote-gap) + 30px));
+}
+
+/* Deeper nested lists (additional padding) */
+.post-content li li span.footnote-body {
+    margin-left: calc(-1 * (var(--footnote-width) + var(--footnote-gap) + 60px));
+}
+
 .post-content p {
     margin-bottom: 20px;
 }
@@ -195,6 +244,17 @@ footer {
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+    .post {
+        --footnote-width: 225px;
+        /* was 150px (1.5x) */
+    }
+
+    span.footnote-body {
+        font-size: 0.75em;
+    }
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 15px;
@@ -229,5 +289,14 @@ footer {
 
     .post-card {
         padding: 15px;
+    }
+
+    span.footnote-body {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin: 10px 0 15px 0;
+        padding: 6px 8px;
+        font-size: 0.85em;
     }
 }

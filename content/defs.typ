@@ -44,6 +44,14 @@
     }
   }
 
+
+  show footnote: it => {
+    if target() == "html" {
+      html.elem("sup", attrs: (class: "footnote-ref"), it.numbering)
+      html.elem("span", attrs: (class: "footnote-body"), super(it.numbering) + [ ] + it.body)
+    }
+  }
+
   outline()
 
   date
