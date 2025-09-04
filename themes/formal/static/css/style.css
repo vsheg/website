@@ -189,14 +189,30 @@ span.footnote-body {
     text-align: right;
 }
 
-/* Alignment fix for footnotes inside list items (lists add 30px padding) */
-.post-content li span.footnote-body {
-    margin-left: calc(-1 * (var(--footnote-width) + var(--footnote-gap) + 30px));
+/* Margin notes on the right */
+span.margin-body {
+    float: right;
+    clear: right;
+    width: var(--footnote-width);
+    margin-right: calc(-1 * (var(--footnote-width) + var(--footnote-gap)));
+    /* Pull into right margin */
+    margin-left: var(--footnote-gap);
+    /* Space from main text */
+    font-size: 0.8em;
+    line-height: 1.35;
+    color: #555;
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-align: left;
 }
 
-/* Deeper nested lists (additional padding) */
-.post-content li li span.footnote-body {
-    margin-left: calc(-1 * (var(--footnote-width) + var(--footnote-gap) + 60px));
+/* Alignment fix for margin notes inside list items */
+.post-content li span.margin-body {
+    margin-right: calc(-1 * (var(--footnote-width) + var(--footnote-gap) + 30px));
+}
+
+.post-content li li span.margin-body {
+    margin-right: calc(-1 * (var(--footnote-width) + var(--footnote-gap) + 60px));
 }
 
 .post-content p {
@@ -291,12 +307,15 @@ footer {
         padding: 15px;
     }
 
-    span.footnote-body {
+    span.footnote-body,
+    span.margin-body {
         float: none;
         clear: both;
         width: 100%;
         margin: 10px 0 15px 0;
         padding: 6px 8px;
         font-size: 0.85em;
+        text-align: left;
+        /* Reset for mobile */
     }
 }
