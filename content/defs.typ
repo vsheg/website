@@ -1,15 +1,14 @@
-#import "@preview/marginalia:0.2.3" as marginalia: note as margin
 #import "@preview/physica:0.9.5": *
 
 
+#let margin(content) = context {
+  if target() == "html" {
+    html.elem("span", attrs: (class: "margin-body"), content)
+  }
+}
+
 // Template
 #let post(date: none, date-modified: none, categories: (), references: none, doc) = {
-  // Marginalia setup
-  // set page(width: 600pt)
-  // show: marginalia.setup.with(outer: (width: 150pt))
-
-  // Code style (inline)
-  //
   show raw.line: box.with(fill: gray.transparentize(80%), outset: 0.3em, radius: 0.4em)
 
   set math.equation(numbering: "(1)")
@@ -35,15 +34,23 @@
   set text(hyphenate: true, costs: (hyphenation: 0%, runt: 50%, widow: 0%, orphan: 0%))
 
   show ref: it => {
-    if it.element != none {
-      // Use your custom scheme
-      link(it.target, it.element.body)
-    } else {
-      // Default `ref`
-      it
-    }
-  }
+    // Aliases
+    let eq = math.equation
+    let el = it.element
 
+    // Equation reference
+    if el != none and el.func() == eq {
+      // Override equation references.
+      return link(el.location(), numbering(
+        el.numbering,
+        ..counter(eq).at(el.location()),
+      ))
+    }
+
+    if el != none and el.func() == heading { return smartquote() + it.element.body + smartquote() }
+
+    it
+  }
 
   show footnote: it => {
     if target() == "html" {
@@ -51,8 +58,6 @@
       html.elem("span", attrs: (class: "footnote-body"), super(it.numbering) + [ ] + it.body)
     }
   }
-
-  outline()
 
   date
 
