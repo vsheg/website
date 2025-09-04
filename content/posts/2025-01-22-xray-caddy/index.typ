@@ -38,7 +38,7 @@ When you communicate with any service via HTTPS encrypted connection, intermedia
 ] (`service.example.com`) and the port (443), but all paths (e.g. in `service.example.com/secret/3x`) are encrypted.
 
 $
-  underbrace("https", "protocol") text("://") underbrace("service.example.com", "visible") underbrace("/secret/3x/panel", "hidden")
+  underbrace("https", "protocol") "://" underbrace("service.example.com", "visible") underbrace("/secret/3x/panel", "hidden")
 $
 
 However, paths are encrypted, VPN servers use lots of traffic, so it's not hard to suspect that traffic for a specific domain `service.example.com` is VPN traffic. To remove suspicion, you should host a real website on the same domain. This website should not be a hello world page, but a real web service with potentially high traffic, e.g. a file sharing or video streaming service which you may actually *want to use*.

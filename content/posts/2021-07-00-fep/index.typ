@@ -107,18 +107,18 @@ $
 $ F(lambda) = - k T ln Q(lambda), $
 можно получить соотношение для производной свободной энергии $F$ по параметру пути $lambda$:
 $
-  (diff F)/(diff lambda) &= -(k T)/Q (diff Q)/(diff lambda) = -(k T)/Z (diff Z)/(diff lambda) \
-  &= -(k T)/Z diff/(diff lambda) integral_("ФП") e^(-beta U(bold(q); lambda)) dd(bold(q)) \
-  &= -(k T)/Z integral_("ФП") (-beta (diff U(bold(q); lambda))/(diff lambda)) e^(-beta U(bold(q); lambda)) dd(bold(q)) \
-  &= lr(angle.l (diff U(lambda))/(diff lambda) angle.r)_lambda
+  (partial F)/(partial lambda) &= -(k T)/Q (partial Q)/(partial lambda) = -(k T)/Z (partial Z)/(partial lambda) \
+  &= -(k T)/Z diff/(partial lambda) integral_("ФП") e^(-beta U(bold(q); lambda)) dd(bold(q)) \
+  &= -(k T)/Z integral_("ФП") (-beta (partial U(bold(q); lambda))/(partial lambda)) e^(-beta U(bold(q); lambda)) dd(bold(q)) \
+  &= lr(angle.l (partial U(lambda))/(partial lambda) angle.r)_lambda
 $ <eq-TD-int>
 
-т.е. $diff F / diff lambda$ может быть рассчитана через среднее по ансамблю с распределением $e^(-beta U(lambda))$ при $lambda = const$.
+т.е. $partial F / partial lambda$ может быть рассчитана через среднее по ансамблю с распределением $e^(-beta U(lambda))$ при $lambda = const$.
 
 Изменения свободной энергии при переходе из $cal(A)$ в $cal(B)$ затем может быть рассчитано через интеграл по пути $lambda$:
 
 $
-  Delta F_(cal(A) cal(B)) = integral_0^1 lr(angle.l (diff U)/(diff lambda) angle.r)_lambda dd(lambda)
+  Delta F_(cal(A) cal(B)) = integral_0^1 lr(angle.l (partial U)/(partial lambda) angle.r)_lambda dd(lambda)
 $ <eq-DF-by-avg-lambda-int>
 
 Уравнение @eq-DF-by-avg-lambda-int называется формулой термодинамического интегрирования @Zwanzig1954, этот интеграл не зависит от выбора $f(lambda)$ и $g(lambda)$, однако, при выборе удачного вида (т.н. выпуклая линейная комбинация)
@@ -130,6 +130,6 @@ $
 
 На практике, однако, от интегрирования по $lambda$ вновь переходят к суммированию по некоторым промежуточным состояниям $lambda_1, ..., lambda_n$:
 $
-  Delta F_(cal(A) cal(B)) = sum_(0 <= lambda_k <= 1) lr(angle.l (diff U)/(diff lambda) angle.r)_(lambda_k),
+  Delta F_(cal(A) cal(B)) = sum_(0 <= lambda_k <= 1) lr(angle.l (partial U)/(partial lambda) angle.r)_(lambda_k),
 $ <eq-DF-avg-lambda-sum>
-точки ФП для вычисления средних $angle.l (diff U) / (lambda) angle.r_(lambda_k)$ берутся из распределения $e^(-beta U(lambda = lambda_k))$.
+точки ФП для вычисления средних $angle.l (partial U) / (lambda) angle.r_(lambda_k)$ берутся из распределения $e^(-beta U(lambda = lambda_k))$.

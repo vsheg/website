@@ -68,7 +68,7 @@ $
 $
 случайная составляющая распределена нормально:
 $
-  bold(a)_i ~ cal(N)(bold(0), bold(sigma)_i) quad text(и) quad sigma_i = (m_i k Theta) / (delta t dot Q),
+  bold(a)_i ~ cal(N)(bold(0), bold(sigma)_i) quad "и" quad sigma_i = (m_i k Theta) / (delta t dot Q),
 $
 где вектора $bold(0), bold(sigma)_i in bb(R)^3$, $sigma_i$ — компонента $bold(sigma)$, $Q$ — параметр теплового обмена, $Theta$ — поддерживаемая температура. Для трения:
 $
