@@ -1,4 +1,4 @@
-#import "../../template.typ": *
+#import "../../_template.typ": *
 #import "@preview/typsium:0.3.0": ce
 
 #show: post.with(
