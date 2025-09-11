@@ -1,5 +1,0 @@
----
-pagetitle: Educational materials
----
-
-{{< include intermediate-ml/README.md >}}
