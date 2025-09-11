@@ -1,4 +1,4 @@
-#import "../../defs.typ": *
+#import "../../template.typ": *
 
 #show: post.with(
   date: "2025-02-26",

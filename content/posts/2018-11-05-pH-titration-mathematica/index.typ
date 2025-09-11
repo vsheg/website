@@ -1,4 +1,4 @@
-#import "../../defs.typ": *
+#import "../../template.typ": *
 
 #show: post.with(date: "2018-11-05", date-modified: "2025-04-30", categories: (
   "chemistry",

@@ -1,4 +1,4 @@
-#import "../../defs.typ": *
+#import "../../template.typ": *
 
 #show: post.with(date: "2021-01", date-modified: "2025-08-15", categories: (
   "molecular dynamics",
