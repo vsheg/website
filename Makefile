@@ -17,12 +17,17 @@ posts:
 	fd -p -g "**/posts/*/*.md" --exec mv {} {.}.qmd
 
 html:
-	mkdir -p html/posts
-	fd . content/posts -e typ --exec bash -c 'filepath={}; \
-		basename=$$(basename $$filepath .typ); \
-		dir=$$(dirname $$filepath | sed "s|^content/|html/|"); \
-		mkdir -p $$dir; \
-		typst compile --format html --features html $$filepath "$$dir/$$basename.html" --root .'
+	mkdir -p html
+	find content -type f -name '*.typ' -print0 | xargs -0 -I {} sh -c '\
+	  f="$$1"; \
+	  out="html/$${f#content/}"; \
+	  out="$${out%.typ}.html"; \
+	  mkdir -p "$$(dirname "$$out")"; \
+	  typst compile --format html --features html "$$f" "$$out" --root . \
+	' sh {}
+	# Copy CSS assets to html/assets
+	mkdir -p html/assets
+	find assets -type f -name '*.css' -exec cp {} html/assets/ \;
 
 uv:
 	uv sync
