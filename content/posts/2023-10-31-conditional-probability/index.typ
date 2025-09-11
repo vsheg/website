@@ -1,4 +1,4 @@
-#import "../../template.typ": *
+#import "../../_template.typ": *
 #import "@preview/callisto:0.2.4"
 
 #show: post.with(date: "2023-10-31", date-modified: "2025-02-04", categories: (

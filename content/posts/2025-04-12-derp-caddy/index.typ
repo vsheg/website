@@ -1,4 +1,4 @@
-#import "../../template.typ": *
+#import "../../_template.typ": *
 
 #show: post.with(date: "2025-04-12", categories: (
   "chemistry",

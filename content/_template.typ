@@ -7,7 +7,25 @@
   }
 }
 
-// Template
+// WEB WRAPPERS
+
+#let web(content) = {
+  html.elem("head", {
+    html.elem("meta", attrs: ("charset": "UTF-8"))
+    html.elem("meta", attrs: (
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1.0",
+    ))
+    html.elem("title", "Posts - Sheg's Blog")
+    html.elem("link", attrs: ("rel": "stylesheet", "href": "/assets/style.css"))
+  })
+
+  content
+}
+
+
+// POST TEMPLATE
+
 #let post(date: none, date-modified: none, categories: (), references: none, doc) = {
   show raw.line: box.with(fill: gray.transparentize(80%), outset: 0.3em, radius: 0.4em)
 
