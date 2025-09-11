@@ -3,26 +3,56 @@
 
 #let margin(content) = context {
   if target() == "html" {
-    html.elem("span", attrs: (class: "margin-body"), content)
+    html.elem("span", attrs: (class: "marginnote"), content)
   }
 }
 
 // WEB WRAPPERS
 
-#let web(content) = {
+#let header() = html.elem(
+  "header",
+  html.elem(
+    "nav",
+    {
+      html.elem("a", attrs: (href: "/posts/"), "Posts")
+      html.elem("a", attrs: (href: "/ML/"), "ML")
+      html.elem("a", attrs: (href: "/contacts/"), "Contacts")
+    },
+  ),
+)
+
+
+#let web(content) = html.elem("html", {
+  // Head
   html.elem("head", {
     html.elem("meta", attrs: ("charset": "UTF-8"))
     html.elem("meta", attrs: (
       "name": "viewport",
-      "content": "width=device-width, initial-scale=1.0",
+      "content": "width=device-width, initial-scale=1",
     ))
     html.elem("title", "Posts - Sheg's Blog")
+    html.elem("link", attrs: (
+      "rel": "stylesheet",
+      href: "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css",
+    ))
     html.elem("link", attrs: ("rel": "stylesheet", "href": "/assets/style.css"))
   })
 
-  content
-}
+  // Body
+  html.elem(
+    "body",
+    {
+      // Add website header
+      header()
 
+      // Main content
+      html.elem(
+        "article",
+        html.elem("section", content),
+      )
+    },
+  )
+})
 
 // POST TEMPLATE
 
@@ -73,20 +103,35 @@
   show footnote: it => {
     if target() == "html" {
       html.elem("sup", attrs: (class: "footnote-ref"), it.numbering)
-      html.elem("span", attrs: (class: "footnote-body"), super(it.numbering) + [ ] + it.body)
+      html.elem("span", attrs: (class: "marginnote"), super(it.numbering) + [ ] + it.body)
     }
   }
 
-  date
 
-  if date-modified != none {
-    [ (updated: ] + date-modified + [) ]
+  // Collect content pieces
+  let content = {
+    margin(
+      "Published: " + date,
+    )
+
+    if date-modified != none {
+      margin("Updated: " + date-modified)
+    }
+
+    doc
+
+    if references != none {
+      bibliography(references)
+    }
   }
 
-  doc
-
-  if references != none {
-    bibliography(references)
+  // Render the final result
+  context {
+    if target() == "html" {
+      return web(content)
+    } else {
+      return content
+    }
   }
 }
 
