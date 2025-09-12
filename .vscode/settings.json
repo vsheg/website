@@ -1,9 +1,4 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/__pycache__": true,
-        "**/.*": true
-    }
+    "livePreview.defaultPreviewPath": "/html/index.html",
+    "livePreview.serverRoot": "/html/",
 }
