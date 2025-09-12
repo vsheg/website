@@ -5,7 +5,7 @@
 #let post-tile(link, title, description) = {
   html.elem("div", attrs: (class: "post-tile"), {
     html.elem("a", attrs: (href: link), {
-      html.elem("h2", title)
+      html.elem("h3", title)
       html.elem("p", description)
     })
   })
