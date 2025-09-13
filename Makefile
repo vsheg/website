@@ -17,7 +17,9 @@ posts:
 	fd -p -g "**/posts/*/*.md" --exec mv {} {.}.qmd
 
 html:
+	rm -rf html || true
 	mkdir -p html
+	cp -r content/* html/
 	find content -type f -name '*.typ' -print0 | xargs -0 -I {} sh -c '\
 	  f="$$1"; \
 	  out="html/$${f#content/}"; \
