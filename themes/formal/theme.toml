@@ -1,6 +1,0 @@
-name = "formal"
-description = "A minimal theme for displaying blog posts in a tiled layout"
-min_version = "0.41.0"
-
-[author]
-name = "Vsevolod Shegolev"
