@@ -1,44 +1,44 @@
-on:
-  workflow_dispatch:
-  push:
-    branches: main
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches: main
 
-name: render
+# name: render
 
-jobs:
+# jobs:
   
-  render:
-    runs-on: ubuntu-latest
-    steps:
-      - run: |
-          sudo apt update
-          sudo apt install -y fd-find zsh
-          cp "$(which fdfind)" /usr/local/bin/fd
-          sudo apt purge --auto-remove pandoc
-          wget https://github.com/jgm/pandoc/releases/download/3.6.2/pandoc-3.6.2-1-amd64.deb
-          sudo dpkg -i pandoc-3.6.2-1-amd64.deb
+#   render:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - run: |
+#           sudo apt update
+#           sudo apt install -y fd-find zsh
+#           cp "$(which fdfind)" /usr/local/bin/fd
+#           sudo apt purge --auto-remove pandoc
+#           wget https://github.com/jgm/pandoc/releases/download/3.6.2/pandoc-3.6.2-1-amd64.deb
+#           sudo dpkg -i pandoc-3.6.2-1-amd64.deb
 
-      - uses: astral-sh/setup-uv@v5
-      - uses: quarto-dev/quarto-actions/setup@v2
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'true'
-      - run: make
-      - run: quarto render
-      - run: make rss
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site/
+#       - uses: astral-sh/setup-uv@v5
+#       - uses: quarto-dev/quarto-actions/setup@v2
+#       - uses: actions/checkout@v4
+#         with:
+#           submodules: 'true'
+#       - run: make
+#       - run: quarto render
+#       - run: make rss
+#       - uses: actions/upload-pages-artifact@v3
+#         with:
+#           path: _site/
   
-  deploy:
-    needs: render
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/deploy-pages@v4
-        id: deployment
+#   deploy:
+#     needs: render
+#     permissions:
+#       pages: write
+#       id-token: write
+#     environment:
+#       name: github-pages
+#       url: ${{ steps.deployment.outputs.page_url }}
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/deploy-pages@v4
+#         id: deployment
