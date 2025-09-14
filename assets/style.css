@@ -10,6 +10,12 @@ html {
     font-size: 10pt;
 }
 
+/* responsive media */
+img,
+svg {
+    max-height: 80vh;
+}
+
 /* basic header + navigation styles */
 header nav {
     display: flex;

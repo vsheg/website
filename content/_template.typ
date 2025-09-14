@@ -53,7 +53,6 @@
     },
   )
 })
-
 // POST TEMPLATE
 
 #let post(date: none, date-modified: none, categories: (), references: none, doc) = {
@@ -107,6 +106,13 @@
     }
   }
 
+  show figure.caption: it => {
+    if target() == "html" {
+      html.elem("span", attrs: (class: "marginnote"), it.body)
+    } else {
+      it
+    }
+  }
 
   // Collect content pieces
   let content = {
